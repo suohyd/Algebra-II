@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-UFD-PID-ED" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>UFD-PID-ED</title>
+  <xi:include href="./sec-UFD-PID-ED.ptx"/>
+  <xi:include href="./sec-chain-conditions.ptx"/>
+  <xi:include href="./sec-ED.ptx"/>
+  <xi:include href="./ex-UFD-PID-ED.ptx"/>
+</chapter>

@@ -1,0 +1,146 @@
+<section xml:id="sec-examples-rings-algebras-homomorphisms">
+	<title>Examples</title>
+	<example xml:id="initial-object-in-Rings">
+		<title>(Canonical map from <m>\Z</m> to a ring)</title>
+		<statement>
+			Let <m>R</m> be any ring with unity. We always have a unique ring homomorphism from <m>\Z</m> to <m>R</m>:
+			<me>i_{\Z}\colon\Z\to R\quad\text{given by}\quad n\mapsto n\cdot 1_R=\underbrace{1_R+\cdots+1_R}_{n\text{-times}}</me>
+		</statement>
+	</example>
+	<example xml:id="terminal-object-in-Rings">
+		<title>(Ring homomorphism onto the trivial ring)</title>
+		<statement>
+			Let <m>R</m> be a ring with unity and <m>\{0\}</m> be a trivial ring. There is a ring epimorphism <me>R\to\{0\}\quad\text{given by}\quad r\mapsto 0\,(=1).</me>
+		</statement>
+	</example>
+	<example xml:id="canonical-epimorphism-for-Z">
+	    <title>(Epimorphism from <m>\Z</m> onto <m>\Z/n\Z</m>)</title>
+	    <statement>
+	    	Let <m>\varphi\colon\Z\to\Z/n\Z</m> be a map defined by <me>i\mapsto [i].</me>
+	    	Verify that <m>\varphi</m> is a ring epimorphism.
+	    </statement>
+	</example>
+	<example xml:id="embedding-of-field-in-algebra">
+		<title>(Embedding of <m>F</m> into an <m>F</m>-algebra)</title>
+		<statement>
+			Let <m>A</m> be a nonzero <m>F</m>-algebra. For this example we denote the unity of <m>F</m> by <m>1_F</m> and the unity of <m>A</m> by <m>1_A</m>. There is an <m>F</m>-algebra monomomorphism from <m>\varphi\colon F\to A</m> given by <m>\alpha\mapsto \alpha\cdot 1_A</m>. Here <sq><m>\cdot</m></sq> denotes the scalar multiplication. By <xref ref="field-extensions"/>, the field <m>F</m> is an <m>F</m>-algebra. By <xref ref="def-algebra-homomorphism"/>, <m>\varphi(1_F)=1_A</m> hence <m>\varphi</m> is not a zero map. Since <m>\varphi</m> is also an <m>F</m>-vector space homomorphism, for any <m>\alpha\in F</m>, <me>\varphi(\alpha)=\varphi(\alpha 1_F)=\alpha\cdot\varphi(1_F)=\alpha\cdot 1_A</me>. The kernel of <m>\varphi</m>, <m>\ker(\varphi)\subsetneq F</m> is a two-sided ideal of <m>F</m>. Since every nonzero element of <m>F</m> is invertible and <m>\varphi</m> is a nonzero map, <m>\ker(\varphi)=\{0\}</m>. Thus <m>\varphi\colon F\to A</m> given by <m>\alpha\mapsto\alpha\cdot 1_A</m> is a monomorphism.
+		</statement>
+	</example>
+	<example xml:id="inclusion-of-subring">
+		<title>(Inclusion as a monomorphism of rings)</title>
+		<statement>
+			Let <m>S</m> be a subring of a ring <m>R</m>. The inclusion map
+			<me>i\colon S\to R\quad\text{given by}\quad s\mapsto s</me>
+			is a monomorphism of rings.
+		</statement>
+	</example>
+	<example xml:id="morphism-from-simple-rings">
+		<title>(Homomorphisms from simple rings)</title>
+		<statement>
+			Let <m>R</m> be a simple ring (see <xref ref="def-simple-rings"/>) and <m>S</m> be a nonzero ring with unity. Any ring homomorphism <m>\varphi\colon R\to S</m> is a ring monomorphism.
+			Indeed, for any ring homomorphism <m>\ker(\varphi)</m> is a two-sided ideal of <m>R</m>. Since <m>R</m> is a simple ring and <m>\varphi</m> is nonzero, the kernel of <m>\varphi</m>, <m>\ker(\varphi)=\{0\}</m>, i.e., <m>\varphi</m> is a monomorphism.
+			<p>
+				In particular a ring homomorphism from a division ring or a field to a nonzero ring with unity is a ring monomorphism.
+			</p>
+		</statement>
+	</example>
+	<example xml:id="involution-on-C">
+		<title>(Conjugation)</title>
+		<statement>
+			Consider <m>\C</m> as an <m>\R</m>-algebra (refer to <xref ref="field-extensions"/>). The conjugation
+			<me>\sigma\colon\C\to\C\quad\text{given by}\quad a+ib\mapsto a-ib</me>
+			is an <m>\R</m>-algebra automorphism.
+		</statement>
+	</example>
+	<example xml:id="iso-between-matrices-opposite-algebra">
+		<title>(Isomorphism between matrices and its opposite algebra)</title>
+		Let <m>M_n(F)</m> be <m>n\times n</m> matrices over <m>F</m>. For <m>A\in M_n(F)</m> we denote by <m>A^t\in M_n(F)</m> the transpose of <m>A</m>. Consider <m>\varphi\colon M_n(F)\to M_n(F)^{\rm op}</m> given by 
+		<me>A\mapsto \left(A^t\right)^{\rm op}.</me> Note that
+		<me>\varphi(AB)=\left((AB)^t\right)^{\rm op}=\left(B^tA^t\right)^{\rm op}=\left(A^t\right)^{\rm op}\left(B^t\right)^{\rm op}=\varphi(A)\varphi(B).</me>
+		 This is an <m>F</m>-algebra homomorphism. The kernel of <m>\varphi</m>, <m>\ker(\varphi)</m> is a two-sided ideal of <m>M_n(F)</m>. By <xref ref="ideals-of-rings-and-matrix-rings"/>, <m>\ker(\varphi)</m> is either <m>M_n(F)</m> or <m>\{0\}</m>. Since <m>\varphi</m> is a nonzero map we must have <m>\ker(\varphi)=\{0\}</m>, i.e., <m>\varphi</m> is an <m>F</m>-algebra monomorphism. In particular <m>\varphi</m> is also an injective <m>F</m>-linear map. As <m>\dim_F\left(M_n(F)^{\rm op}\right)=\dim_F\left(M_n(F)\right)</m> we get that <m>\varphi</m> is surjective. Therefore, <m>\varphi</m> is an isomorphism of <m>F</m>-algebras.
+	</example>
+	<example xml:id="matrices-over-matrices">
+		<title>(Matrix ring over a matrix ring)</title>
+		<statement>
+			We show that for a ring <m>R</m>, there is a ring isomorphism <m>M_n(M_m(R))\simeq M_{nm}(R)</m>.
+	Let <m>S=M_m(R)</m>, hence <m>M_n\left(M_m(R)\right)=M_n(S)</m>. The typical element of <m>M_n(S)</m> is of the following block form.
+	<me>\begin{pmatrix}S_{11}\amp S_{12}\amp \cdots\amp S_{1n}\\S_{21}\amp S_{22}\amp \cdots\amp S_{2n}\\\vdots\amp \vdots\amp \ddots\amp \vdots\\S_{n1}\amp S_{n2}\amp \cdots\amp S_{nn}\end{pmatrix}\quad\text{where}\quad S_{ij}\in S=M_m(R)</me>
+
+	Hence the above matrix has <m>nm</m> entries from <m>R</m> in each row as well as in each column. Assume that <m>S_{ij}=\left(s_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)</m> and <m>T_{ij}=\left(t_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)</m>. So the above matrix becomes:
+	<men xml:id="peeled-onion">
+		\begin{pmatrix}
+		s_{11}(11)\amp \cdots\amp s_{11}(1m)\amp s_{12}(11)\amp \cdots\amp s_{12}(1m)\amp \cdots\amp s_{1n}(11)\amp \cdots\amp s_{1n}(1m)\\s_{11}(21)\amp \cdots\amp s_{11}(2m)\amp s_{12}(21)\amp \cdots\amp s_{12}(2m)\amp \cdots\amp s_{2n}(21)\amp \cdots\amp s_{2n}(1m)\\
+		\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+		s_{11}(m1)\amp \cdots\amp s_{11}(mm)\amp s_{12}(m1)\amp \cdots\amp s_{12}(mm)\amp \cdots\amp s_{2n}(m1)\amp \cdots\amp s_{2n}(mm)\\
+		\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+		\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+		
+		s_{n1}(11)\amp \cdots\amp s_{n1}(1m)\amp s_{n2}(11)\amp \cdots\amp s_{n2}(1m)\amp \cdots\amp s_{nn}(11)\amp \cdots\amp s_{nn}(1m)\\s_{n1}(21)\amp \cdots\amp s_{n1}(2m)\amp s_{n2}(21)\amp \cdots\amp s_{n2}(2m)\amp \cdots\amp s_{nn}(21)\amp \cdots\amp s_{nn}(1m)\\
+		\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+		s_{n1}(m1)\amp \cdots\amp s_{n1}(mm)\amp s_{n2}(m1)\amp \cdots\amp s_{n2}(mm)\amp \cdots\amp s_{nn}(m1)\amp \cdots\amp s_{nn}(mm)
+	\end{pmatrix}
+</men>
+	The matrix multiplication of <m>(S_{ij}),(T_{ij})\in M_n(S)</m> is the following matrix in <m>M_n(S)</m>.
+	<men xml:id="ring-hom-identity">
+		(S_{ij})(T_{ij})=\left(\sum_{k}S_{ik}T_{kj}\right)=\left(\sum_{k=1}^n\left(\sum_{\ell=1}^ms_{ik}(p\ell)\cdot t_{kj}(\ell q)\right)_{1\leq p,q\leq m}\right)
+	</men>
+Define a map <m>\varphi\colon M_n\left(M_m(R)\right)\to M_{nm}(R)</m> given by <m>(S_{ij})\mapsto\text{ matrix given in eq.}</m> <xref ref="peeled-onion"/>. This is additive group homomorphism and eq. <xref ref="ring-hom-identity"/> shows that <m>\varphi\left((S_{ij})(T_{ij})\right)=\varphi\left(S_{ij}\right)\varphi\left(T_{ij}\right)</m>, and <m>\varphi</m> maps unity to unity. Therefore, <m>\varphi</m> is a nonzero ring homomorphism. Verify that <m>\varphi</m> is a ring isomorphism.
+		</statement>
+	</example>
+	<example xml:id="def-inner-automorphism">
+		<title>(Inner automorphism)</title>
+		<statement>
+			Let <m>A</m> be a nonzero <m>F</m>-algebra and let <m>A^\times</m> be the set of all invertible elements of <m>A</m>. Since <m>0\neq 1</m> the set <m>A^\times</m> is nonempty. Let <m>a\in A^\times</m>. The inner automorphism of <m>A</m> defined by <m>a\in A^\times</m> is 
+			<me>\Int(a)\colon A\to A\quad\text{given by}\quad x\mapsto axa^{-1}.</me>
+		</statement>
+	</example>
+	<example xml:id="def-evaluation-map">
+		<title>(Evaluation map)</title>
+		<statement>
+			Let <m>F</m> be a field and let <m>F[X]</m> be the polynomial ring over <m>F</m> in one variable. Fix <m>a\in F</m>. The evaluation at <m>a</m> given below is an <m>F</m>-algebra homomorphism.
+			<me>\ev_a\colon F[X]\to F\quad\text{given by}\quad \sum_i\alpha_iX^i\mapsto \sum_i\alpha_i\,a^i</me>
+			More generally, consider the polynomial ring <m>F[X_1,\ldots,X_n]</m> over <m>F</m> in <m>n</m> variables. Fix <m>a_1,a_2,\ldots,a_n\in F</m>. The evaluation map at <m>a_1,\ldots,a_n</m> given below is an <m>F</m>-algebra homomorphism.
+			<me>\ev_{(a_1,\ldots,a_n)}\colon F[X_1,\ldots,X_n]\to F\quad\text{given by}\quad \sum \alpha_{i_1\cdots i_n}X^{i_1}X^{i_2}\cdots X^{i_n}\mapsto \sum \alpha_{i_1\cdots i_n}a_1^{i_1}a_2^{i_2}\cdots a_n^{i_n}</me>
+		</statement>
+	</example>
+	<example xml:id="matrix-representation-of-algebra">
+		<title>(Homomorphism from algebra to the endomorphism ring)</title>
+		<statement>
+			Let <m>A</m> be a finite-dimensional <m>F</m>-algebra (see <xref ref="def-algebra-over-a-field"/>). By <xref ref="embedding-of-field-in-algebra"/>, for any <m>\alpha\in F</m> we have <m>\alpha 1\in\mathcal{Z}(A)</m>. Given <m>a\in A</m> the map <m>L_a\colon A\to A</m> (resp., <m>R_a\colon A\to A</m>) given by <m>x\mapsto ax</m> (resp., <m>x\mapsto xa</m>) is an <m>F</m>-linear map. We show that the following maps are <m>F</m>-algebra homomorphisms.
+			<me>L\colon A\to\End_F(A)\quad\text{given by}\quad a\mapsto L_a</me>
+			<me>R\colon A^{\rm op}\to\End_F(A)\quad\text{given by}\quad a^{\rm op}\mapsto R_a</me>
+			Indeed, 
+			<ol>
+				<li> Maps <m>L</m> and <m>R</m> are <m>F</m>-linear. For <m>\alpha,\beta\in F</m> and <m>a,b\in A</m> we have 
+				<md><mrow>L_{\alpha\cdot a+\beta\cdot b}(x)\amp=(\alpha\cdot a+\beta\cdot b)x</mrow><mrow>\amp=\alpha\cdot ax+\beta\cdot bx</mrow><mrow>\amp=\alpha L_a(x)+\beta L_b(x)</mrow></md>
+				Similarly, using <xref ref="algebra-identity"/> and <me>\alpha\cdot a^{\rm op}+\beta\cdot b^{\rm op}=(\alpha\cdot a)^{\rm op}+(\beta\cdot b)^{\rm op}=(\alpha\cdot a+\beta\cdot b)^{\rm op}</me> we get the following.
+				<md><mrow>R\left({\alpha\cdot a^{\rm op}+\beta\cdot b^{\rm op}}\right)(x)\amp=x(\alpha\cdot a+\beta\cdot b)</mrow><mrow>\amp=x(\alpha\cdot a)+x(\beta\cdot b)</mrow><mrow>\amp=\alpha\cdot (xa)+\beta\cdot (xb)</mrow><mrow>\amp=\alpha R_{a}(x)+\beta R_{b}(x)</mrow></md>
+			</li>
+			<li>
+				Maps <m>L</m> and <m>R</m> are ring homomorphisms. Indeed,
+				<md><mrow>L(ab)(x)\amp=L_{ab}(x)</mrow><mrow>\amp=abx</mrow><mrow>\amp=L_a\circ L_b(x)</mrow></md>
+				Hence, <m>L(ab)=L(a)L(b)</m>.
+				We also have the following.
+				<md><mrow>R(a^{\rm op}b^{\rm op})(x)\amp=R\left({(ba)^{\rm op}}\right)(x)</mrow><mrow>\amp=xba</mrow><mrow>\amp=R_a\circ R_b(x)</mrow></md>
+				Hence, <m>R(a^{\rm op}b^{\rm op})=R(a^{\rm op})R(b^{\rm op})</m>.
+				We also have <m>L(1)=\unit_A</m> and <m>R(1)=\unit_A</m>.
+				
+			</li>
+			</ol>
+		</statement>
+	</example>
+	<example xml:id="projections">
+		<title>(Projection maps)</title>
+		<statement>
+			Let <m>I</m> be a nonempty indexing set. Let <m>R_i</m> be rings, where <m>i\in I</m>, and consider the product ring <m>\prod_iR_i</m> (see <xref ref="example-product-of-rings"/>). We denote the additive identity of <m>R_i</m> by <m>0_i</m> and the unity of <m>R_i</m> by <m>1_i</m>. For each <m>k\in I</m> consider 
+			<me>\pi_k\colon\prod_iR_i\to\prod_iR_i\quad\text{given by}\quad (x_i)_{i\in I}\mapsto (\delta_{ik}\,x_i)_{i\in I},</me>
+			where for each <m>i\in I</m>,
+			<me>
+				\delta_{ik}=\begin{cases}0_i\amp\text{if }i\neq k\\1_i\amp\text{if }i=k\end{cases}
+			</me>
+			Verify that <m>\pi_k</m> is a ring homomorphism, and that
+			<me>\pi_k^2=\pi_k\quad\text{and}\quad\pi_k\circ\pi_\ell=\pi_\ell\circ\pi_k=0\quad\text{for}\;k\neq\ell.</me>
+			Thus, <m>\pi_k</m> are orthogonal idempotents of the ring <m>\End_\Rings(\prod_iR_i)</m>.
+		</statement>
+	</example>
+</section>

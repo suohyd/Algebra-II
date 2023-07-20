@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-quotient-rings" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Quotient rings</title>
+  <xi:include href="./sec-quotient-rings.ptx"/>
+  <xi:include href="./sec-isomorphism-theorems.ptx"/>
+  <xi:include href="./sec-prime-maximal-ideal-criterion.ptx"/>
+  <xi:include href="./ex-prime-maximal-ideals.ptx"/>
+</chapter>

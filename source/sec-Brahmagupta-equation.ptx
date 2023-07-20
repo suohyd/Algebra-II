@@ -1,0 +1,80 @@
+<section xml:id="sec-Brahmagupta-equation">
+	<title>Brahmagupta's equations</title>
+	<introduction>
+		Let us consider the following equation <men xml:id="Bramhagupta-Pell-equation">x^2-dy^2=1\quad\text{[Brahmagupta's equation]}</men> where <m>d</m> is a square-free integer. Problem is to find integers <m>x,y</m> satisfying the above equation. Indian mathematician Brahmagupta discovered, among other things, the following identity: for given integers <m>x,y,z</m>, and <m>w</m> there exists integers <m>M,N</m> such that
+		<men xml:id="Bramhagupta-identity">(x^2-dy^2)(z^2-dw^2)=M^2-dN^2\quad
+		\text{[Bramhagupta's identity]}</men>
+		Using this identity Bramhagupta was able to produce infinitely many solutions of <m>x^2-dy^2=1</m>, and also able to solve <m>x^2-dy^2=c</m> for certain values of <m>d</m> and <m>c</m>.
+		<p>
+			In this section we give a connection between the ring theory and equations of type <xref ref="Bramhagupta-Pell-equation"/>. We begin with the following.
+		</p>
+	</introduction>
+	<lemma xml:id="norm-of-sqrt-d">
+		<statement>
+		Let <m>d</m> be a square-free integer. The set <m>\Z[\sqrt{d}]=\{a+b\sqrt{d}:a,b\in\Z\}</m> is an integral domain, and the map
+		<me>N\colon\Z[\sqrt{d}]\to\Z\quad\text{given by}\quad N(a+b\sqrt{-2})=a^2-db^2.</me>
+		is multiplicative, i.e., <me>N\left((a+b\sqrt{d})(c+d\sqrt{d})\right)=N(a+b\sqrt{d})\,N(c+d\sqrt{d})</me>.
+	</statement>
+	</lemma>
+	<remark>
+		<statement>
+			The map <m>N</m> defined above is a square of the absolute value in <m>\C</m>.
+		</statement>
+	</remark>
+	<lemma>
+		<statement>
+			We keep notations of <xref ref="norm-of-sqrt-d"/>.
+			<ol>
+				<li><m>\alpha\in\Z[\sqrt{d}]</m> is a unit in <m>\Z[\sqrt{d}]</m> if and only if <m>N(\alpha)=\pm 1</m>.</li>
+				<li>If <m>\pm N(\alpha)</m> is a prime number in <m>\Z</m> then <m>\alpha</m> is irreducible.</li>
+			</ol>
+		</statement>
+	</lemma>
+	<exercise>
+		<statement>
+			Show that <m>\alpha\in\Z[\sqrt{3}]</m> is a unit if and only if <m>N(\alpha)=1</m>.
+		</statement>
+	</exercise>
+	<remark>
+		<title>(Connection with Brahmagupta's equation)</title>
+		<statement>
+			The integer solutions of the equation <m>x^2-dy^2=1</m> or <m>x^2-dy^2=-1</m> are precisely units in the ring <m>\Z[\sqrt{d}]</m>.
+		</statement>
+	</remark>
+	<!-- <proof>
+		<p>
+			Suppose that <m>a,b\in\Z</m> are such that <m>a^2+2b^2=1</m>, i.e., <m>1-a^2=2b^2\geq 0</m>, i.e., <m>|a|\leq 1</m>. Therefore, <m>a=0,\pm 1</m>. Since <m>b\in\Z</m> we must have <m>a\neq 0</m>. If <m>a=\pm 1</m> then <m>b=0</m>. Hence if <m>N(\alpha)=1</m> then <m>\alpha=\pm 1</m>.
+			Now suppose that <m>\alpha\in\Z[\sqrt{-2}]</m> is a unit. Thus there exists <m>\beta\in\Z[\sqrt{-2}]</m> such that <m>\alpha\beta=1</m>. Hence <m>N(\alpha)N(\beta)=1</m>. Since the function <m>N</m> takes values in non-negative integers we must have <m>N(\alpha)=1=N(\beta)</m>.
+		</p>
+		<p>
+		If <m>\alpha=\beta\gamma</m> then <m>N(\alpha)=N(\beta)N(\gamma)</m>. Since <m>\pm N(\alpha)</m> is a prime number, either <m>\pm N(\beta)</m> or <m>\pm N(\gamma)</m> is a unit. Thus we get the result.
+		</p>
+	</proof> -->
+	<lemma>
+		<title>(Units in <m>\Z[\sqrt{-2}]</m>)</title>
+		<statement>
+			By the above lemma an element <m>a+b\sqrt{-2}\in\Z[\sqrt{-2}]</m> is a unit if and only if <m>a^2+2b^2=1</m>. Thus we must have <m>a=\pm 1</m> and <m>b=0</m>.
+		</statement>
+	</lemma>
+	<p>
+		Suppose that <m>\alpha,\beta\in\Z[\sqrt{-2}]</m> with <m>\beta\neq 0</m>. Then we can consider <m>\alpha\beta^{-1}\in\C</m>. Note that we can always choose <m>q\in\Z[\sqrt{-2}]</m> with
+		<me>N\left(\alpha\beta^{-1}-q\right)\leq N\left(\frac{1+\sqrt{-2}}{2}\right)\lt 1.</me>
+		If we plot integers on <m>X=\R</m>-axis and integer multiples of <m>\sqrt{-2}</m> on the <m>Y=i\R</m>-axis then the choice of <m>q</m> will be clear. Note that it is similar to the result proved for Gaussian integers (ref <xref ref="sec-ED"/>). 
+	</p>
+	<proposition xml:id="division-algorithm-in-sqrt-2">
+		<title>(<m>\Z[\sqrt{-2}]</m> is ED)</title>
+		<statement>
+			For nonzero <m>\alpha,\beta\in\Z[\sqrt{-2}]</m> there exists <m>q,r\in\Z[\sqrt{-2}]</m> such that <me>\alpha=q\beta+r\quad\text{with}\;N(r)\lt N(\beta).</me>
+		</statement>
+	</proposition>
+	<remark>
+		<statement>
+			Consider <m>\Z[\sqrt{-5}]=\{a+b\sqrt{-5}:a,b\in\Z\}</m> with the map
+			<me>N\colon\Z[\sqrt{-5}]\to\Z_+\quad\text{given by}\quad a+b\sqrt{-5}\mapsto a^2+5b^2.</me>
+			Suppose that <m>\alpha,\beta\in\Z[\sqrt{-5}]</m> are nonzero elements such that <me>\alpha\beta^{-1}=\frac{1}{2}+\frac{\sqrt{-5}}{2}\in\C.</me> Suppose that we want to find <m>q=a+b\sqrt{-5}\in\Z[\sqrt{-5}]</m> such that <m>\alpha\beta^{-1}-q\in\Z[\sqrt{-5}]</m>. Thus <me>N\left(\alpha\beta^{-1}-q\right)=\frac{1}{4}(1-2a)^2+\frac{5}{4}(1-2b)^2</me>
+			In order to have <m>N\left(\alpha\beta^{-1}-q\right)\lt 1</m> we must have
+			<me>(1-2a)^2+5(1-2b)^2\lt 4\quad\text{for integers}\, a, b.</me>
+			Since for any <m>n\in\Z</m> we have <m>1-2n\neq 0</m> and hence <m>(1-2a)^2+5(1-2b)^2</m> is always bigger than <m>5</m>. Thus with the map <m>N</m> there does not exists <m>q\in\Z[\sqrt{-5}]</m> with <m>N\left(\alpha\beta^{-1}-q\right)\lt 1</m>.
+		</statement>
+	</remark>
+</section>

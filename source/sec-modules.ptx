@@ -1,0 +1,65 @@
+<section xml:id="sec-modules">
+	<title>Definition</title>
+	<introduction>
+		We generalize the concept of a vector space over a field. 
+	</introduction>
+	<definition xml:id="def-left-module">
+		<title>(Left Module)</title>
+		<statement>
+			Let <m>R</m> be a ring. An abelian group <m>(M,+)</m> is said to be a <term>left <m>R</m>-module</term> if there is a map <sq>scalar multiplication</sq> <me>R\times M\to M\quad\text{denoted by}\quad(r,m)\mapsto r\cdot m</me> satisfying the following conditions:
+			<ol>
+				<li>For any <m>r\in R</m> and any <m>m,n\in M</m> <me>r\cdot(m+n)=r\cdot m+r\cdot n</me></li>
+				<li>For any <m>r,s\in R</m> and any <m>m\in M</m>
+				<me>(r+s)\cdot m=r\cdot m+s\cdot m</me></li>
+				<li>For any <m>r,s\in R</m> and any <m>m\in M</m>
+				<me>(rs)\cdot m=r\cdot(s\cdot m)</me></li>
+				<li>For any <m>m\in M</m> <me>1_R\cdot m=m</me></li>
+			</ol>
+		</statement>
+	</definition>
+	<convention>
+		<statement>
+			A left <m>R</m> module <m>M</m> is referred to as an <m>R</m>-mod.
+		</statement>
+	</convention>
+	<p>
+		In a similar way we define a right module.
+	</p>
+	<definition xml:id="def-right-module">
+		<title>(Right Module)</title>
+		<statement>
+			Let <m>R</m> be a ring. An abelian group <m>(M,+)</m> is said to be a <term>right <m>R</m>-module</term> if there is a map <sq>scalar multiplication</sq> <me>M\times R\to M\quad\text{denoted by}\quad(m,r)\mapsto m\cdot r</me> satisfying the following conditions:
+			<ol>
+				<li>For any <m>r\in R</m> and any <m>m,n\in M</m> <me>(m+n)\cdot r= m\cdot r+ n\cdot r</me></li>
+				<li>For any <m>r,s\in R</m> and any <m>m\in M</m>
+				<me> m\cdot (r+s)=m\cdot r+ m\cdot s</me></li>
+				<li>For any <m>r,s\in R</m> and any <m>m\in M</m>
+				<me>m\cdot (rs)=(m\cdot r)\cdot s</me></li>
+				<li>For any <m>m\in M</m> <me>m\cdot 1=m</me></li>
+
+			</ol>
+		</statement>
+	</definition>
+	<convention>
+		<statement>
+			A right <m>R</m> module <m>M</m> is referred as mod-<m>R</m>.
+		</statement>
+	</convention>
+	<p>
+		Following properties follows immediately from the definition of <m>R</m>-module.
+	</p>
+	<lemma>
+		<statement>
+			Let <m>M</m> be a left <m>R</m>-module. For any <m>r\in R</m> and any <m>m\in M</m> we have the following.
+			<ol>
+				<li><m>r\cdot 0_M=0_M</m></li>
+				<li><m>0_R\cdot m=0_M</m></li>
+				<li><m>r\cdot(-m)=-(r\cdot m)</m></li>
+				<li>For <m>m_1,\ldots,m_k\in M</m> and any <m>r\in R</m> we have 
+				<me>r\cdot\left(m_1+\cdots +m_k\right)=r\cdot m_1+r\cdot m_2+\cdots+r\cdot m_k.</me></li>
+				<li>For <m>m_1,\ldots,m_\ell,n_1,\ldots,n_\ell\in M</m> we have
+				<me>\sum_{i=1}^{\ell}(m_i+n_i)=\sum_{i=1}^{\ell}m_i+\sum_{i=1}^{\ell}n_i</me>.</li>
+			</ol>
+		</statement>
+	</lemma>
+</section>

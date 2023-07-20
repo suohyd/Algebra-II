@@ -1,0 +1,29 @@
+<section xml:id="sec-polynomial-rings">
+	<title>Polynomial rings</title>
+	<introduction>
+		Let <m>R</m> be a ring. A <term>polynomial ring</term> in one variable over <m>R</m> is the following:
+<me>R[X]=\{a_0+a_1X+\cdots+a_nX^n:a_i\in R\text{ and }n\in\mathbb{N}\}</me>
+with <m>a_0+a_1X+\cdots+a_nX^n=0</m> if and only if <m>a_i=0</m> for <m>0\leq i\leq n</m>. If <m>f=a_0+a_1X+\cdots+a_nX^n</m> and <m>g=b_0+b_1X+\cdots+b_mX^m</m> with <m>m\leq n</m> then the addition is defined to be commutative and is given as follows.
+<me>f+g=\sum_{i=0}^{m}(a_i+b_i)X^i+\sum_{j=m+1}^{n}b_jX^j=g+f</me>
+and the multiplication is defined by
+<me>fg=\sum_i\left(\sum_{j=0}^{i}a_{j}b_{i-j}\right)X^i.</me>
+Under the binary operations defined above <m>R[X]</m> is a ring with unity. The additive identity is <m>0=0_R+0_RX+0_RX^2+\cdots</m> and the multiplicative identity is <m>1=1_R+0_RX+0_RX^2+\cdots</m>. The ring <m>R[X]</m> is called a polynomial ring over <m>R</m>. It is a commutative ring if and only if <m>R</m> is a commutative ring.
+There is a ring monomorphism
+<me>i\colon R\to R[X]\quad\text{given by}\quad r\mapsto r+0_RX+0_RX^2+\cdots</me>
+Suppose <m>f=a_0+a_1X+\cdots+a_nX^n\in R[X]</m>. We call <m>a_0</m> the <term>constant term of <m>f</m></term> and <m>a_n</m> the <term>leading coefficient</term> of <m>f</m>. We denote the leading coefficient of <m>f</m> by <m>LC(f)</m>. If <m>{\rm LC}(f)=a_n\neq 0</m> then the we define the <term>degree of <m>f</m></term>, <m>\deg(f)=n</m>. If <m>LC(f)=1</m> then <m>f</m> is called a <term>monic polynomial</term>. If <m>f=0</m> or <m>\deg(f)=0</m> then we call <m>f</m> a <term>constant polynomial</term>. We let <m>LC(0)=0_R</m>. We define the degree of the zero polynomial <m>\deg(0)=-\infty</m>. We follow the convention that for any <m>n\in\Z</m> we have <m>-\infty\lt n</m> and <m>-\infty+n=-\infty</m>.
+
+<p>
+	A <term>polynomial ring in <m>n</m> variables</term>, <m>R[X_1,X_2,\ldots,X_n]</m> is defined as the polynomial ring in <m>X_n</m> over <m>R[X_1,\ldots,X_{n-1}]</m>, i.e., <me>R[X_1,\ldots,X_n]=R[X_1,\ldots,X_{n-1}][X_n].</me>
+</p>
+	</introduction>
+	<lemma>
+		<statement>
+			Let <m>R</m> be a ring and let <m>f,g\in R[X]</m>.
+			<ol>
+				<li><m>\deg(f+g)\leq{\rm max}{\left\{\deg(f),\deg(g)\right\}}</m></li>
+				<li><m>\deg(fg)\leq\deg(f)+\deg(g)</m> with equality if and only if 
+				<me>LC(fg)=LC(f)\;LC(g)\quad\text{is nonzero}\quad.</me></li>
+			</ol>
+		</statement>
+	</lemma>
+</section>

@@ -1,0 +1,67 @@
+<section xml:id="sec-def-rings">
+	<title>Definition</title>
+	<definition xml:id="def-rings">
+		<title>(Ring with unity)</title>
+		<statement>
+			A ring <m>R</m> with unity is a nonempty set with two binary operations addition, denoted by <sq><m>+</m></sq> and multiplication, denoted by <sq><m>\cdot</m></sq> satisfying following conditions.
+			<ol>
+				<li><title>[Group under addition]</title><m>(R,+)</m> is an abelian group. We denote by <m>0</m> the identity of this group.</li>
+				<li><title>[Associativity under multiplication]</title> For any <m>r,s,t\in R</m> we have <m>r\cdot(s\cdot t)=(r\cdot s)\cdot t</m>.</li>
+				<li><title>[Existence of Unity]</title> There is an element <m>1\in R</m>, called <term>the unity of <m>R</m></term>, such that for every <m>r\in R</m> we have <me>r\cdot 1=1\cdot r=r.</me></li>
+				<li><title>[Distributive Laws]</title> For any <m>r,s,t\in R</m> we have
+				<me>r\cdot(s+t)=r\cdot s+r\cdot t\quad\text{and}\quad(s+t)\cdot r=s\cdot r+t\cdot r.</me>
+				</li>
+			</ol>
+		</statement>
+	</definition>
+
+	<observation>
+		<statement>
+			In <xref ref="def-rings"/>(1) assume that <m>(R,+)</m> is a group, not necessarily abelian. If we assume all other axioms of <xref ref="def-rings"/> then we get that <m>(R,+)</m> is abelian. Indeed for any <m>r,s\in R</m>, using distributive laws, we have the following.
+			<md><mrow>(1+1)(r+s)\amp=1\cdot(r+s)+1\cdot(r+s)</mrow><mrow>\amp=r+s+r+s</mrow></md>
+			<md><mrow>(1+1)(r+s)\amp=(1+1)\cdot r+(1+1)\cdot s</mrow><mrow>\amp=r+r+s+s</mrow></md>
+			Therefore, <m>r+s+r+s=r+r+s+s</m>. Since <m>(R,+)</m> is a group we have <m>r+s=s+r</m>.
+		</statement>
+	</observation>
+
+	<remark>
+		<statement>
+			There is a concept of a ring <alert>without unity</alert>, see Section 2.17 of <sq>Basic Algebra-I</sq> by N. Jacobson. Rings without unity are called, following Jacobson, <term>rngs</term> (word <sq>ring</sq> without <sq>i</sq>).
+		</statement>
+	</remark>
+
+	<convention>
+		In this course we always consider rings with unity.
+	</convention>
+
+	<remark>
+		<statement>
+			A nonempty set with a binary operation satisfying conditions <m>2</m> and <m>3</m> above is called a <term>monoid</term>. Thus a ring with unity is a monoid under multiplication and an abelian group under addition. The group structure and monoid structure of a ring are tied together by distributive laws.
+		</statement>
+	</remark>
+	<p>We give examples of rings in the next sections. We first deduce some properties of rings with unity.</p>
+	<proposition>
+		<statement>
+			Let <m>R</m> be a ring with unity. We have the following properties.
+			<ol>
+				<li><m>\left(\sum_{i=1}^{m}r_i\right)\cdot\left(\sum_{j=1}^{n}s_j\right)=\sum_{i,j}(r_i\cdot s_j)</m></li>
+				
+				<li>For any <m>r,s\in R</m> we have <me>0\cdot r=r\cdot 0=0\quad\text{and}\quad (-r)\cdot s=-(rs)</me>, where <m>-r</m> and <m>-(rs)</m> are the additive inverses of <m>r</m> and <m>rs</m>, respectively.
+				In particular, the additive inverse of <m>r\in R</m> is <m>-1\cdot r</m>.</li>
+				<li>If <m>r\in R</m> commutes with <m>s\in R</m>, i.e., if <m>r\cdot s=s\cdot r</m> then we have the <em>binomial theorem</em>.
+				<me>(r+s)^n=r^n+{n\choose 1} r^{n-1}\cdot s+\cdots+s^n</me>
+			</li>
+			</ol>
+		</statement>
+	</proposition>
+	<convention>
+		<statement>
+			<ol>
+				<li>
+					When the multiplication operation is clear from the context we often write <m>rs</m> instead of <m>r\cdot s</m>.
+				</li>
+				<li>For <m>r\in R</m> the additive inverse of <m>r</m> is denoted by <m>-r</m>. The <em>subtraction of two elements</em> <m>r,s</m> of a ring is written as <m>r-s</m>, where <me>r-s=r+(-s).</me></li>
+			</ol>
+		</statement>
+	</convention>
+</section>

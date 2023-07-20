@@ -1,0 +1,74 @@
+<section xml:id="sec-types-of-ring-elements">
+	<title>Types of ring elements</title>
+	<definition xml:id="def-0-divisor">
+		<title>(Zero-divisors)</title>
+		<statement>
+			<p>
+				A nonzero element <m>r</m> of a ring <m>R</m> is said to be a <term>left <m>0</m>-divisor</term> if there exists a nonzero element <m>s\in R</m> such that <m>rs=0</m>.
+			</p>
+			<p>
+				Right <m>0</m>-divisors are defined similarly.
+			</p>
+		</statement>
+	</definition>
+	<remark>
+		<statement>
+			A left <m>0</m>-divisor need <alert>not</alert> be a right <m>0</m>-divisor. For instance, consider a triangular ring given in <xref ref="example-triangular-rings"/> with <m>A=\Z/2\Z</m>. We denote the additive identity in the ring <m>\Z/2\Z</m> by <m>[0]</m>. Verify that the following element is a left <m>0</m>-divisor but not a right <m>0</m>-divisor.
+			<me>\begin{pmatrix}2\amp [0]\\0_{\Z}\amp 1\end{pmatrix}</me>
+		</statement>
+	</remark>
+	<definition xml:id="def-nilpotent-element">
+		<title>(Nilpotent Element)</title>
+		<statement>
+				An element <m>r</m> of a ring <m>R</m> said to be <term>nilpotent</term> if there exists a natural number <m>n</m> such that <m>r^n=0</m> in <m>R</m>.
+		</statement>
+	</definition>
+	<definition xml:id="def-idempotent-element">
+		<title>(Idempotent Elements and Orthogonal Idempotents)</title>
+		<statement>
+			<p>
+				An element <m>r</m> of a ring <m>R</m> said to be <term>idempotent</term> if <m>r^2=r</m> in <m>R</m>.
+			</p>
+			<p>Idempotents <m>0,1</m> of a ring <m>R</m> are called the <term>trivial idempotents</term>.</p>
+			<p>
+				Idempotents <m>\{e_i\}_{i\in I}</m> are called <term>orthogonal</term> if <m>e_ie_j=0=e_je_i</m> for every <m>i\neq j</m>.
+			</p>
+		</statement>
+	</definition>
+	<definition xml:id="def-left-right-invertible-element">
+		<title>(Left and right invertible elements)</title>
+		<statement>
+			Let <m>R</m> be a ring. A nonzero element <m>r\in R</m> is said to be <term>left invertible</term> (resp., <term>right invertible</term>) if there exists <m>s\in R</m> (resp., <m>s^\prime\in R</m>) such that <m>sr=1</m> (resp., <m>rs^\prime=1</m>), and we call <m>s</m> (resp., <m>s^\prime</m>) to be a left inverse (resp., a right inverse) of <m>r</m>.
+		</statement>
+	</definition>
+	<lemma xml:id="left-right-inverse-equality">
+		<statement>
+			Let <m>R</m> be a ring, and <m>0\neq r\in R</m>. If <m>s</m> is a left inverse of <m>r</m> and <m>t</m> is a right inverse of <m>r</m> then <m>s=t</m>.
+		</statement>
+	</lemma>
+	<proof>
+		We have <m>sr=1</m> and <m>rt=1</m>. Multiplying <m>sr=1</m> on right by <m>t</m> gives <m>(sr)t=t</m>. Associativity of multiplication and <m>rt=1</m> implies that <m>s=t</m>.
+	</proof>
+	<convention>
+		<statement>
+			<p>
+				Suppose that <m>0\neq r\in R</m> has both left and right inverse, say <m>s</m> and <m>t</m>, respectively. We denote <m>s=t=r^{-1}</m> and <m>r^{-1}</m> is called the <term>inverse</term> of <m>r</m>. Thus, <m>r^{-1}r=1=rr^{-1}</m>. The use of an article <sq>the</sq> before the term inverse is justified in the following <xref ref="uniquenss-of-inverse"/>.
+			</p>
+			</statement>
+	</convention>
+	<lemma xml:id="uniquenss-of-inverse">
+		<title>(Uniqueness of inverse)</title>
+		<statement>
+			If inverse of a nonzero element of a ring exists then it is unique.
+		</statement>
+	</lemma>
+	<proof>
+		Suppose that <m>s</m> and <m>t</m> are two inverses of a nonzero element <m>r</m> of a ring <m>R</m>, i.e., <m>sr=1=rs</m> and <m>rt=1=tr</m>. Thus, <m>(s-t)r=sr-tr=0</m> this implies that <m>(s-t)rt=0\cdot t</m> i.e., <m>s-t=0</m>.
+	</proof>
+	<definition xml:id="def-invertible-element">
+		<title>(Invertible element)</title>
+		<statement>
+				A nonzero element <m>r\in R</m> is said to be <term>invertible</term> in <m>R</m> or a <term>unit</term> in <m>R</m> if inverse of <m>r</m> exists in <m>R</m>. The inverse of <m>r</m> is denoted by <m>r^{-1}</m>.
+			</statement>
+	</definition>
+</section>

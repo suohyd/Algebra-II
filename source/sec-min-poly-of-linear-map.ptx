@@ -1,0 +1,44 @@
+<section xml:id="sec-min-poly-of-linear-map">
+	<title>Minimal polynomial of a linear map</title>
+	<introduction>
+		The minimal polynomial of a linear map was defined in <sq>Linear Algebra</sq> course. We obtain the minimal polynomial using Module Theory.
+	</introduction>
+	<p>
+	Let <m>F</m> be a field and let <m>F[x]</m> the polynomial ring in one variable over <m>F</m>. Suppose that <m>V</m> is a finite-dimensional vector space over <m>F</m>, i.e., <m>V</m> is a left <m>F</m>-module. Consider an <m>F</m>-linear map <m>T\in\End_F(V)</m>. We make <m>V</m> as an <m>F[x]</m>-module using <m>T</m> as follows. The scalar multiplication <m>F[x]\times V\to V</m> is defined by <me>\left(a_0+a_1x+\cdots+a_nx^n\right)\cdot v= a_0v+a_1T(v)+\cdots+a_nT^n(v).</me> Thus for <m>f(x)=a_0+a_1x+\cdots+a_nx^n\in F[x]</m> if we consider <m>f(T)=a_0\unit_V+a_1T+\cdots+a_nT^n</m> then we have, for any <m>v\in V</m>, <me>f(x)\cdot v=f(T)(v).</me>
+			It is left to the reader to verify that with the scalar multiplication defined above <m>V</m> becomes an <m>F[x]</m>-module.
+			Given <m>f\in F[x]</m> we define a group endomorphism of an abelian group <m>(V,+)</m> as follows:
+			<me>f(T)\colon V\to V\quad\text{given by}\quad v\mapsto f(x)\cdot v=f(T)(v).</me>
+			As in <xref ref="ring-hom-and-modules"/> we consider the following ring homomorphism:
+			<me>\varphi\colon F[x]\to\End_{\rm Grps}(V)\quad\text{given by}\quad f(x)\mapsto f(T).</me>
+			Note that <m>f(T)</m> is not only a group endomorphism but it is an <m>F</m>-linear map. Thus, <m>f(T)\in\End_F(V)\subset\End_{\rm Grps}(V)</m>. Since <m>\varphi</m> is a ring homomorphism its kernel, <m>\ker(\varphi)</m> is an ideal in <m>F[x]</m>. By the fundamental isomorphism theorem we get a ring and a vector space isomorphism
+			<me>F[x]/\ker(\varphi)\simeq\left\{f(T):f\in F[x]\right\}.</me>
+			Since <m>\left\{f(T):f\in F[x]\right\}\subseteq\End_F(V)</m> and <m>\dim_F(\End_F(V))\lt\infty</m>, while <m>\dim_F(F[x])=\infty</m>, the <m>\ker(\varphi)</m> is non-trivial.
+			<p>
+
+			As <m>F[x]</m> is a PID there exists a monic polynomial <m>m_T(x)\in\ker(\varphi)</m> such that <m>\ker(\varphi)=\langle m_T(x)\rangle</m>. Thus <m>m_T(x)</m> is characterized by each of the following properties:
+			<ol>
+				<li>Let <m>f(x)\in F[x]</m> and <m>m_T(x)</m> is monic. Then <m>f(T)\equiv 0</m> if and only <m>m_T(x)\mid f(x)</m>.</li>
+				<li>The polynomial <m>m_T(x)</m> is a monic polynomial of the least degree such that <m>m_T(T)=0</m>.</li>
+			</ol>
+			The polynomial <m>m_T(x)</m> is called the <term>minimal polynomial of <m>T</m></term>.
+		</p>
+	</p>
+	<p>
+		We reprove the following result from <sq>Linear Algebra</sq> course.
+	</p>
+	<proposition>
+		<statement>
+			Keep notations of the above paragraph. An element <m>a\in F</m> is a root of the minimal polynomial <m>m_T</m> if and only if <m>a</m> is an eigenvalue of <m>T</m>.
+		</statement>
+	</proposition>
+	<proof>
+		Assume that <m>a\in F</m> is a root of <m>m_T(x)</m>, i.e., <m>m_T(x)=(x-a)g(x)\in F[x]</m> with <m>\deg g\lt\deg m_T(x)</m>. Since <m>m_T</m> is a monic generator of <m>\ker(\varphi)</m> we must have <m>g(T)\neq 0\in\End_F(V)</m>. So let <m>v\in V</m> be such that <m>g(T)(v)\neq 0\in V</m>. Therefore we have the following.
+		<me>0=m_T(T)(v)=(T-a\unit_V)\left(g(T)(v)\right).</me>
+		In other words, <m>a\in F</m> is an eigenvalue of <m>T</m> with an eigenvector <m>g(T)(v)\in V</m>.
+		<p>
+			Now we show the converse. Suppose that <m>a\in F</m> is an eigenvalue of <m>T</m>. Thus there exists <m>0\neq v\in V</m> such that <m>T(v)=av</m>. By division algorithm there exists a constant <m>c\in F</m> and <m>q(x)\in F[x]</m> such that
+			<me>m_T(x)=q(x)(x-a)+c.</me>
+			Hence, <me>0=m_T(T)(v)=q(T)\left((T-a\unit_V)(v)\right)+c\cdot v=c\cdot v.</me> Since <m>v\neq 0</m> we get that <m>c=0\in F</m> and hence <m>x-a\mid m_T(x)</m>, i.e., <m>a\in F</m> is a root of <m>m_T(x)</m>.
+		</p>
+	</proof>
+</section>

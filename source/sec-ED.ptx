@@ -1,0 +1,38 @@
+<section xml:id="sec-ED">
+	<title>Euclidean Domains</title>
+<definition xml:id="def-ED">
+	<title>(Euclidean Domain)</title>
+	An integral domain <m>A</m> is said to be an <term>Euclidean domain</term> if there is a function <m>\delta\colon A\to\Z_+</m> such that if <m>a,b\in A</m> are nonzero then there exists <m>q,r\in A</m> such that 
+	<men xml:id="division-in-ED">
+		a=bq+r \quad\text{where}\;\delta(r)\lt\delta(b).
+	</men>
+</definition>
+<example xml:id="Z-is-ED">
+	<title>(<m>\Z</m> is an Euclidean Domain)</title>
+	<statement>
+		If we define <m>\delta\colon\Z\to\Z_+</m> by the absolute value map, i.e., for <m>n\mapsto|n|</m> then <m>\Z</m> becomes an Euclidean domain.
+	</statement>
+</example>
+<example xml:id="poly-is-ED">
+	<title>(<m>F[X]</m> is an Euclidean Domain)</title>
+	<statement>
+Also the division algorithm for polynomials in <m>F[X]</m> shows that <m>F[X]</m> is an Euclidean domain if we define <m>\delta\colon F[X]\to\Z_+</m> by <m>f(X)\mapsto 2^{\deg(f)}</m>.
+</statement>
+</example>
+<example xml:id="Gaussion-integer-is-ED">
+	<title>(Gaussian integers as an Euclidean Domain)</title>
+	We show that the ring of Gaussian integers is an Euclidean domain. Recall that the ring of Gaussian integers <me>\Z[i]=\{m+ni:m,n\in\Z\}</me> is a subring of <m>\C</m>. Hence, it is an integral domain. We define a map <m>\delta\colon\Z[i]\to\Z_+</m> by <me>m+ni\mapsto m^2+n^2.</me> Consider nonzero elements <m>x,y\in\Z[i]</m>. If <m>\delta(a)\lt\delta(b)</m> then we take <m>q=0\in\Z[i]</m> and <m>r=a\in\Z[i]</m> to obtain <xref ref="division-in-ED"/>. So we assume that <m>\delta(a)\geq\delta(b)</m>. Let <m>b=m_1+n_2i</m>. Since <m>0\neq b</m> its inverse <m>c=\tfrac{m_1}{m_1^2+n_1^2}-\tfrac{n_1}{m_1^2+n_1^2}i</m> exists in <m>\C</m>. Therefore, <m>ac=k+\ell i\in\C</m> with <m>k,\ell\in\Q</m>. Choose <m>r,s\in\Z</m> such that <m>|k-r|\leq\tfrac{1}{2}</m> and <m>|\ell-s|\leq\tfrac{1}{2}</m>. Put <m>M=k-r</m> and <m>N=\ell-s</m>. Thus <m>ac=(M+r)+(N+s)i\in\C</m>. In other words, <m>a=b(r+si)+b(M+Ni)</m>. Note that <m>M,N\in\Q</m>. However, <m>b(M+Ni)=a-b(r+si)\in\Z[i]</m>. Following the definition of <m>\delta</m> it is easy to see that <m>\delta\left(b(M+Ni)\right)\lt\delta(b)</m>.
+</example>
+<theorem xml:id="ED-implies-PID">
+	<statement>Every Euclidean domain is a principal ideal domain.</statement>
+</theorem>
+<proof>
+	Let <m>A</m> be an Euclidean domain with a map <m>\delta\colon A\to\Z_+</m>. Since the zero ideal is principal we show that every nonzero ideal in <m>A</m> is principal. Suppose that <m>\mfa</m> is a nonzero ideal. Choose <m>0\neq a\in\mfa</m> with <m>\delta(a)\leq\delta(x)</m> for every nonzero element <m>x\in\mfa</m>. Thus for any <m>x\in\mfa</m> there exists <m>q_x,r_x\in A</m> with <m>\delta(r_x)\lt\delta(a)</m> and <m>x=aq_x+r_x</m>. By the choice of <m>a</m> we thus have <m>r_x=0</m>. This shows that <m>\mfa=(a)</m>, i.e., <m>\mfa</m> is a principal ideal.
+</proof>
+<p>
+	Using <xref ref="PID-implies-UFD"/> and the above <xref ref="ED-implies-PID"/> we get the following result.
+</p>
+<corollary>
+	<statement>Every Euclidean domain is factorial/UFD.</statement>
+</corollary>
+</section>

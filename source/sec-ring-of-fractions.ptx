@@ -1,0 +1,93 @@
+<section xml:id="sec-ring-of-fractions">
+	<title>Ring of fractions</title>
+	<lemma xml:id="equivalence-relation-quotient">
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>S</m> be a multiplicatively closed subset of <m>A</m>. Consider <me>A\times S=\{(a,s):a\in A\text{ and }s\in S\}</me>. Define a relation <sq><m>\sim</m></sq> on <m>\mathcal{S}</m> as follows:
+			<me>(a,s)\sim (b,t)\quad\text{if there exists}\,u\in S\,\text{such that}\,u(at-bs)=0\in A.</me>
+			This is an equivalence relation.
+		</statement>
+	</lemma>
+	<convention>
+		<statement>
+			We keep the notation of <xref ref="equivalence-relation-quotient"/>. We denote the equivalence class of <m>(a,s)</m> by <m>a/s</m>.
+		</statement>
+	</convention>
+	<proposition>
+		<statement>
+			We keep the notations of <xref ref="equivalence-relation-quotient"/>.
+			The set
+			<me>S^{-1}A=\left\{a/s:a\in A\,\text{and}\,s\in S\right\}</me> with addition and multiplication defined below is a commutative ring.
+			<ol>
+				<li><m>(a/s)+(b/t)=(at+bs)/st</m> for <m>a,b\in A</m> and <m>s,t\in S</m></li>
+				<li><m>(a/s)\cdot (b/s)=ab/st</m> for <m>a,b\in A</m> and <m>s,t\in S</m>.</li>
+				<li>The additive identity of <m>S^{-1}A</m> is <m>0_A/1_A</m> while the multiplicative identity of <m>S^{-1}A</m> is <m>1_A/1_A</m>.</li>
+			</ol>
+		</statement>
+	</proposition>
+	<definition xml:id="def-ring-of-fractions">
+		<title>(Ring of fractions)</title>
+		Let <m>A</m> be a commutative ring and let <m>S</m> be a multiplicatively closed subset of <m>A</m>. Then 
+			<me>S^{-1}A=\left\{a/s:a\in A\,\text{and}\,s\in S\right\}</me> is called the <term>ring of fractions of <m>A</m> with respect to <m>S</m>.</term>
+	</definition>
+	<example xml:id="def-localization-at-prime">
+		<title>(Localization at a prime)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>\mfp</m> be a prime ideal in <m>A</m>. Consider a multiplicative set <m>S=A\setminus\mfp</m>. The ring of fractions <m>S^{-1}A</m> is also called the <term>localization at a prime <m>\mfp</m></term>. It is often denoted by <m>A_{\mfp}</m>.
+		</statement>
+	</example>
+	<example xml:id="def-field-of-fractions">
+		<title>(Field of fractions/Quotient field)</title>
+		<statement>
+			Let <m>A</m> be an integral domain. The set <m>S=A\setminus\{0\}</m> is a multiplicatively closed subset of <m>A</m>. The ring <m>S^{-1}A</m> is a field and it is called the <term>field of fractions of <m>A</m></term> or the <term>quotient field of <m>A</m></term>. Note that it is a particular case of <xref ref="def-localization-at-prime"/> with the prime ideal <m>(0)</m>.
+			<p>
+				The field of rational numbers <m>\Q</m> is obtained as the field of fractions of <m>\Z</m>.
+			</p>
+		</statement>
+	</example>
+	<lemma>
+		<statement>
+			Let <m>A</m> be an integral domain and let <m>Q</m> be the field of fractions of <m>A</m>. The mapping <m>i_A\colon A\to Q</m> given by <m>a\mapsto a/1_A</m> is a ring monomorphism.
+		</statement>
+	</lemma>
+	<proposition xml:id="universal-property-field-of-fractions">
+		<title>(Universal property of field of fractions)</title>
+		<statement>
+			Let <m>A</m> be an integral domain and let <m>Q</m> be the field of fractions of <m>A</m>. Suppose that <m>K</m> is a field. If there is a ring monomorphism <m>f\colon A\to K</m> then there is a unique ring monomorphism <m>g\colon Q\to K</m> such that <m>f=g\circ i_A</m>.
+		</statement>
+	</proposition>
+	<proof>
+		We define <m>g\colon Q\to K</m> by <m>a/b\mapsto f(a)f(b)^{-1}</m>.
+		<ol>
+			<li><title>[Well-definedness]</title>
+			Suppose that <m>a/b=c/d</m>, i.e., there exists <m>e\in A\setminus\{0\}</m> such that <m>e(ad-bc)=0\in A</m> (refer <xref ref="equivalence-relation-quotient"/>). Since <m>A</m> is an integral domain, <m>ad=bc</m>. Thus, <m>f(a)f(d)=f(b)f(c)</m>. By the assumption <m>f</m> is an monomorphism, <m>b\neq 0</m> and <m>c\neq 0</m>. Hence, <m>f(a)f(b)^{-1}=f(c)f(d)^{-1}</m>.
+		</li>
+		<li>
+			<title>[Ring homomorphism]</title>
+			Left to the reader.
+		</li>
+		<li>
+			<title>[Injectivity]</title>
+			Suppose that <m>g(a/b)=f(a)f(b)^{-1}=0</m>. Thus <m>f(a)=0</m> and since <m>f</m> is given to be a monomorphism <m>a=0_A</m>. By <xref ref="equivalence-relation-quotient"/> we have <m>0_A/b=0_A/1_A</m> and thus <m>g</m> is injective.
+		</li>
+		<li>
+			<title>[Uniqueness]</title>
+			Let <m>h\colon Q\to K</m> be a ring monomorphism such that <m>f=h\circ i_A</m>. Thus <m>f(a)=h(a/1_A)=g(a/1_A)</m>. For <m>0\neq b\in A</m> we have <me>1_K=h(1_A/1_A)=h(b/1_A\cdot 1_A/b)=h(b/1_A)\cdot h(1_A/b)=f(b)\cdot h(1_A/b).</me>
+			Hence <m>h(1_A/b)=f(b)^{-1}</m>. Therefore, <m>h(a/b)=f(a)f(b)^{-1}</m>.
+		</li>
+		</ol>
+	</proof>
+	<corollary>
+		<statement>
+			<ol>
+				<li>If <m>K</m> is a field of characteristic zero then there is a unique ring monomorphism <m>\Q\to K</m>.</li>
+				<li>If <m>K</m> is a field of characteristic <m>p</m> then there is a unique ring monomorphism <m>\mathbb{F}_p\to K</m>.</li>
+			</ol>
+		</statement>
+	</corollary>
+	<exercise xml:id="def-rational-function-field">
+		<title>(Rational function field)</title>
+		<statement>
+			Consider the polynomial ring over a field <m>F[x]</m>. Describe the field of fractions/quotient field of <m>F[x]</m>. We denote the field of fractions of <m>F[x]</m> by <m>F(x)</m>, and it is called the <term>rational function field</term>.
+		</statement>
+	</exercise>
+</section>

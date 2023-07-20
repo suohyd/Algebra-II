@@ -1,0 +1,63 @@
+<section xml:id="sec-examples-of-algebras">
+	<title>Examples of <m>F</m>-algebras</title>
+	<introduction>
+		In this section we assume that <m>F</m> is a field. We give several examples of <m>F</m>-algebras. In the following examples checking that the underlying abelian group structures for a ring and a vector space are the same will be easy, and it is left to the reader. In some instances we only  verify <xref ref="algebra-identity"/>.
+	</introduction>
+	<example xml:id="trivial-algebra">
+		<title>(Trivial algebra)</title>
+		<statement>
+			The trivial group <m>\{0\}</m> as a ring as well as a vector space over <m>F</m> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="field-extensions">
+		<title>(Field extensions)</title>
+		<statement>
+			Suppose that <m>E</m> is a field containing <m>F</m>. Then <m>F</m> is a subspace as well as a subring of <m>E</m>. We also get that <m>E</m> is an <m>F</m> algebra because <m>E</m> is commutative.
+		</statement>
+	</example>
+	<example xml:id="matrix-algebra">
+		<title>(Matrix algebra)</title>
+		<statement>
+			Consider <m>n\times n</m> matrices over <m>F</m>, <m>M_n(F)</m>. Recall that <m>M_n(F)</m> is a vector space over <m>F</m> via the scalar multiplication defined by
+			<me>\alpha\cdot(a_{ij})=(\alpha a_{ij})\quad\text{where}\;\alpha\in F\;\text{and}\;(a_{ij})\in M_n(F).</me> 
+			Verify that <m>\alpha\cdot\left((x_{ij})(y_{ij})\right)=\left(\alpha\cdot(x_{ij})\right)(y_{ij})=(x_{ij})\left(\alpha\cdot (y_{ij})\right)</m>.
+			Thus <m>M_n(F)</m> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="opposite-algebra">
+		<title>Opposite algebra</title>
+		<statement>
+			Assume that <m>A</m> is an <m>F</m>-algebra. Consider the opposite ring <m>A^{\rm op}</m> (see <xref ref="example-opposite-ring"/>). We claim that <m>A^{\rm op}</m> is an <m>F</m>-algebra. We make <m>A^{\rm op}</m> a vector space over <m>F</m> via the following scalar multiplication. For any <m>\alpha\in F</m> and <m>x^{\rm op}\in A^{\rm op}</m> we define
+			<me>\alpha\cdot x^{\rm op}=({\alpha\cdot x})^{\rm op},\quad\text{where }\alpha\cdot x\;\text{is scalar multiplication defined on }A</me>
+			Suppose that <m>\alpha\in F</m> and <m>x^{\rm op},y^{\rm op}\in A^{\rm op}</m>. Then we have
+			<md><mrow>\alpha\cdot(x^{\rm op}y^{\rm op})\amp=\alpha\cdot(yx)\amp</mrow><mrow>\amp=(\alpha\cdot y)x\amp\text{Since }A\text{ is an }F\text{-algebra}</mrow><mrow>\amp=x^{\rm op}(\alpha\cdot y)^{\rm op}\amp</mrow><mrow>\amp=x^{\rm op}(\alpha\cdot y^{\rm op})\amp</mrow></md>
+			Similarly we get <m>\alpha\cdot(x^{\rm op}y^{\rm op})=(\alpha\cdot x^{\rm op})y^{\rm op}</m>. Hence <m>A^{\rm op}</m> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="endomorphism-algebra">
+		<title>(Endomorphisms of a vector space)</title>
+		<statement>
+			Let <m>V</m> be a vector space over <m>F</m>. By <xref ref="example-endo-of-vs"/>, <m>\End_F(V)</m> is a ring and we have seen that it is also a vector space. It is easy to verify that <m>\End_F(V)</m> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="polynomial-algebra">
+		<title>(Polynomial ring as an <m>F</m>-algebra)</title>
+		<statement>
+			The polynomial ring over <m>F</m>, <m>F[X]</m> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="example-quaternion-algebra">
+		<title>(Quaternion algebra)</title>
+		<statement>
+			The ring <m>(a,b)_F=\langle i,j:i^2=a,j^2=b,ij=-ji\rangle</m> defined in <xref ref="sec-quaternions"/> is an <m>F</m>-algebra.
+		</statement>
+	</example>
+	<example xml:id="centralizer-of-algebra">
+		<title>(Centralizer)</title>
+		<statement>
+			Let <m>A</m> be an <m>F</m>-algebra and <m>S</m> be a nonempty subset of <m>A</m>. The centralizer of <m>S</m>,
+			<me>C_A(S)=\{a\in A:as=sa\quad\text{for all}\;s\in S\}</me>
+			is an <m>F</m>-algebra. This is a subring of <m>A</m> (refer to <xref ref="def-centralizer"/>). Verify that <m>C_A(S)</m> is a vector subspace of <m>A</m>. Since <m>A</m> is an <m>F</m>-algebra the identity <xref ref="algebra-identity"/> is satisfied by <m>C_A(S)</m>. Hence, centralizer is an <m>F</m>-subalgebra.
+		</statement>
+	</example>
+</section>

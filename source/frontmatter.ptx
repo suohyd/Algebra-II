@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This frontmatter division will contain all content before the -->
+<!-- first chapter.  Fill in and comment/uncomment to see how this -->
+<!-- works.                                                        -->
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <titlepage>
+    <author>
+      <personname>A. Soman</personname>
+      <department>School of Mathematics and Statistics</department>
+      <institution>University of Hyderabad</institution>
+    </author>
+    <!-- <date><today/></date> -->
+  </titlepage>
+
+  <colophon>
+    <!--<website>
+    <name><c>my-website.org</c></name>
+      <address>http://my.website.org</address>
+    </website>-->
+
+    <copyright>
+      <!-- In addition to specifying the copyright holder, you should  -->
+      <!-- include a license, such as the cc-by-sa license shown below -->
+      <!-- so people reading your book know how they can use it.       -->
+      <year>2022<ndash/>2023</year>
+      <holder>A. Soman</holder>
+      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
+      <shortlicense>
+        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
+        This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</url>
+      </shortlicense>
+
+    </copyright>
+
+  </colophon>
+
+  <!--<dedication>
+    <p>
+      For ...
+    </p>
+  </dedication>-->
+
+  <!--<acknowledgement>
+    <p>
+      I would like to thank...
+    </p>
+
+  </acknowledgement>-->
+
+  <preface xml:id="preface">
+    <!-- You should be a little careful about what you put here -->
+    <!-- Avoid elements that should have a number, for example  -->
+    <p>
+      These are companion notes and it is a work in progress. All material covered in these notes is standard and can be found in references listed below.
+      <ol>
+       <li><sq>Basic Algebra-I</sq> by N. Jacobson</li>
+       <li><sq>Abstract Algebra</sq> by D. Dummit and S. Foote</li>
+       <li><sq>Introduction to Rings And Modules</sq> by C. Musili</li>
+       <li><sq><url href="https://www.math.ucla.edu/~rse/">Lectures on Abstract Algebra</url></sq> by R. Elman </li>
+       <li><sq>Algebra</sq> by S. Lang</li>
+       <li><sq>Algebra</sq> by M. Artin</li>
+       <li><sq>A first course in noncommutative rings</sq> by T. Y. Lam</li>
+      </ol>
+    </p>
+
+  </preface>
+
+  <!-- You can have more than one preface. -->
+</frontmatter>
+

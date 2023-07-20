@@ -1,0 +1,67 @@
+<exercises xml:id="ex-UFD-PID-ED">
+		<exercise>
+			<statement>
+				Show that a field is a PID.
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				Show that <m>\Z[\sqrt{2}]=\{a+b\sqrt{2}:a,b\in\Z\}</m> is ED.
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				Suppose that <m>A</m> is a PID and it is a subring of an integral domain <m>B</m>. Show that for <m>a_1,a_2\in A</m> if <m>d=\gcd(a_1,a_2)\in A</m> then <m>d=\gcd(a_1,a_2)\in B</m>.
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				Show that the map <m>\ev\colon\Z[x]\to\Z[\sqrt{-5}]</m> given by <m>f(x)\mapsto f(\sqrt{-5})</m> is a ring epimorphism. Show that <m>\Z[\sqrt{-5}]</m> is not a UFD. We prove in the next chapter that <m>\Z[x]</m> is a UFD. This shows that epimorphism of a UFD need not be a UFD.
+			</statement>
+			<hint>
+				<m>9=3\cdot 3=(2+\sqrt{-5})(2-\sqrt{-5})\in\Z[\sqrt{-5}]</m>.
+			</hint>
+		</exercise>
+		<exercise>
+			<statement>
+				Show that if <m>A</m> is an integral domain but not a field then <m>A[x]</m> is not a PID.
+			</statement>
+			<hint>
+				If <m>A[x]</m> is a PID then the ideal <m>(x)</m> is maximal. Indeed, if <m>(x)\subset I</m> then <m>I=(d)</m> (since <m>A</m> is a PID), and <m>x=de</m> for some <m>e\in A[x]</m>. Degree consideration implies that <m>x\sim d</m> or <m>d\sim 1</m>, i.e., either <m>I=(x)</m> or <m>I=A[x]</m>. Hence <m>(x)</m> is maximal and thus <m>A[x]/(x)\simeq A</m> is a field.
+			</hint>
+		</exercise>
+		<exercise>
+			<statement>
+				Show that if <m>\varphi\colon A\to B</m> is a ring isomorphism, and <m>A</m> is a UFD then <m>B</m> is a UFD.
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				Determine irreducible elements of <m>\Z[i]</m>.
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				Let <m>p\equiv 1\mod 4</m> be a prime number. Show that there exists <m>n\in\Z</m> such that <m>p\mid (n^2+1)</m>, i.e., <m>n^2\equiv -1\mod p</m>.
+			</statement>
+			<hint>
+				Consider <m>n=1\cdot 2\cdots\frac{p-1}{2}</m> and use Wilson's theorem, i.e., <m>(p-1)!\equiv -1\mod p</m>.
+			</hint>
+		</exercise>
+		<exercise>
+			<statement>
+				Suppose that <m>p\equiv 1\mod 4</m> is a prime number. Show that <m>p</m> is reducible in <m>\Z[i]</m>.
+			</statement>
+			<hint>
+			By the above exercise there exists <m>n\in\Z</m> such that <m>p\mid (n^2+1)</m>. In <m>\Z[i]</m>, <m>n^2+1=(n+i)(n-i)</m>. Assume that <m>p</m> is irreducible in <m>\Z[i]</m>. Thus <m>p</m> is a prime element in <m>\Z[i]</m> (why?). This implies that either <m>p\mid n+i</m> or <m>p\mid n-i</m>.
+		</hint>
+	</exercise>
+	<exercise>
+		<statement>
+			If <m>p\in\N</m> is a prime number such that <m>p\equiv -1\mod 4</m> then <m>p</m> is a sum of two squares in <m>\Z</m>.
+		</statement>
+		<hint>
+			Using the above exercise write <m>p=xy</m> with <m>x,y\in\Z[i]</m> such that <m>y</m> is irreducible in <m>\Z[i]</m> and <m>x</m> is a non-unit in <m>\Z[i]</m>. Taking Euclidean norm defined on <m>\Z[i]</m>, and using the fact that <m>\Z</m> is a UFD we get the result.
+		</hint>
+	</exercise>
+	</exercises>

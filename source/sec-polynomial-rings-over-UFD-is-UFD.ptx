@@ -1,0 +1,35 @@
+<section xml:id="sec-polynomial-rings-over-UFD-is-UFD">
+	<title>Polynomial ring over a UFD is a UFD</title>
+	<introduction>
+		We show that a polynomial ring over a UFD is again a UFD.
+	</introduction>
+	<proposition xml:id="irreducible-over-quotient-field">
+		<statement>
+			Let <m>A</m> be a UFD and <m>Q</m> be its quotient field. A nonconstant irreducible polynomial over <m>A[x]</m> remains irreducible over <m>Q[x]</m>.
+		</statement>
+	</proposition>
+	<proof>
+		Suppose that <m>f\in A[x]</m> is a nonconstant irreducible polynomial in <m>A[x]</m>. By <xref ref="properties-of-content"/>, <m>f</m> is primitive. Suppose that <m>f=gh\in Q[x]</m> for some polynomials in <m>g,h\in Q[x]</m> with <m>\deg g\lt\deg f</m> and <m>\deg h\lt\deg f</m>.
+		By <xref ref="clearing-denominators"/>, there are <m>\alpha,\beta\in Q</m> and primitive polynomials <m>g_1,h_1\in A[x]</m> such that <m>g=\alpha g_1</m> and <m>h=\beta h_1</m>. Thus <m>f=(\alpha\beta)g_1h_1</m>. By Gauss's lemma (<xref ref="Gauss-theorem"/>), <m>g_1h_1\in A[x]</m> is a primitive polynomial. Therefore, <m>\alpha\beta\in A</m> is a unit in <m>A</m>. We thus get the result.
+	</proof>
+	<theorem>
+		<statement>
+			If <m>A</m> is a UFD then <m>A[x]</m> is a UFD.
+		</statement>
+	</theorem>
+	<proof>
+		<p>
+			First observe that an irreducible element in <m>A</m> remains irreducible in <m>A[x]</m>. Thus in order to show <m>A[x]</m> is a UFD we first show that any nonzero nonunit polynomial <m>f\in A[x]</m> can be factored into a product of irreducibles. So we assume that <m>f\in A[x]</m> is a nonzero nonunit. By <xref ref="properties-of-content"/>, there exists a primitive polynomial <m>f_1\in A[x]</m> such that <m>f=C(f)f_1</m>. Since <m>A</m> is UFD, <m>C(f)</m> can be uniquely factored into irreducibles in <m>A</m>. Thus we further assume that <m>f\in A[x]</m> is a primitive reducible polynomial. So there are <m>g,h\in A[x]</m> such that <m>f=gh</m>, and <m>\deg g\lt\deg f</m> and <m>\deg h\lt\deg f</m>. By induction on <m>\deg f</m> we get <m>g,h</m> can be factored in <m>A[x]</m>, thus <m>f</m> can be factored in a product of irreducibles in <m>A[x]</m>.
+		</p>
+		<p>
+			Now we show that the factorization obtained above is essentially unique. Suppose that <m>f</m> is a nonconstant primitive polynomial in <m>A[x]</m> and 
+			<me>f=p_1p_2\cdots p_r=q_1q_2\cdots q_s.</me>
+			By <xref ref="irreducible-over-quotient-field"/> each <m>p_i</m> and <m>q_j</m> remains irreducible over the quotient field <m>Q</m> of <m>A</m>. Since <m>Q[x]</m> is UFD we must have <m>r=s</m> and there are <m>a_i\in Q^\times</m> such that <m>p_i=a_iq_{\sigma(i)}</m> for some permutation <m>\sigma\in S_r</m>. However, as <m>p_i</m> and <m>q_j</m> are irreducibles in <m>A[x]</m>, by <xref ref="properties-of-content"/>, <m>p_i,q_j</m> are primitive elements of <m>A[x]</m>. Therefore, <m>a_i\in A^\times</m> for every <m>i</m> (see <xref ref="primitive-in-UFD-and-ff"/>), i.e., <m>p_i\sim q_{\sigma(i)}</m>.
+		</p>
+	</proof>
+	<corollary xml:id="polynomial-ring-over-field-is-UFD">
+		<statement>
+			A polynomial ring in <m>n</m>-variable over a field <m>F</m>, <m>F[x_1,\ldots,x_n]</m> is a UFD.
+		</statement>
+	</corollary>
+</section>

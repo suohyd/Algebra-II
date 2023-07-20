@@ -1,0 +1,153 @@
+<section xml:id="sec-division-algorithm">
+	<title>Division algorithm</title>
+	<theorem xml:id="division-algorithm">
+		<title>(Division Algorithm)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring with unity. Let <m>f(X)</m> and <m>0\neq g(X)</m> be elements of <m>A[X]</m>. Suppose that <m>LC(g(X))=b_m</m> and <m>\deg(g)=m</m>. Then there exists <m>k\in\N</m>, and <m>q(X),r(X)\in A[X]</m> with <m>\deg(r)\lt\deg(g)</m> such that <me>b_m^kf(X)=q(X)g(X)+r(X).</me>
+		</statement>
+	</theorem>
+	<proof>
+		If <m>\deg(f)\lt\deg(g)</m> then the resuLC follows by taking <m>k=0</m> and <m>q(X)=0</m>. So, assume that <m>\deg(g)=m\leq\deg(f)</m>. Suppose that <me>f(X)=a_0+a_1X+\cdots+a_nX^n\quad\text{and}\quad g(X)=b_0+b_1X+\cdots+b_mX^m.</me> Put <m>f_1(X)=b_mf(X)-a_nX^{n-m}g(X)</m>. Thus
+		<me>f_1(X)=b_ma_0+b_ma_1X+\cdots+b_ma_nX^n-a_nb_0X^{n-m}-a_nb_1X^{n-m+1}-\cdots-a_nb_mX^n.</me> Therefore, <m>\deg(f_1)\lt\deg(f)</m>. We use induction on <m>\deg(f)</m>. Thus, by induction, there exists <m>k_1\in\N</m>, and <m>q_1(X),r(X)\in A[X]</m> with <m>\deg(r)\lt\deg(g)</m> such that <me>b_m^{k_1}f_1(X)=q_1(X)g(X)+r(X).</me> Hence,
+		<me>b_m^{k_1}f_1(X)=b_m^{k_1+1}f(X)-b_m^{k_1}a_nX^{n-m}g(X)=(q_1(X)+b_m^{k_1}a_nX^{n-m})g(X)+r(X).</me>
+	</proof>
+	<corollary xml:id="division-algorithm-for-LC-unit">
+		<statement>
+			If <m>LC(g)=b_m</m> is invertible then there exists <m>q(X),r(X)\in A[X]</m> with <m>\deg(r)\lt\deg(g)</m> such that 
+		<me>f(X)=q(X)g(X)+r(X).</me> Moreover, <m>q(X)</m> and <m>r(X)</m> are uniquely determined.
+	</statement>
+	</corollary>
+	<remark>
+		<statement>
+			The above <xref ref="division-algorithm-for-LC-unit"/> is particularly useful when we consider polynomial ring in several variables over a field.
+		</statement>
+	</remark>
+	<definition xml:id="def-divisor-polynomial">
+		<title>(Divisor)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>f,g\in A[X]</m>. We say that <m>g</m> divides <m>f</m>, and write it as <m>g\mid f</m>, if there exists <m>q(X)\in A[X]</m> such that <m>f(X)=q(X)g(X)</m>.
+		</statement>
+	</definition>
+	<observation>
+		<statement>
+			<p>
+				Let <m>A</m> be a commutative ring. Suppose that <m>a\in A</m> and <m>f,g\in A[X]</m>. Then <me>(fg)(a)=f(a)g(a)=g(a)f(a).</me> In other words, the evaluation map <m>\ev_a\colon F[X]\to F[X]</m> is a ring homomorphism. We use this observation without explicitly mentioning it.
+			</p>
+			<p>
+				If ring is not commutative then <m>(fg)(a)</m> need not be the same as <m>f(a)g(a)</m>. We first recall that <m>(fg)(a)</m> is obtained as follows: First write <m>fg</m> in the form <m>c_0+c_1X+\cdots+c_rX^r</m> and then <m>(fg)(a)=c_0+c_1a+\cdots+c_ra^r</m>. 
+			</p>
+			<p>
+				Suppose that <m>R=M_2(\R)</m> and consider the following polynomials over <m>M_2(\R)</m>:
+<me>f(X)=X-\begin{pmatrix}
+	1\amp0\\0\amp-1
+\end{pmatrix}\in M_2(\R)[X]\quad\text{and}\quad g(X)=X-\begin{pmatrix}
+0\amp1\\-1\amp0
+\end{pmatrix}\in M_2(\R)[X].</me> Then <me>(fg)(X)=X^2-\begin{pmatrix}1\amp1\\-1\amp-1\end{pmatrix}X+\begin{pmatrix}
+0\amp1\\1\amp0
+\end{pmatrix}\in M_2(\R)[X].</me> We can then see that <me>(fg)\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)\neq 0</me>, while <me>f\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)g\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)=0</me>.
+			</p>
+		</statement>
+	</observation>
+	<definition xml:id="def-root">
+		<title>(Root of a polynomial)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring and <m>f\in A[X]</m>. An element <m>a\in A</m> is said to be a <term>root of <m>f(X)</m> in <m>A</m></term> if <m>f(a)=0</m>.
+		</statement>
+	</definition>
+	<lemma xml:id="root-iff-linear-factor">
+		<title>(Root iff linear factor)</title>
+		<statement>
+			Let <m>A</m> be a nonzero commutative ring. Suppose that <m>a\in A</m> and <m>f\in A[X]</m>. We have <m>f(a)=0</m> if and only if <m>f(X)=q(X)(X-a)</m> for some <m>q(X)\in A[X]</m>.
+			</statement>
+	</lemma>
+	<proof>
+				Indeed, as <m>LC(X-a)=1\in A</m> is a unit, by <xref ref="division-algorithm-for-LC-unit"/>, there exists <m>q(X),r(X)\in A[X]</m> with <m>\deg(r)\lt 1</m> (i.e., <m>r(X)</m> is a constant polynomial) such that <m>f(X)=q(X)(X-a)+r(X)</m>. Since <m>f(a)=0</m> we get <m>0=f(a)=q(a)\cdot 0+r(a)</m>. Thus <m>r(X)</m>, which is a constant polynomial, must be zero. Hence we get the resuLC.
+			</proof>
+	<lemma>
+		<statement>
+			Let <m>A</m> be an integral domain, and let <m>f(X)\in A[X]</m> be a nonzero polynomial. If <m>a_1,\ldots,a_n\in A</m> are pairwise distinct roots of <m>f</m> then <m>(X-a_1)\cdots(X-a_n)</m> divides <m>f</m>.
+		</statement>
+	</lemma>
+	<proof>
+		The case when <m>n=1</m> is <xref ref="root-iff-linear-factor"/>. We now assume that <m>n\gt 1</m>. By repeated application of <xref ref="root-iff-linear-factor"/>, <m>f(X)=(X-a_1)^rg(X)</m> and <m>g(a_1)\neq 0</m>. Since <m>A</m> is an integral domain, <m>\deg(g)\leq\deg(f)-r\lt\deg(f)</m>. Moreover for <m>2\leq i\leq n</m>, <m>0=f(a_i)=(a_i-a_1)^rg(a_i)</m>. Since <m>A</m> is an integral domain and <m>a_i\neq a_1</m>, we have <m>g(a_i)=0</m>. By induction, <m>(X-a_2)\cdots(X-a_n)</m> divides <m>g(X)</m>. Therefore, we get the resuLC.
+	</proof>
+	<corollary xml:id="finite-roots">
+				<title>(Finite roots)</title>
+				<statement>
+					Let <m>F</m> be a field and <m>0\neq f(X)\in F[X]</m>. Then <m>f(X)</m> has at most <m>\deg(f)</m> many roots in <m>F</m>.
+				</statement>
+			</corollary>
+			<remark>
+				<statement>
+					Let <m>A=\prod_{n\in\N}\Z/3\Z</m>, a product ring as defined in <xref ref="example-product-of-rings"/>. It is a commutative ring but not an integral domain. There are infinitely many roots of the polynomial <m>X^2-1_A\in A[X]</m> in <m>A</m>. For instance, let <m>a_{n}=(1,\ldots,1,-1,1,\ldots)\in A</m> be such that <m>-1\in\Z/3\Z</m> occurs at <m>n</m>-th place and all other entries are <m>1\in\Z/3\Z</m>. Then, <m>a_{n}</m> is a root of <m>X^2-1_A</m> for each <m>1\leq n\lt\infty</m>.
+				</statement>
+			</remark>
+	<example xml:id="Gaussian-integers-as-quotient-rings">
+		<title>(Gaussian integers as a quotient ring)</title>
+		<statement>
+			We show that <m>\Z[i]\simeq\Z[X]/(X^2+1)</m>.
+			Consider the map <m>\ev_i\colon\Z[X]\to\Z[i]</m> defined by <me>\sum_ka_kX^k\mapsto\sum_ka_ki^k</me> Check that the map <m>\ev_i</m> is a ring epimorphism. We compute its kernel, <m>\ker(\ev_i)=\{f\in\Z[X]:f(i)=0\}</m>. The ideal generated by <m>X^2+1</m>, <m>(X^2+1)\subseteq\ker(\ev_i)</m>. Now suppose that <m>f\in\ker(\ev_i)</m>. Since the <m>LC(X^2+1)=1\in\Z</m> is invertible in <m>\Z</m>, we use <xref ref="division-algorithm-for-LC-unit"/>, to obtain <m>q(X),r(X)\in\Z[X]</m> with <m>\deg(r)\lt 2</m> such that <m>f(X)=q(X)(X^2+1)+r(X)</m>. Hence, <me>0=f(i)=q(i)(i^2+1)+r(i)\in\Z[i],\quad\text{i.e.,}\quad r(i)=0.</me> If <m>r(X)\neq 0</m> then , by <xref ref="root-iff-linear-factor"/>, <m>r(X)=n(X-i)\in\Z[X]</m> for some <m>n\in\Z</m>. This implies that <m>i\in\Z</m>, a contradiction. Hence <m>r(X)=0</m> and <m>f\in(X^2+1)</m>. Therefore, <m>\ker(\ev_i)=(X^2+1)</m> and by <xref ref="FIT"/>, we get the resuLC.
+		</statement>
+	</example>
+	<example xml:id="radical-ideal-twisted-cubic-curve">
+		<title>(Radical of <m>(Y^2-X^3)</m>)</title>
+		<statement>
+			<p>
+				The below example has connections to geometry. We will not make the connection explicit in this course. However, you may see the curve <m>Y^2-X^3</m> in <m>\R^2</m> <url href="https://www.wolframalpha.com/input?i=plot+y%5E2%3Dx%5E3">here</url>.
+			</p>
+			Consider <m>\Q[X,Y]</m> and the ideal generated by <m>Y^2-X^3\in\Q[X,Y]</m>, <m>(Y^2-X^3)</m>. 
+			<!--Consider the evaluation homomorphism
+			<me>\ev_{(a^2,a^3)}\colon\Q[X,Y]\mapsto\Q\quad\text{given by}\quad f(X,Y)\mapsto f(a^2,a^3).</me>
+			We claim that <m>\ker(\ev_{(a^2,a^3)})=(Y^2-X^3)</m>. We have <m>(Y^2-X^3)\subseteq\ker(\ev_{(a^2,a^3)})</m>.-->
+ We show that if <m>f(X,Y)\in\Q[X,Y]</m> is such that <m>f(a^2,a^3)</m> for any <m>a\in\Q</m> then <m>f(X,Y)\in(Y^2-X^3)</m>. We consider <m>f(X,Y),Y^2-X^3</m> as polynomials over <m>\Q[X]</m> in variable <m>Y</m>. Thus we can apply <xref ref="division-algorithm-for-LC-unit"/> to get the following.
+			<me>f=q(X,Y)(Y^2-X^3)+r(X)Y+s(X),\quad\text{where}\quad r(X),s(X)\in\Q[X]</me> By the assumption, <m>f(a^2,a^3)=0</m> for every <m>a\in\Q</m>, and hence we get that <me>r(a^2)a^3+s(a^2)=0\quad\text{for every}\quad a\in\Q.</me> This shows that the polynomial <m>r(X^2)X^3+s(X^2)\in\Q[X]</m> has infinitely many roots in <m>\Q</m>. By <xref ref="finite-roots"/>, we must have <m>r(X^2)X^3+s(X^2)=0\in\Q[X]</m>. Comparing even degree and odd degree terms we get that <m>r=s=0\in\Q[X]</m>. Thus, <m>f\in(Y^2-X^3)</m> and the resuLC is proved.
+		</statement>
+	</example>
+		<example xml:id="maximal-ideals-in-poly-in-several-variables">
+		<title>(Examples of maximal ideals in <m>F[X_1,\ldots,X_n]</m>)</title>
+		<statement>
+			Let <m>F</m> be a field and let <m>F[X_1,X_2,\ldots,X_n]</m> be the polynomial ring over <m>F</m> in <m>n</m> variables.
+			We give examples of maximal ideals in <m>F[X_1,\ldots,X_n]</m>. Fix <m>a_1,a_2,\ldots,a_n\in F</m>.
+			<p>
+				Consider the evaluation <m>F</m>-algebra homomorphism.
+				<me>\ev_{(a_1,\ldots,a_n)}\colon F[X_1,\ldots,X_n]\to F\quad\text{given by}\quad \sum a_{i_1\cdots i_n}X_1^{i_1}\cdots X_n^{i_n}\mapsto\sum a_{i_1\cdots i_n}a_1^{i_1}\cdots a_n^{i_n}</me>
+				Thus the kernel of this map is <me>\ker(\ev_{(a_1,\ldots,a_n)})=\{f\in F[X_1,\ldots,X_n]:f(a_1,a_2,\ldots,a_n)=0\}.</me> Hence the ideal generated by <m>X_1-a_1,\ldots,X_n-a_n</m>, <m>(X_1-a_1,\ldots,X_n-a_n)\subseteq\ker(\ev_{(a_1,\ldots,a_n)})</m>. We claim that <me>(X_1-a_1,\ldots,X_n-a_n)=\ker(\ev_{(a_1,\ldots,a_n)}).</me>
+			</p>
+			<p>
+				Let <m>f\in\ker(\ev_{(a_1,\ldots,a_n)})</m>. We consider <m>f\in F[X_1,\ldots,X_{n-1}][X_n]</m>. By <xref ref="division-algorithm-for-LC-unit"/> there exists <m>q_n,r_n\in F[X_1,\ldots,X_{n-1}][X_n]</m> with <m>\deg r_n\lt\deg (X_n-a_n)=1</m>, i.e., <m>r_n</m> is a constant polynomial in <m>F[X_1,\ldots,X_{n-1}][X_n]</m>, i.e., <m>r_n\in F[X_1,\ldots,X_{n-1}]</m> such that
+				<men xml:id="first-eq">f=q_n(X_n-a_n)+r_n.</men>
+				We thus have <m>0=f(a_1,\ldots,a_n)=0=r_n(a_1,\ldots,a_n)</m>.
+				We now consider <m>r_n\in F[X_1,\ldots,X_{n-2}][X_{n-1}]</m>. Again applying <xref ref="division-algorithm-for-LC-unit"/>, there exists <m>q_{n-1},r_{n-1}\in F[X_1,\ldots,X_{n-2}][X_{n-1}]</m> with <m>\deg r_{n-1}\lt\deg (X_{n-1}-a_{n-1})=1</m>, i.e., <m>r_{n-1}</m> is a constant polynomial in <m>F[X_1,\ldots,X_{n-2}][X_{n-1}]</m> such that 
+				<me>r_n=q_{n-1}(X_{n-1}-a_{n-1})+r_{n-1}</me>. Thus we also get <m>0=r_{n}(a_1,\ldots,a_{n-1})=r_{n-1}(a_1,\ldots,a_{n-1})</m>. Continuing in this way we get that <m>r_2\in F[X_1]</m> and, by <xref ref="division-algorithm-for-LC-unit"/>, there exists <m>q_1,r_1\in F[X_1]</m> with <m>\deg r_1\lt\deg(X_1-a_1)=1</m>, i.e., <m>r_1\in F</m> such that 
+				<me>r_2=q_1(X_1-a_1)+r_1.</me> 
+				Thus we have <m>0=r_2(a_1)=r_1</m>, i.e., <m>r_2=q_1(X_1-a_1)</m>. Putting successive expression of <m>r_n,r_{n-1},\ldots,r_2</m> in <xref ref="first-eq"/> we get that <me>f=q_n(X_n-a_n)+q_{n-1}(X_{n-1}-a_{n-1})+\cdots+q_2(X_2-a_1)+q_1(X_1-a_1).</me> Hence <m>\ker(\ev_{(a_1,\ldots,a_n)})\subseteq (X_1-a_1,\ldots,X_n-a_n)</m> and we get the desired resuLC.
+			</p>
+			<p>
+				The <m>\ev_{(a_1,\ldots,a_n)}</m> is surjective. Hence, by <xref ref="FIT"/>, <m>F[X_1,\ldots,X_n]\big/(X_1-a_1,\ldots,X_n-a_n)\simeq F</m>. By <xref ref="prime-maximal-criterion-using-quotient"/> the ideal generated by <m>X_1-a_1,\ldots,X_n-a_n</m>, <m>(X_1-a_1,\ldots,X_n-a_n)</m> is maximal.
+			</p>
+		</statement>
+	</example>
+	<definition xml:id="def-irreducible-polynomial">
+		<title>(Reducible and irreducible polynomial in <m>F[X]</m>)</title>
+		<statement>
+			<p>
+				Let <m>F</m> be a field. A nonconstant polynomial <m>f(X)\in F[X]</m> is said to be an <term>reducible polynomial</term> if there exists nonconstant polynomials <m>g,h\in F[X]</m> with <m>\deg(g)\lt\deg(f)</m> and <m>\deg(h)\lt\deg(f)</m> such that <m>f=gh</m>.
+			</p>
+			<p>
+				A nonconstant polynomial in <m>F[X]</m> is called an <term>irreducible polynomial in F[X]</term> or an <term>irreducible polynomial over <m>F</m></term> if it is not reducible.
+			</p>
+		</statement>
+	</definition>
+	<example>
+		<title>(Irreduciblility of polynomial depends on the underlying field)</title>
+		<statement>
+			If we consider <m>X^2+1</m> over <m>\Q</m> or <m>\R</m> then this polynomial is irreducible. However the same polynomial is reducible over <m>\C</m>. Indeed, <m>X^2+1=(X-i)(X+i)</m>, where <m>i\in\C</m> is such that <m>i^2=-1</m>.
+		</statement>
+	</example>
+</section>

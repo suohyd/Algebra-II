@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-arithmetic-of-Z-and-polynomials" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Arithmetic in <m>\Z</m> and polynomial rings</title>
+  <xi:include href="./sec-arithmetic-in-Z.ptx"/>
+  <xi:include href="./sec-prime-maximal-ideals-in-Z.ptx"/>
+  <xi:include href="./sec-polynomial-rings.ptx"/>
+  <xi:include href="./sec-division-algorithm.ptx"/>
+  <xi:include href="./sec-arithmetic-in-polynomials.ptx"/>
+  <xi:include href="./sec-Kronecker-theorem.ptx"/>
+  <xi:include href="./sec-irreducibility-criterions.ptx"/>
+  <xi:include href="./sec-examples-irreducibility.ptx"/>
+  <xi:include href="./sec-poly-reducible-for-any-p.ptx"/>
+  <xi:include href="./sec-Chinese-remainder-theorem-commutative-rings.ptx"/>
+  <xi:include href="./ex-arithmetic-in-PID.ptx"/>
+</chapter>

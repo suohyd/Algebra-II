@@ -1,0 +1,45 @@
+<section xml:id="sec-isomorphism-theorems">
+    <title>Isomorphism theorems</title>
+    <theorem xml:id="FTH">
+    	<title>(Fundamental theorem of homomorphisms of rings)</title>
+    	<statement>
+    		Let <m>\varphi\colon R\to S</m> be a ring homomorphism, and let <m>\pi\colon R\to R/\ker(\varphi)</m> be the canonical ring homomorphism (see <xref ref="canonical-quotient-map"/>). There is a unique ring monomorphism from <m>\overline{\varphi}\colon R/\ker(\varphi)\to S</m> such that <m>\overline{\varphi}\circ\pi=\varphi</m>. Moreover, there is a ring isomorphism <me>R/\ker(\varphi)\simeq\varphi(R)</me>.
+    	</statement>
+    </theorem>
+    <theorem xml:id="ideal-correspondence-quotient-ring">
+    	<title>(Correspondence between ideals of a ring and its quotient ring)</title>
+    	<statement>
+    		Let <m>I</m> be an ideal of a ring <m>R</m>. There is one-one map between ideals of <m>R</m> containing <m>I</m> and ideals of <m>R/I</m>.
+    		<me>\{J\supseteq I:J\text{ is an ideal of }R\}\longleftrightarrow\{\overline{J}:\overline{J}\text{ an ideal of }R/I\}</me>
+    	</statement>
+    </theorem>
+    <theorem xml:id="FIT">
+    	<title>(First Isomorphism Theorem)</title>
+    	<statement>
+    		Let <m>\varphi\colon R\to S</m> be an epimorphism of rings.
+    		<ol>
+    			<li>
+    				If <m>I</m> is an ideal in <m>R</m> then <m>\varphi(I)</m> is an ideal in <m>S</m>.
+    			</li>
+    			<li><title>[First Isomorphism Theorem]</title>
+    				If <m>I</m> is an ideal in <m>R</m> containing <m>\ker(\varphi)</m> then 
+    				<me>\overline{\varphi}\colon R/I\to S/\varphi(I)\quad\text{given by}\quad r+I\mapsto\varphi(r)+\varphi(I)</me> is an isomorphism of rings.
+    			</li>
+    		</ol>
+    	</statement>
+    </theorem>
+    <theorem xml:id="SIT">
+    	<title>(Second Isomorphism Theorem)</title>
+    	<statement>
+    		Let <m>R</m> be a ring, <m>S</m> be a subring of <m>R</m>, and let <m>I</m> be an ideal in <m>R</m>. The set 
+    		<me>S+I=\{s+x:s\in S\text{ and }x\in I\}</me> is a subring of <m>R</m>, and the mapping
+    		<me>\varphi\colon (S+I)/I\to S/(S\cap I)\quad\text{defined by}\quad s+I\mapsto s+(S\cap I),\;\text{where }s\in S;</me> is a ring isomorphism.
+    	</statement>
+    </theorem>
+    <theorem xml:id="TIT">
+  <title>(Third isomorphism theorem)</title>
+  <statement>
+   Let <m>R</m> be a ring and let <m>I</m> and <m>J</m> be two-sided ideals of <m>R</m> with <m>I\subseteq J</m>. Then <m>J/I</m> is an ideal of <m>R/I</m> and <me>(R/I)\big/(J/I)\simeq R/J</me>.
+  </statement>
+ </theorem>
+</section>

@@ -1,0 +1,41 @@
+<exercises xml:id="ex-ring-homomorphisms">
+	<!--<exercise>
+		<statement>
+			Suppose that <m>R</m> is a ring and <m>A</m> be an <m>F</m>-algebra. Show that <m>\End_\Rings(R)</m> is a ring. Further show that <m>\End_\Alg(A)</m> is an <m>F</m>-algebra.
+		</statement>
+	</exercise>-->
+		<exercise>
+		<statement>
+			Let <m>F</m> be a field and let <m>M_n(F)</m> be the ring of <m>n\times n</m> matrices over <m>F</m>. Show <m>\mathcal{Z}(M_n(F))\simeq F</m>.
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Describe all ring homomorphism from <m>\Z/n\Z</m> to <m>\Z/m\Z</m>.
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Find <m>\Aut_\Rings(\Z)</m> and <m>\Aut_\Rings(\Z/n\Z)</m>.
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Show that the following rings are not isomorphic.
+			<ol>
+				<li><m>\Z/n\Z\not\simeq\Z/m\Z</m> for <m>m\neq n</m></li>
+				<li><m>\Z[X]\not\simeq\Q[X]</m></li>
+			</ol>
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Does there exists a ring homomorphism from <m>\Q</m> to <m>\Z</m>?
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Let <m>F</m> be a field, and let <m>a_1,\ldots,a_n\in F</m>. Show that <m>\ev_{(a_1,\ldots,a_n)}\colon F[X_1,\ldots,X_n]\to F</m> is an <m>F</m>-algebra homomorphism.
+		</statement>
+	</exercise>
+</exercises>

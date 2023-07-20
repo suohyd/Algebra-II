@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-polynomial-ring-over-UFD" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Polynomial rings over UFD</title>
+  <xi:include href="./sec-Gauss-Lemma.ptx"/>
+  <xi:include href="./sec-polynomial-rings-over-UFD-is-UFD.ptx"/>
+</chapter>

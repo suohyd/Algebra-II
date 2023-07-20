@@ -1,0 +1,81 @@
+<section xml:id="sec-Gauss-Lemma">
+	<title>Gauss's Lemma</title>
+	<introduction>
+		Throughout this section we assume that <m>A</m> is a UFD and <m>A[x]</m> is a polynomial ring over <m>A</m> in one variable. We start with the following definition.
+	</introduction>
+	<definition xml:id="def-content">
+		<title>(Content of a polynomial over UFD)</title>
+		<statement>
+			The <term>content of a nonzero polynomial </term><m>f(x)=a_0+a_1x+\cdots+a_nx^n\in A[x]</m> is <m>\gcd(a_0,a_1,\ldots,a_n)</m>.
+		</statement>
+	</definition>
+	<convention>
+		<statement>
+			The content of <m>0\neq f\in A[x]</m> is unique up to units. For notational convenience we write <m>C(f)</m> for a choice of the content of <m>f</m>.
+		</statement>
+	</convention>
+	<definition xml:id="def-primitive-polynomial">
+		<title>(Primitive polynomial)</title>
+		<statement>
+			A polynomial <m>f\in A[x]</m> is said to be <term>primitive</term> if the content of <m>f</m>, <m>C(f)=1</m>.
+		</statement>
+	</definition>
+	<lemma xml:id="properties-of-content">
+		<statement>
+			Let <m>f(x)=a_0+a_1x+\cdots+a_nx^n\in A[x]</m>.
+			<ol>
+				<li>
+					For <m>\alpha\in A</m>,  <m>C(\alpha f)=\alpha C(f)</m>.
+				</li>
+				<li>There exists a primitive polynomial <m>f_1\in A[x]</m> such that <m>f=C(f)f_1</m> and <m>\deg f=\deg f_1</m>.</li>
+				<li>If <m>f</m> is a nonconstant irreducible polynomial then <m>f</m> is primitive. The converse is not true.</li>
+			</ol>
+		</statement>
+	</lemma>
+	<proof>
+		We only prove the last statement. Assume that <m>f</m> is a nonconstant irreducible polynomial. We have <m>f=C(f)f_1</m>, where <m>f_1</m> is a primitive polynomial. If <m>C(f)\not\sim 1\in A</m> then, as <m>A</m> is a UFD, <m>C(f)</m> can be factored into a product of irreducibles in <m>A</m>. Since irreducible elements of <m>A</m> remains irreducible in <m>A[x]</m>, we must have <m>C(f)\sim 1</m>. Thus we get the result.
+		<p>
+			The converse is not true can be seen by considering the polynomial <m>x^2-1\in A[x]</m>.
+		</p>
+	</proof>
+	<lemma xml:id="clearing-denominators">
+		<title>(Clearing denominators)</title>
+		<statement>
+			Let <m>A</m> be a UFD and <m>F</m> be the field of fractions of <m>A</m>. For any <m>0\neq f\in F[x]</m> there exists <m>\gamma\in F</m> and a primitive polynomial <m>f_1\in A[x]</m> such that <m>f=\gamma f_1</m>. This factorization is unique up to unit multipliers in <m>A</m>.
+		</statement>
+	</lemma>
+	<proof>
+		<p>
+			Suppose that <m>f=a_0/b_0+(a_1/b_1)x+\cdots+(a_n/b_n)x^n</m>. Put <m>b=b_0b_1\cdots b_n\in A</m>. Then <m>bf\in A[x]</m>, say <m>bf=f_1</m>. By <xref ref="properties-of-content"/> there exists a primitive polynomial <m>f_1</m> such that <m>bf=cf_1</m>. Therefore, <m>f=(c/b)f_1</m>.
+		</p>
+		<p>
+			Now assume that there exists primitive polynomials <m>f_1,f_2\in A[x]</m> and <m>\gamma_1=c/b,\gamma_2=d/e\in F</m> such that <m>f=\gamma_if_i</m> for <m>i=1,2</m>. Hence <m>ce f_1=bd f_2\in A[x]</m>. As <m>f_i</m> are primitive we must have <m>ce\sim bd</m>, i.e., there exists a unit <m>u\in A</m> such that <m>ce=ubd</m>, i.e., <m>c/b=u\cdot d/e</m>. Hence uniqueness is proved.
+		</p>
+	</proof>
+	<corollary xml:id="primitive-in-UFD-and-ff">
+	    <statement>
+	    	If <m>f,g\in A[x]</m> are primitive polynomials and <m>f\sim g</m> in <m>F[x]</m>. Then <m>f\sim g</m> in <m>A[x]</m>.
+	    </statement>
+	</corollary>
+	<proof>
+		Suppose that <m>0\neq \gamma\in F</m> is such that <m>f=\gamma g</m>.
+		By uniqueness part of <xref ref="clearing-denominators"/>, there exists a unit <m>u\in A</m> such that <m>1=u\cdot\gamma</m>. Thus <m>\gamma\in A</m> is a unit.
+	</proof>
+	<corollary>
+		<statement>
+			Let <m>f\in A[x]</m> be a nonconstant primitive. If <m>f</m> is  reducible polynomial in <m>A[x]</m>, then there exists <m>g,h\in A[x]</m> with <m>0\lt\deg g\lt\deg f</m> and <m>0\lt\deg h\lt\deg f</m>.
+		</statement>
+	</corollary>
+	<proof>
+		Suppose that there are <m>g,h\in A[x]</m> such that <m>f=gh</m>. If <m>\deg g=0</m>, i.e., if <m>g</m> is constant then <m>1\sim C(f)\sim gC(h)</m>, i.e., <m>g</m> is a unit and <m>f\sim h</m> in <m>A[x]</m>.
+	</proof>
+	<theorem xml:id="Gauss-theorem">
+		<title>(Gauss's theorem)</title>
+		<statement>
+			Let <m>A</m> be a UFD. The product of primitive polynomials in <m>A[x]</m> is primitive.
+		</statement>
+	</theorem>
+	<proof>
+		Let <m>f,g\in A[x]</m> be primitive polynomials. Suppose that <m>fg</m> is not a primitive polynomial. Let <m>p\in A</m> be a prime element in <m>A</m> which is a factor of <m>C(fg)</m>. Thus <m>(R/p)[x]</m> is an integral domain and by the assumption <m>0=\overline{f}\overline{g}\in (R/p)[x]</m>. Hence either <m>\overline{f}=0</m> or <m>\overline{g}=0</m>. In particular, either <m>p\mid C(f)</m> or <m>p\mid C(g)</m>. This is a contradiction to the assumption that <m>f</m> and <m>g</m> are primitive polynomials.
+	</proof>
+</section>

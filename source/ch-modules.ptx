@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-linear-algebra" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Modules over rings</title>
+  <xi:include href="./sec-modules.ptx"/>
+  <xi:include href="./sec-examples-of-modules.ptx"/>
+  <xi:include href="./sec-min-poly-of-linear-map.ptx"/>
+  <xi:include href="./sec-submodules.ptx"/>
+  <xi:include href="./sec-module-hom.ptx"/>
+  <xi:include href="./sec-sums-products-of-modules.ptx"/>
+</chapter>

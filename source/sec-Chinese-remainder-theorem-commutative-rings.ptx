@@ -1,0 +1,30 @@
+<section xml:id="sec-Chinese-remainder-theorem-commutative-rings">
+	<title>Chinese Remainder Theorem</title>
+	<introduction>
+		We generalize <xref ref="Chinese-remainder-theorem-in-Z"/> to commutative rings.
+	</introduction>
+	<theorem xml:id="Chinese-remainder-theorem">
+		<title>(Chinese remainder theorem)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>\mfa_1,\mfa_2,\ldots,\mfa_n</m> be proper ideals of <m>A</m>. Further assume that for <m>i\neq j</m>, <m>\mfa_i+\mfa_j=A</m>. Then
+			<me>A\big/\mfa_1\cdots\mfa_n\simeq A\big/\mfa_1\cap\cdots\cap\mfa_n\simeq A/\mfa_1\times\cdots\times A/\mfa_n.</me>
+		</statement>
+	</theorem>
+	<proof>
+		First we show that <m>\mfa_1\cdots\mfa_n=\mfa_1\cap\cdots\cap\mfa_n</m>. We certainly have <me>\mfa_1\cdots\mfa_n\subseteq\mfa_1\cap\cdots\cap\mfa_n</me>. We claim that <m>\mfa_1</m> and <m>\mfb=\mfa_2\cdots\mfa_n</m> are such that <m>\mfa_1+\mfb=A</m>. Indeed, since <m>\mfa_1+\mfa_i=A</m> for <m>i\geq 2</m>, there are <m>x_i\in\mfa_1</m> and <m>y_i\in\mfa_i</m> such that <m>x_i+y_i=1</m> for each <m>i\geq 2</m>. Thus, <m>x_i+y_i\equiv y_i\mod\mfa_1</m> and hence <me>1=(x_2+y_2)\cdots(x_n+y_n)\in\mfa_1+\mfb.</me>
+		So, there are <m>x\in\mfa_1</m> and <m>y\in\mfb</m> such that <m>1=x+y</m>. Now for any <m>a\in\mfa_1\cap\cdots\cap\mfa_n</m> we get <m>a=ax+ay\in\mfa_1\mfb=\mfa_1\cdots\mfa_n</m>.
+		<p>
+			Consider the map <m>\varphi\colon A\to A/\mfa_1\times\cdots\times A/\mfa_n</m> given by <me>a\mapsto(a+\mfa_1,\ldots,a+\mfa_n)</me>
+			It is left to the reader to check that <m>\varphi</m> is a well-defined ring homomorphism. We compute its kernel.
+			<md><mrow>\ker(\varphi)\amp=\{a\in A:a\in\mfa_i\;\text{for all}\; i\}</mrow><mrow>\amp=\mfa_1\cap\cdots\cap\mfa_n</mrow></md>
+			We now show that <m>\varphi</m> is surjective. It is enough to show that <m>(1+\mfa_1,0+\mfa_2,\ldots,0+\mfa_n)</m> is in the image of <m>\varphi</m>. Since <m>\mfa_1+\mfa_i=A</m> for each <m>i\geq 2</m> there are <m>x_i\in\mfa_1</m> and <m>y_i\in\mfa_i</m> such that <m>x_i+y_i=1</m> for each <m>i\geq 2</m>. We put <m>y=y_2y_3\cdots y_n</m>. Then <me>y\equiv(1-x_2)(1-x_3)\cdots(1-x_n)\equiv 1\mod\mfa_1</me> and <me>y\equiv 0\mod\mfa_i\quad\text{for}\,i\geq 2.</me>
+			Hence <m>\varphi(y)=(1+\mfa_1,0+\mfa_2,\cdots,0+\mfa_n)</m>. By <xref ref="FTH"/>, we get the required result.
+		</p>
+	</proof>
+	<example>
+		<statement>
+			Let <m>F[x]</m> be the polynomial ring over a field <m>F</m>. Let <m>f_1,f_2,\ldots,f_n</m> be pairwise distinct irreducible polynomials such that <m>f_i</m> and <m>f_j</m> are not associates for any <m>i\neq j</m>. Then <me>F[X]\big/(f_1^{k_1}\cdots f_n^{k_n})\simeq F[x]/(f_1^{k_1})\times\cdots\times F[x]/(f_n^{k_n}).</me>
+			We first show that <m>(f_i^{k_i})+(f_j^{k_j})=F[x]</m> for <m>i\neq j</m>. By <xref ref="existence-of-gcd-lcm"/> <m>\gcd(f_i^{k_i},f_j^{k_j})=1</m> and hence <m>(f_i^{k_i})+(f_j^{k_j})=F[x]</m> for <m>i\neq j</m>.  We have <m>(f_1^{k_1})\cap\cdots\cap(f_n^{k_n})=(f_1^{k_1}\cdots f_n^{k_n})</m> (refer to the proof of <xref ref="Chinese-remainder-theorem"/>). Thus by Chinese remainder theorem we get the result.
+		</statement>
+	</example>
+</section>

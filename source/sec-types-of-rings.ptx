@@ -1,0 +1,89 @@
+<section xml:id="sec-types-of-rings">
+	<title>Types of Rings</title>
+	<introduction>
+		We define certain types of rings.
+	</introduction>
+	<definition xml:id="def-commutative-rings">
+		<title>(Commutative Ring)</title>
+		<statement>
+			A ring <m>R</m> with unity is said to be a <term>commutative ring</term> if for every <m>r\in R</m> and every <m>s\in R</m> we have <m>rs=sr</m>.
+			<p>
+				Thus <m>R</m> is a commutative monoid under multiplication.
+			</p>
+		</statement>
+	</definition>
+	<definition xml:id="def-integral-domain">
+		<title>(Integral Domain)</title>
+		<statement>
+			A nonzero ring <m>R</m> is said to be an <term>integral domain</term> if <m>R</m> is a commutative ring satisfying the following condition.
+			<me>\text{If}\; rs=0\;\text{then either}\;r=0\;\text{or}\;s=0.</me>
+		</statement>
+	</definition>
+	<example>
+		<statement>
+			<p>
+				The ring of integers (see <xref ref="example-ring-of-integers"/>), the complex, real and rational numbers (see <xref ref="example-rationals-reals-complex"/>), the ring of Gaussian integers (see <xref ref="Gaussian-integers"/>), polynomial ring over an integral domain (see <xref ref="example-poly-over-rings"/>), the opposite ring of an integral domain (see <xref ref="example-opposite-ring"/>) are some of the examples of integral domains and hence commutative rings.
+			</p>
+			<p>
+				If <m>R_i</m> are commutative rings then their product (see <xref ref="example-product-of-rings"/>) is also commutative. Finite cyclic groups with ring structures defined in <xref ref="example-finite-group"/> are commutative rings.
+			</p>
+		</statement>
+	</example>
+	<observation xml:id="Cancellative-monoid">
+		<title>(Cancellative Monoid)</title>
+		<statement>
+			<p>
+				Suppose that <m>R</m> is an integral domain. Let <m>r,s</m> and <m>t</m> be elements of <m>R</m>. We have the following cancellation property.
+			<me>\text{Left cancellation:}\quad\text{If}\;r\neq 0\;\text{and}\;rs=rt\;\text{ then }\; s=t.</me>
+			Since <m>rs=rt</m>, by a distributive law, <m>r(s-t)=0</m>. As <m>R</m> is assumed to be an integral domain and <m>r\neq 0</m> we have<m>s=t</m>.
+		</p>
+			<p>
+				Note that, by similar arguments, we also have the right cancellation.
+				<me>\text{Right cancellation:}\quad\text{If}\;r\neq 0\;\text{and}\;sr=tr\;\text{ then }\; s=t.</me>
+			</p>
+		</statement>
+	</observation>
+	<definition xml:id="def-reduced-rings">
+		<title>(Reduced Ring)</title>
+		<statement>
+			A ring is said to be <term>reduced</term> if <m>r^2=0</m> then <m>r=0</m> in <m>R</m>.
+		</statement>
+	</definition>
+	<definition xml:id="def-division-ring">
+		<title>(Division Ring)</title>
+		<statement>
+			A nonzero ring is said to be a <term>division ring</term> if every nonzero element is invertible, i.e., if <m>r\in R</m> is nonzero then there exists a unique <m>s\in R</m> such that <m>rs=sr=1</m>.
+		</statement>
+	</definition>
+	<definition xml:id="def-fields">
+		<title>(Field)</title>
+		<statement>
+			A commutative division ring is called a <term>field</term>.
+		</statement>
+	</definition>
+	<definition xml:id="def-algebra-over-a-field">
+		<title>(Associative Algebra over a Field)</title>
+		<statement>
+			Let <m>F</m> be a field and <m>A</m> be a ring as well as a vector space over <m>F</m>. We say that <m>A</m> is an <term>associative algebra over a field <m>F</m></term> if following conditions are satisfied.
+			<ol>
+				<li>The underlying set, the addition, and the additive identity <m>0</m> of <m>A</m> as a ring and <m>A</m> as a vector space are the same. In other words, the underlying abelian group structure <m>(A,+)</m> is the same for <m>A</m> as a ring and for <m>A</m> as a vector space.</li>
+				<li>For <m>\alpha\in F</m>, <m>x,y\in A</m> we have 
+				<men xml:id="algebra-identity">\alpha\cdot(xy)=(\alpha\cdot x)y=x(\alpha\cdot y).</men>
+				Note that <m>\alpha\cdot(xy)</m> (resp., <m>\alpha\cdot x</m> and <m>\alpha\cdot y</m>) is scalar multiplication inherited from the vector space structure. While <m>(\alpha\cdot x)y</m> (resp. <m>x(\alpha\cdot y)</m>) is the multiplication of ring elements <m>\alpha\cdot x</m> and <m>y</m> (resp., <m>x</m> and <m>\alpha\cdot y</m>).
+			</li>
+			</ol>
+			<p>
+				An associative algebra over a field <m>F</m> is said to be <term>finite-dimensional</term> if it is finite-dimensional as a vector space over <m>F</m>.
+			</p>
+		</statement>
+	</definition>
+	<observation xml:id="scalar-ring-multiplication">
+		<statement>
+			Let <m>A</m> be an <m>F</m>-algebra. For any <m>\alpha\in F</m> and every <m>x\in A</m>,  using <xref ref="algebra-identity"/>, we have the following.
+			<men xml:id="left-scalar-multiplication">\alpha\cdot x=\alpha\cdot(1 x)=(\alpha\cdot 1)x</men>
+			Similarly, using <xref ref="algebra-identity"/>, we have the following.
+			<men xml:id="right-scalar-multiplication">x(\alpha\cdot 1)=\alpha\cdot(x 1)=\alpha\cdot x</men>
+		</statement>
+		Therefore, the scalar multiplication of <m>\alpha</m> and <m>x\in A</m> coincides with the ring multiplication of <m>\alpha\cdot 1</m> and <m>x</m>. Furthermore, by <xref ref="left-scalar-multiplication"/> and <xref ref="right-scalar-multiplication"/> we get that <m>\alpha\cdot 1</m> commutes with every element of <m>A</m>, i.e., <m>\alpha\cdot 1</m> belongs to the center of <m>A</m>, <m>\mathcal{Z}(A)</m>.
+	</observation>
+</section>

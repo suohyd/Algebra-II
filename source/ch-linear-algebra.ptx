@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-linear-algebra" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear Algebra</title>
+  <xi:include href="./sec-modules.ptx"/>
+  <xi:include href="./sec-examples-of-modules.ptx"/>
+</chapter>

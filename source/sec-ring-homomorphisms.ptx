@@ -1,0 +1,114 @@
+<section xml:id="sec-ring-homomorphisms">
+	<title>Definition</title>
+	<introduction>
+		We define mappings between rings with unity that preserves the ring structure.
+	</introduction>
+	<definition xml:id="def-ring-homomorphism">
+		<title>(Ring homomorphism)</title>
+		<statement>
+			Let <m>R</m> and <m>S</m> be rings with unity. We denote the unity of <m>R</m> (resp., unity of <m>S</m>) by <m>1_R</m> (resp., by <m>1_S</m>). A function <m>\varphi\colon R\to S</m> is said to be a <term>ring homomorphism</term> if it satisfy following properties.
+			<ol>
+				<li><title>[Group homomorphism]</title><m>\varphi(r_1+r_2)=\varphi(r_1)+\varphi(r_2)</m> for every <m>r_1,r_2\in R</m></li>
+				<li><title>[Unity maps to unity]</title><m>\varphi(1_R)=1_S</m></li>
+				<li><title>[Preserves multiplication]</title><m>\varphi(r_1r_2)=\varphi(r_1)\varphi(r_2)</m> for all <m>r_1,r_2\in R</m></li>
+			</ol>
+		</statement>
+	</definition>
+	<observation>
+		<statement>
+			The first condition in <xref ref="def-ring-homomorphism"/> is that a ring homomorphism is a group homomorphism between <m>(R,+)</m> and <m>(S,+)</m>. The conditions (2) and (3) in <xref ref="def-ring-homomorphism"/> implies that a ring homomorphism is a monoid homomorphism as well.
+		</statement>
+	</observation>
+	<convention>
+		<statement>
+			While considering ring homomorphisms, when context is clear, we often write <m>\varphi(1)=1</m>.
+		</statement>
+	</convention>
+	<definition xml:id="def-kernel">
+		<title>(Kernel of a ring homomorphism)</title>
+		<statement>
+			Let <m>\varphi\colon R\to S</m> be a ring homomorphism. The <term>kernel of <m>\varphi</m></term> is the following set.
+			<me>\ker(\varphi)=\{r\in R:\varphi(r)=0\}</me>
+		</statement>
+	</definition>
+	<observation>
+		<statement>
+			The kernel of a ring homomorphism <m>\varphi\colon R\to S</m> is a two-sided ideal of <m>R</m>.
+		</statement>
+	</observation>
+	<definition xml:id="def-image">
+		<title>(Image of a ring homomorphism)</title>
+		<statement>
+			Let <m>\varphi\colon R\to S</m> be a ring homomorphism. The <term>image of <m>\varphi</m></term> is the following:
+			<me>\Im(\varphi)=\{\varphi(r):r\in R\}</me>
+			The <m>\Im(\varphi)</m> is a subring of <m>S</m>.
+		</statement>
+	</definition>
+	<observation>
+		The image of a ring homomorphism <m>\varphi\colon R\to S</m> need not be an ideal of <m>S</m>. For instance, consider the following ring homomorphism from a field <m>F</m> to a ring of polynomials over <m>F</m> in one variable:
+		<me>\varphi\colon F\to F[X]\quad\text{given by}\;\alpha\mapsto\alpha\cdot 1 \quad(\text{the constant polynomial }\alpha)</me>
+		The image of this map is the set of all constant polynomials, and hence <m>\Im(\varphi)\subsetneq F[X]</m>. Since every nonzero element of the image is invertible it can not be a left or a right or a two-sided ideal. Indeed, suppose that <m>\Im(\varphi)</m> is a left ideal of <m>F[X]</m>. Note that every <m>0\neq\alpha\in\Im(\varphi)</m> is invertible. If <m>\beta\in F[X]</m> is the inverse of <m>\alpha\in F[X]</m> then, <m>\beta\alpha=1\in\Im(\varphi)</m>. This will imply that if <m>\Im(\varphi)</m> is a left ideal then <m>\Im(\varphi)=F[X]</m>, a contradiction.
+	</observation>
+	<definition xml:id="def-monomorphism">
+		<title>(Monomorphism)</title>
+		<statement>
+			Let <m>\varphi\colon R\to S</m> be a ring homomorphism. We call <m>\varphi</m> a <term>monomorphism</term> if <m>\ker(\varphi)=\{0\}</m>.
+		</statement>
+	</definition>
+	<observation>
+		Let <m>\varphi\colon R\to S</m> be a map. The following are equivalent.
+		<ol>
+			<li><m>\varphi</m> is an monomorphism</li>
+			<li><m>\varphi</m> is a ring homomorphism and it is injective as a set-theoretic map</li>
+		</ol>
+	</observation>
+	<definition xml:id="def-epimorphism">
+		<title>(Epimorphism)</title>
+		<statement>
+			A ring homomorphism <m>\varphi\colon R\to S</m> is said to be a <term>epimorphism</term> if <m>\Im(\varphi)=S</m>.
+		</statement>
+	</definition>
+	<!--<observation>
+		If a ring homomorphism <m>\varphi\colon R\to S</m> is surjective as a set-theoretic map if and only if <m>\varphi</m> is an epimorphism.
+	</observation>-->
+	<definition xml:id="def-isomorphism">
+		<title>(Isomorphism)</title>
+		<statement>
+			Let <m>R</m> and <m>S</m> be rings. The ring homomorphism <m>\varphi\colon R\to S</m> is said to be an <term>isomorphism</term> if there exists a ring homomorphism <m>\psi\colon S\to R</m> such that <m>\psi\circ\phi=\unit_{R}</m> and <m>\phi\circ\psi=\unit_S</m>, where <m>\unit_R</m> (resp., <m>\unit_S</m>) is the identity homomorphism.
+		</statement>
+	</definition>
+	<convention>
+		If two rings <m>R</m> and <m>S</m> are isomorphic then we denote it by <m>R\simeq S</m>.
+	</convention>
+
+	<definition>
+		<title>(Automorphism)</title>
+		<statement>
+			A ring isomorphism from a ring onto itself is said to be an <term>automorphism</term>.
+		</statement>
+	</definition>
+
+	<convention>
+		Let <m>R</m> and <m>S</m> be rings. The set of all ring homomorphisms from <m>R</m> to <m>S</m> (resp., from <m>R</m> to <m>R</m>) is denoted by <m>\Hom_{\rm Rings}(R,S)</m> (resp., <m>\End_{\rm Rings}(R)</m>). The set of all ring automorphisms of <m>R</m> is denoted by <m>\Aut_\Rings(R)</m>.
+	</convention>
+
+	<definition xml:id="def-algebra-homomorphism">
+		<title>(Algebra homomorphism)</title>
+		<statement>
+			Let <m>F</m> be a field. Let <m>A</m> and <m>B</m> be <m>F</m>-algebras. A map <m>\varphi\colon A\to B</m> is said to be an <term><m>F</m>-algebra homomorphism</term> if <m>\varphi</m> is both an <m>F</m>-vector space homomorphism and a ring homomorphism. 
+		</statement>
+	</definition>
+	<p>
+		Hence, if <m>a_1,\ldots,a_4\in A</m> and <m>\alpha,\beta\in F</m> then
+			<me>\varphi\left(\alpha\cdot a_1a_2+\beta\cdot a_3a_4\right)=\alpha\cdot\varphi(a_1)\varphi(a_2)+\beta\cdot\varphi(a_3)\varphi(a_4).</me>
+	</p>
+	<p>
+		Monomorphisms, epimorphisms, isomorphisms, and automorphisms between <m>F</m>-algebras are defined in a similar way.
+	</p>
+	<convention>
+		Let <m>A</m> and <m>B</m> be <m>F</m>-algebras. Similar to ring case we denote by <m>\Hom_{F\text{-Alg}}(A,B)</m>, <m>\End_{F\text{-Alg}}(A)</m> and <m>\Aut_{F\text{-Alg}}(A)</m> the sets of all <m>F</m>-algebra homomorphisms, <m>F</m>-algebra endomorphisms and <m>F</m>-algebra automorphisms, respectively.
+		<p>
+			If <m>A</m> and <m>B</m> are isomorphic <m>F</m>-algebras then we write <m>A\simeq B</m>.
+		</p>
+	</convention>
+</section>

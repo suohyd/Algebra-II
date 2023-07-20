@@ -1,0 +1,47 @@
+<section xml:id="sec-irreducibility-criterions">
+	<title>Irreducibility criterions</title>
+	<introduction>
+		We have already seen the following result for determining whether polynomials of degree <m>2</m> or <m>3</m> in one variable over a field is reducible or not.
+	</introduction>
+	<proposition xml:id="Irreducibility-2-3">
+		<statement>
+			Let <m>F</m> be a field. A polynomial of degree <m>2</m> or <m>3</m> is reducible if and only if it has a root in <m>F</m>.
+		</statement>
+	</proposition>
+
+	<proposition xml:id="rational-root-criterion">
+		<statement>
+			Let <m>f(x)=a_0+a_1x+\cdots+a_nx^n\in\Z[x]</m>. If a rational number <m>r/s</m> with <m>\gcd(r,s)=1</m> is a root of <m>f</m> then <m>r\mid a_0</m> and <m>s\mid a_n</m>.
+		</statement>
+	</proposition>
+	<proof>
+		Since <m>r/s</m> is a root of <m>f</m>. We have that 
+		<me>0=a_0+a_1(r/s)+\cdots+a_n(r/s)^n.</me> This implies that 
+		<me>0=a_0s^n+a_1rs^{n-1}+\cdots+a_nr^n\quad\text{i.e.,}\quad -a_0s^n=r(a_1s^{n-1}+\cdots+a_nr^{n-1}).</me> Since <m>\gcd(r,s)=1</m> and <m>r\mid -a_0s^n</m> we get <m>r\mid a_0</m>.
+		Similarly, we have <me>-a_nr^n=s(a_0s^{n-1}+\cdots+a_{n-1})</me> and this implies, by the similar reasoning as earlier, that <m>s\mid a_n</m>.
+	</proof>
+	<proposition>
+		<statement>
+			Let <m>A</m> be an integral domain and <m>I</m> an ideal in <m>A</m>. Let <m>f(x)\in A[x]</m> be a nonconstant monic polynomial. If the polynomial <m>f(x)</m>, when viewed as a polynomial in <m>(A/I)[x]</m>, can not be factored into proper factors in <m>(A/I)[x]</m> then, <m>f(x)</m> is irreducible in <m>A[x]</m>.
+		</statement>
+	</proposition>
+	<proof>
+		Assume that <m>f=gh\in A[x]</m> with <m>\deg(g)\lt\deg(f)</m> and <m>\deg(h)\lt\deg(f)</m>. Since <m>f</m> is monic, we may assume that <m>g,h</m> are also monic. Then <m>f\equiv gh\mod I</m> is a factorization of <m>f</m> in <m>(A/I)[x]</m>, a contradiction.
+	</proof>
+	<proposition xml:id="Eisenstein-criterion">
+		<title>(Eisenstein's criterion)</title>
+		<statement>
+			Let <m>A</m> be an integral domain and let <m>\mfp</m> be a prime ideal in <m>A</m>. Let <m>f(x)=a_0+a_1x+\cdots+x^n\in A[x]</m> be a nonconstant monic polynomial. Suppose that <m>a_0,a_1,\ldots,a_{n-1}\in\mfp</m> and <m>a_0\not\in\mfp^2</m>. Then <m>f(x)</m> is irreducible in <m>A[x]</m>.
+		</statement>
+	</proposition>
+	<proof>
+		Assume that <m>f</m> is reducible, i.e., there are monic proper factors <m>g,h\in A[x]</m> such that <m>f=gh</m>. Thus <m>f\equiv gh\mod\mfp</m>. Since <m>a_i\in\mfp</m> we have that <m>f\equiv x^n\mod\mfp</m>, and hence <m>x^n\equiv gh\mod\mfp</m>. Assume that <m>g=x^r+b_{r-1}X^{r-1}+\cdots+b_0</m> and <m>h=x^s+c_{s-1}x^{s-1}+\cdots+c_0</m>.
+
+		Since <m>\mfp</m> is a prime ideal, <m>A/\mfp</m> is an integral domain. Thus, <m>x^n\equiv gh\mod\mfp</m> implies that either <m>b_0\in\mfp</m> or <m>c_0\in\mfp</m>. Without loss of generality assume that <m>b_0\in\mfp</m>. We claim that <m>c_0\in\mfp</m> as well.
+		<p>Let <m>\overline{b_k}\overline{x}^k</m> be the nonzero term of <m>\overline{g}</m> of the least degree. Thus, <m>0\lt k\leq r</m>. Since <m>\overline{f}=\overline{g}\overline{h}</m> we have <m>\overline{a_k}=\sum_{i=0}^{k}\overline{b_{i}}\overline{c_{k-i}}</m>. By our assumption <m>\overline{b}_k</m> is the nonzero least degree term in <m>\overline{g}</m>, therefore <m>\overline{b}_i=0\in A/\mfp</m> for <m>i=0,1,\ldots,{k-1}</m> and <m>\overline{a_k}=\overline{b}_k\overline{c}_0</m>. Since <m>\overline{a}_k=0\in A/\mfp</m> and <m>\overline{b}_k\neq 0\in A/\mfp</m> we must have <m>\overline{c_0}=0\in A/\mfp</m>, i.e., <m>c_0\in\mfp</m>.
+		</p>
+		<p>
+			However <m>b_0,c_0\in\mfp</m> implies that <m>a_0\in\mfp^2</m>, a contradiction. Hence, <m>f</m> must be an irreducible polynomial over <m>A</m>.
+		</p>
+	</proof>
+</section>

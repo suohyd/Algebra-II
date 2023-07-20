@@ -1,0 +1,82 @@
+<section xml:id="sec-examples-of-modules">
+	<title>Examples</title>
+	<example xml:id="abelian-groups-Z-modules">
+		<title>(Abelian groups as <m>\Z</m>-modules)</title>
+		<statement>
+			We show that every abelian group is a left <m>\Z</m>-module. Indeed, let <m>(A,+)</m> be an abelian group. We define the map <m>\Z\times A\to A</m> by <m>(n,a)\mapsto\underbrace{a+\cdots+a}_{n-\text{times}}</m> if <m>n\in\N</m> and <m>(-n,a)\mapsto\underbrace{(-a)+\cdots+(-a)}_{n-\text{times}}</m> if <m>n\in\N</m>. It is left to the reader to verify that with this map <m>A</m> becomes <m>\Z</m>-module.
+			<p>
+				Conversely, any <m>\Z</m>-module is, by definition, an abelian group.
+			</p>
+		</statement>
+	</example>
+	<example xml:id="vs-as-modules">
+		<title>(Vector spaces as left modules)</title>
+		<statement>
+			Let <m>V</m> be a finite-dimensional vector space over a field <m>F</m>. Then <m>V</m> is also a left <m>F</m>-module. In other words, left modules over a field are vector spaces.
+		</statement>
+	</example>
+	<example xml:id="vs-as-End-module">
+		<title>(Vector space as <m>\End_F(V)</m>-module)</title>
+		<statement>
+			Let <m>V</m> be an <m>F</m>-vector space. We define the map:
+			<me>\End_F(V)\times V\to V;\quad (T,v)\mapsto T(v).</me>
+			Verify that with this map <m>V</m> is a left <m>\End_F(V)</m>-module.
+		</statement>
+	</example>
+	<example xml:id="vs-as-FX-module">
+		<title>(Vector space as an <m>F[X]</m>-module)</title>
+		<statement>
+			Let <m>V</m> be a vector space over a field <m>F</m>, and fix an <m>F</m>-linear map <m>T\in\End_F(V)</m>. Recall that <m>T^r</m> is the linear map given by <m>\underbrace{T\circ\cdots\circ T}_{r-\text{times}}</m>. We define a map <me>F[X]\times V\to V</me> by 
+			<me>(a_0+a_1X+\cdots+a_nX^n,v)\mapsto a_0v+a_1T(v)+a_2T^2(v)+\cdots+a_nT^n(v).</me> It is left to the reader to verify that this makes <m>V</m> a left <m>F[X]</m>-module.
+		</statement>
+	</example>
+	<example xml:id="module-over-itself">
+		<title>(Ring as a module over itself)</title>
+		<statement>
+			Let <m>R</m> be a ring. The ring multiplication maps 
+			<me>R\times R\to R\quad\text{given by}\quad (r,s)\mapsto rs</me> defines a left and a right <m>R</m>-module structure on <m>R</m>. 
+		</statement>
+	</example>
+	<!--<example>
+		<title>(Group endomorphisms of <m>R</m> as an <m>R</m>-mod)</title>
+		<statement>
+			Let <m>R</m> be a ring. We denote by <m>\End_{\rm Grps}(R)</m> the group of all group endomorphism of <m>(R,+)</m>. For any <m>r\in R</m> consider the left multiplication map:
+			<me>\ell_r\colon (R,+)\to (R,+)\quad\text{given by}\quad x\mapsto rx.</me> The map <m>\ell_r\in\End_{\rm Grps}(R)</m>. We now define an <m>R</m>-mod structure on <m>\End_{\rm Grps}(R)</m>. Consider the map
+			<me>R\times\End_{\rm Grps}(R)\to\End_{\rm Grps}(R)\quad\text{given by}\quad(r,\varphi)\mapsto\ell_r\circ\varphi.</me> It is left to the reader to verify that with the above map <m>\End_{\rm Grps}(R)</m> is an <m>R</m>-mod.
+		</statement>
+	</example>-->
+	<example xml:id="ring-hom-and-modules">
+		<title>(Ring homomorphisms and module structures)</title>
+		<statement>
+			<p>
+				Let <m>(A,+)</m> be an abelian group. The group of all group endomorphisms of <m>A</m>, <m>\End_{\rm Grps}(A)</m> is a ring. Assume that there is a ring homomorphism <m>\varphi\colon R\to\End_{\rm Grps}(A)</m>. We make <m>A</m> as an <m>R</m>-mod using <m>\varphi</m>. Indeed, consider the following map:
+			<me>R\times A\to A\quad\text{defined by}\quad (r,a)\mapsto\varphi(r)(a).</me> This map makes <m>A</m> into an <m>R</m>-mod. The verification is left to the reader.
+			</p>
+			<p>
+				Conversely, suppose that <m>A</m> is a left <m>R</m>-module. For <m>r\in R</m> define a group homomorphism <m>f_r\colon A\to A</m> by <m>f_r(a)=r\cdot a</m>. We get a ring homomorphism <me>f\colon R\to\End_{\rm Grps}(A)\quad\text{given by}\quad r\mapsto f_r.</me>
+				All verifications are left to the reader.
+			</p>
+			<p>
+				Thus, there is a left <m>R</m>-module structure on an abelian group <m>A</m> if and only if there is a ring homomorphism <m>R\to\End_{\rm Grps}(A)</m>.
+			</p>
+		</statement>
+	</example>
+	<example xml:id="module-struture-via-ring-hom">
+		<title>(Induced module structure via a ring homomorphism)</title>
+		<statement>
+			Let <m>\varphi\colon R\to S</m> be a ring homomorphism, and let <m>N</m> be a left <m>S</m>-module. We show that <m>N</m> can be considered as a left <m>R</m>-module. Indeed, define 
+			<me>R\times N\to N\quad\text{by}\quad (r,n)\mapsto\varphi(r)\cdot n</me>. Verify that this makes <m>N</m> a left <m>R</m>-module.
+			<p>
+				If we consider the identity homomorphism on <m>R</m> then we get <xref ref="module-over-itself"/>.
+			</p>
+		</statement>
+	</example>
+	<example xml:id="left-module-as-right-module">
+		<title>(Modules over a ring and its opposite ring)</title>
+		<statement>
+			Let <m>R</m> be a ring and <m>R^{\rm op}</m> be its opposite ring (see <xref ref="example-opposite-ring"/>). If <m>M</m> is a left <m>R</m>-module (resp., a right <m>R</m>-module) then <m>M</m> is a right <m>R^{\rm op}</m>-module (resp., a left <m>R^{\rm op}</m>-module).
+			Indeed, given a left <m>R</m>-module <m>M</m> we define <m>M\times R^{\rm op}\to M</m> by 
+			<me>(m,r^{\rm op})\mapsto r\cdot m.</me>
+		</statement>
+	</example>
+</section>

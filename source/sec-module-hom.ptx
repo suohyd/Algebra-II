@@ -1,0 +1,89 @@
+<section xml:id="sec-module-hom">
+	<title>Module homomorphisms</title>
+	<definition xml:id="def-module-hom">
+	Let <m>R</m> be a ring. Let <m>M</m> and <m>N</m> are left <m>R</m>-modules. A map <m>f\colon M\to N</m> is said to be an <term><m>R</m>-module homomorphism</term> if for any <m>m,m^\prime\in M</m> and any <m>r\in R</m> we have
+	<me>f(m+m^\prime)=f(m)+f(m^\prime)\quad\text{and}\quad f(r\cdot m)=r\cdot f(m).</me> 
+</definition>
+<definition xml:id="def-kernel-module-hom">
+	Let <m>R</m> be a ring, and let <m>f\colon M\to N</m> be an <m>R</m>-module homomorphism. The <term> kernel of <m>f</m></term> is
+	<me>\ker(f)=\{m\in M:f(m)=0\}</me>
+	and the <term> image of <m>f</m></term> is
+	<me>{\rm Im}(f)=\{f(m)\in N:m\in M\}.</me>
+</definition>
+<remark>
+	It is easy to verify that <m>\ker(f)</m> and <m>{\rm Im}(f)</m> are <m>R</m>-submodules of <m>M</m> and <m>N</m>, respectively.
+</remark>
+<example xml:id="left-multiplication-module-hom">
+	<title>(Left multiplication module homomorphism)</title>
+	<statement>
+	Let <m>A</m> be a commutative ring, and let <m>M</m> be a left <m>A</m>-module. We fix <m>a\in A</m> and consider the map <m>\ell_a\colon M\to M</m> defined by <me>m\mapsto a\cdot m</me>
+	The map <m>\ell_a</m> is an <m>A</m>-module homomorphism.
+</statement>
+</example>
+<example>
+	<title>(<m>F[X]</m>-module homomorphism)</title>
+	<statement>
+	Let <m>V</m> be a finite-dimensional vector space over a field <m>F</m>. We fix an <m>F</m>-linear endomorphism of <m>V</m>, say <m>T</m>. We consider <m>V</m> as a left <m>F[X]</m>-module via the following scalar multiplication (refer to <xref ref="vs-as-FX-module"/>):
+	<me>F[X]\times V\to V;\quad f(X)\cdot v=f(T)(v)</me>
+	Consider the following map.
+	<me>\varphi\colon V\to V\quad\text{defined by}\quad v\mapsto T(v).</me>
+	It is left to the reader to verify that <m>\varphi</m> is an <m>F[X]</m>-module.
+</statement>
+</example>
+<example>
+	<title>(Abelian group homomorphisms)</title>
+	<statement>
+	A <m>\Z</m>-module homomorphism is same as the group homomorphism.
+</statement>
+</example>
+<example xml:id="annihilator-of-element">
+	<title>(Annihilator of an element)</title>
+	<statement>
+	Let <m>R</m> be a ring and let <m>M</m> be a left <m>R</m>-module. Fix an element <m>m\in M</m>. The map <m>f_m\colon R\to M</m> define by <me>r\mapsto r\cdot m</me> is an <m>R</m>-module homomorphism. The kernel of this map is called the annihilator of <m>m</m> and it is denoted by <m>{\rm Ann}_R(m)</m>. Thus
+	<me>{\rm Ann}_R(m)=\{r\in R:r\cdot m=0\}</me> is a left ideal of <m>R</m>.
+</statement>
+</example>
+<example>
+	<title>(Inclusion homomorphism)</title>
+	<statement>
+	Let <m>R</m> be a ring and let <m>M,N</m> be left <m>R</m>-modules with <m>N\subset M</m>. Then <m>N</m> is a submodule of <m>M</m> if and only if inclusion <m>N\hookrightarrow M</m> is an <m>R</m>-module homomorphism.
+</statement>
+</example>
+<lemma>
+	<statement>
+	Let <m>R</m> be a ring and let <m>M,N</m> be left <m>R</m>-modules. An <m>R</m>-module homomorphism if injective if and only if <m>\ker(f)=\{0\}</m>.
+</statement>
+</lemma>
+<definition>
+	Let <m>R</m> be a ring and let <m>M,N</m> be left <m>R</m>-modules. An <m>R</m>-module homomorphism <m>f\colon M\to N</m> is said to be an <term><m>R</m>-isomorphism</term> if there exists an <m>R</m>-module homomorphism <m>g\colon N\to M</m> such that <m>f\circ g=Id_N</m> and <m>g\circ f=Id_M</m>.
+	
+	If there is an <m>R</m>-isomorphism between <m>M</m> and <m>N</m> then we say that0 <m>M</m> isomorphic to <m>N</m>, and write <m>M\simeq N</m>.
+</definition>
+<lemma>
+	<statement>An <m>R</m>-module homomorphism <m>f\colon M\to N</m> is isomorphism if and only if <m>f</m> is a bijective <m>R</m>-module homomorphism.
+</statement>
+</lemma>
+<example xml:id="minimal-left-ideals-of-matrices">
+	<title>(Minimal left ideals of <m>M_2(F)</m>)</title>
+	<statement>
+	Consider the matrix ring over a field <m>F</m>, <m>M_2(F)</m>. Then
+	<me>M=\left\{\begin{pmatrix}a\amp 0\\b\amp 0\end{pmatrix}:a,b\in F\right\}\quad\text{and}\quad N=\left\{\begin{pmatrix}0\amp a\\0\amp b\end{pmatrix}:a,b\in F\right\}</me>
+	are left ideals of <m>M_2(F)</m>, and hence left <m>M_2(F)</m>-submodules of <m>M_2(F)</m>. We define a map 
+	<me>f\colon M\to N\quad\text{by}\quad \begin{pmatrix}a\amp 0\\b\amp 0\end{pmatrix}\mapsto\begin{pmatrix}0\amp a\\0\amp b\end{pmatrix}.</me>
+	It is left to the reader to check that <m>f</m> is an <m>M_2(F)</m>-module homomorphism. Furthermore, the map <me>g\colon N\to M\quad\text{defined by}\quad\begin{pmatrix}0\amp a\\0\amp b\end{pmatrix}\mapsto\begin{pmatrix}a\amp 0\\b\amp 0\end{pmatrix}</me> is also an <m>M_2(F)</m>-module homomorphism with <me>f\circ g=\unit_N\quad\text{and}\quad g\circ f=\unit_M.</me>
+	Thus <m>M_2(F)</m>-modules <m>M,N</m> are isomorphic.
+	
+	Furthermore we show that <m>M</m> is a simple left <m>M_2(F)</m>-module. By a similar reasoning <m>N</m> can be shown as a simple left <m>M_2(F)</m>-mdoule. Suppose that <m>m= \begin{pmatrix}a\amp 0\\b\amp 0\end{pmatrix}\in M</m> is a nonzero element and <m>m^\prime=\begin{pmatrix}c\amp 0\\d\amp 0\end{pmatrix}\in M</m> be an arbitrary element. We show that there exists <m>X=\begin{pmatrix}x\amp y\\z\amp w\end{pmatrix}\in M_2(F)</m> such that <m>Xm=m^\prime</m>. Indeed, we get the following equations from <m>Xm=m^\prime</m>.
+	<me>ax+by=c\quad\text{and}\quad az+bw=d.</me>
+	This can be solved to obtain <m>x,y,z,</m> and <m>w</m>. Hence, <m>M</m> is a simple left <m>M_2(F)</m>-module. In other words, <m>M</m> is a minimal left ideal of <m>M_2(F)</m>. 
+</statement>
+</example>
+<lemma>
+	<statement>Let <m>M</m> be a simple left <m>R</m>-module and let <m>N</m> be a left <m>R</m>-module. Any nonzero <m>R</m>-module homomorphism <m>M\to N</m> is injective.
+</statement>
+</lemma>
+<lemma>
+	<statement>Let <m>N</m> be a simple left <m>R</m>-module and let <m>M</m> be a left <m>R</m>-module. Any nonzero <m>R</m>-module homomorphism <m>M\to N</m> is surjective.
+</statement>
+</lemma>
+</section>

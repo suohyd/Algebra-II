@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-ring-homomorphisms" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Ring homomorphisms</title>
+  <xi:include href="./sec-ring-homomorphisms.ptx"/>
+  <xi:include href="./sec-examples-rings-algebras-homomorphisms.ptx"/>
+  <xi:include href="./ex-ring-homomorphisms.ptx"/>
+</chapter>

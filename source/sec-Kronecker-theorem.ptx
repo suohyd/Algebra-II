@@ -1,0 +1,52 @@
+<section xml:id="sec-Kronecker-theorem">
+	<title>Kronecker's Theorem</title>
+	<theorem xml:id="Kronecker-theorem">
+		<title>(Kronecker's theorem)</title>
+		<statement>
+			Let <m>F</m> be a field and let <m>f\in F[X]</m> be an irreducible polynomial. The <m>K=F[X]/(f)</m> is a field, and <m>f</m> has a root in <m>K</m>.
+		</statement>
+	</theorem>
+	<proof>
+		Let <m>h\in F[X]</m> be a nonconstant polynomial of <m>\deg(h)\geq\deg(f)</m>. By <xref ref="division-algorithm-for-LC-unit"/>, there exists <m>q,r\in F[X]</m> with <m>\deg(r)\lt\deg(f)</m> such that <me>h=qf+r,\quad\text{i.e.,}\quad h+(f)=r+(f)\in K.</me> Then <m>(f)+(r)=F[X]</m>. Indeed, if <m>d=\gcd(r,f)</m> then <m>d\mid r</m> and <m>d\mid f</m>. As <m>f</m> is irreducible, <m>d</m> is a unit or <m>d=f</m>. Since <m>d\mid r</m> and <m>\deg(r)\lt\deg(f)</m>, we must have <m>d</m> is a unit. Hence <m>(r)+(f)=F[X]</m>. Thus there exists <m>x,y\in F[X]</m> such that <m>rx+fy=1</m>. Thus
+		<me>rx\equiv 1\mod f</me> i.e., <m>r</m> is invertible in <m>K</m>. This shows that <m>K</m> is a field.
+		<p>
+			We now show that <m>f</m>, when considered as a polynomial over <m>K</m>, has a root in <m>K</m>. An element <m>r\in F[X]</m> when considered as an element in <m>K</m> is denoted by <m>\overline{r}</m>.  Suppose that <m>f(X)=a_0+a_1X+\cdots+a_nX^n\in F[X]</m>. Consider the polynomial <m>\overline{f}(t)=\overline{a_0}+\overline{a_1}t+\cdots+\overline{a_n}t^n\in K[X]</m>. We show that <m>\overline{X}</m> is a root of <m>\overline{f}</m>. Indeed,
+			<md><mrow>\overline{f}(\overline{X})\amp=\overline{a_0}+\overline{a_1}\overline{X}+\cdots+\overline{a_n}\overline{X}^n</mrow><mrow>\amp= (a_0+a_1X+\cdots+a_nX^n)+(f)</mrow><mrow>\amp=0\in K</mrow></md>
+		</p>
+	</proof>
+	<corollary xml:id="prime-implies-maximal-in-polynomials">
+		<title>(Prime if and only if maximal)</title>
+		<statement>
+			A nonzero ideal of <m>F[X]</m> is prime if and only if it is maximal.
+	</statement>
+	</corollary>
+	<proof>
+		<p>
+			Suppose that <m>I</m> is a nonzero prime ideal. Then there exists an irreducible polynomial <m>f\in F[X]</m> such that <m>I=(f)</m> (see <xref ref="prime-iff-irreducible-polynomials"/>). By <xref ref="Kronecker-theorem"/>, <m>F[X]/I</m> is a field. By correspondence theorem, every ideal of <m>F[X]/I</m> is obtained by an ideal of <m>F[X]</m> containing <m>I</m>. As <m>F[X]/I</m> is a field there are no proper ideals of <m>F[X]</m> that contains <m>I</m>. Hence <m>I</m> is maximal.
+		</p>
+		<p>
+			Conversely, assume that <m>I</m> is maximal. Suppose that <m>I=(f)</m> (see <xref ref="polynomial-ring-is-PID"/>). If <m>f</m> is reducible then there exists <m>g,h\in F[X]</m> such that <m>f=gh</m>. In this case <m>I\subseteq (g)</m> and <m>I\subseteq (h)</m>. The maximality of <m>I</m> implies that either <m>I=(g)</m> or <m>(g)=F[X]</m> (similarly for <m>h</m>). If <m>I=(g)</m> then <m>f\mid g</m> and there exists <m>k\in F[X]</m> such that <m>g=fk</m>. Thus, <m>f=gh=fkh</m>. Since <m>F[X]</m> is an integral domain, <m>kh=1</m>. This shows that <m>h</m> is a constant polynomial. If <m>(g)=F[X]</m> then <m>g</m> is a unit. Therefore, we obtain that <m>f</m> is irreducible. By <xref ref="prime-iff-irreducible-polynomials"/> we get the desired result.
+		</p>
+	</proof>
+	<observation>
+		<statement>
+			We keep the notations of <xref ref="Kronecker-theorem"/>. We have a ring monomorphism given by composition:
+			<me>F\xrightarrow{i}F[X]\xrightarrow{\pi}F[X]/(f)</me> given by
+			<me>i(\alpha)=\alpha 1\quad\text{and}\quad\pi(g(X))=g(X)+(f)=g(\overline{X}).</me> Thus <m>F\simeq \pi\circ i(F)\subset K</m>.
+		</statement>
+	</observation>
+	<corollary>
+		<statement>
+			Let <m>f</m> be a field and let <m>f\in F[X]</m> a non-constant polynomial. Then there exists a field <m>K</m> containing isomorphic image of <m>F</m> and a root of <m>f</m>.
+		</statement>
+	</corollary>
+	<!--<example xml:id="evaluation-map-Kronecker">
+		<statement>
+			Let <m>K</m> and <m>F</m> be field with <m>F\subset K</m>. Assume that <m>f\in F[X]</m> is an irreducible polynomial in <m>F[X]</m> and <m>a\in K</m> is a root of <m>f(X)\in K[X]</m>, i.e., <m>f(a)=0\in K</m>. Consider the evaluation map
+			<me>\ev_a\colon F[X]\to K\quad\text{given by}\quad \sum\alpha_iX^i\mapsto\sum\alpha_ia^i.</me> We show that <m>\ker(\ev_a)=(f)\subset F[X]</m>.
+			<p>
+				Since <m>a\in K</m> is such that <m>f(a)=0</m> we have <m>(f)\subseteq\ker(\ev_a)</m>. Conversely, suppose that <m>g\in\ker(\ev_a)</m>. By the division algorithm, there exists <m>q,r\in F[X]</m> with <m>\deg(r)\lt\deg(f)</m> such that <m>g=qf+r</m>. Thus <m>0=r(a)\in K</m>, i.e., <m>r\in\ker(\ev_a)</m>. As <m>f(X)</m> is irreducible in <m>F[X]</m> and <m>\deg(r)\lt\deg(f)</m>, we have <m>(r)+(f)=F[X]</m>.
+			</p>
+		</statement>
+	</example>-->
+</section>

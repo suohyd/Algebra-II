@@ -1,0 +1,98 @@
+<section xml:id="sec-UFD-PID-ED">
+	<title>Unique Factorization Domains</title>
+	<introduction>
+	Let <m>A</m> be an integral domain. An element <m>b\in A</m> is said to <term>divide</term> an element <m>a\in A</m> if there exists <m>x\in A</m> such that <m>b=ax</m>. In this case <m>b</m> is called a <term>divisor</term> or a <term>factor</term> of <m>a</m> and we write <m>b\mid a</m>. We write <m>c\nmid a</m> to denote that <m>c</m> is <term>not a factor</term> of <m>a</m>.
+
+	An element <m>u\in A</m> is called an <term>unit</term> if <m>u\mid 1</m>. Units are factors of every element.
+	
+	Two elements <m>a,b\in A</m> are called <term>associates</term> if <m>a\mid b</m> and <m>b\mid a</m>. We denote associates by <m>a\sim b</m>. It is easy to see that <m>a\sim b</m> if and only if <m>b=au</m> and <m>a=bv</m> for some units <m>u,v\in A</m>.
+	
+	If <m>b\mid a</m> and <m>a\nmid b</m> then <m>b</m> is said to be a <term>proper factor</term> of <m>a</m>.
+	
+	An element <m>a\in A</m> is said to be <term>irreducible</term> if <m>a</m> is not a unit and <m>a</m> has no proper factors other than units. It is easy to verify that if <m>a</m> is irreducible and <m>a\sim b</m> then <m>b</m> is also irreducible.
+	
+	Suppose that <m>a\in A</m> is such that <m>a=p_1p_2\cdots p_n</m> where <m>p_i</m> are irreducibles. This is called a <term>factorization of <m>a</m> into irreducibles</term>.
+	
+	A factorization of <m>a=p_1p_2\cdots p_n</m> is said to be <term>essentially unique</term> if for any other factorization <m>a=q_1q_2\cdots q_m</m> (<m>q_i</m> are irreducibles) we have <m>m=n</m> and <m>p_i\sim q_j</m> for a suitable permutation <m>\sigma\in S_n</m> with  <m>\sigma(i)=j</m>.
+</introduction>
+
+
+<definition xml:id="def-UFD">
+	<title>(Factorial domain or Unique factorization domain)</title>
+	An integral domain <m>A</m> is called <term>factorial</term> or <term>unique factorization domain</term> if every nonzero non-unit in <m>A</m> has an essentially unique factorization into irreducibles.
+</definition>
+
+<definition xml:id="divisor-chain-condition">
+	<title>(Divisor Chain Condition)</title>
+	<statement>
+		Let <m>A</m> be an integral domain. We say that <m>A</m> satisfy the <term>divisor chain condition</term> if <m>a_1,a_2,\ldots</m> is a sequence of elements of <m>A</m> such that <m>a_{i+1}\mid a_i</m> then there exists an integer <m>N</m> such that <m>a_N\sim a_{N+1}\sim\cdots</m>. 
+	</statement>
+</definition>
+<definition xml:id="primeness-condition">
+	<title>(Primeness condition)</title>
+	<statement>
+		An integral domain is said to satisfy <term>primeness condition</term> if every irreducible is prime.
+	</statement>
+</definition>
+<theorem xml:id="UFD-iff-primeness">
+	<statement>
+		Let <m>A</m> be an integral domain. Then <m>A</m> is factorial (or UFD) if and only if <m>A</m> satisfies the divisor chain condition and the primeness condition.
+	</statement>
+</theorem>
+<definition xml:id="def-GCD">
+	<title>(Greatest Common Divisor)</title>
+	<statement>
+		Let <m>A</m> be an integral domain. An element <m>d\in A</m> is called a <term>greatest common divisor or g.c.d.</term> of <m>a,b\in A</m> if <m>d\mid a</m> and <m>d\mid b</m>; and if <m>e\mid a</m> and <m>e\mid b</m> then <m>e\mid d</m>.
+	</statement>
+</definition>
+<remark>
+	<statement>
+		The g.c.d., if exists, is determined up to a unit multiplier.
+	</statement>
+</remark>
+<definition xml:id="def-GCD-condition">
+	<statement>
+		Let <m>A</m> be an integral domain. We say that <m>A</m> satisfy the GCD condition if any two elements of <m>A</m> have a g.c.d.
+	</statement>
+</definition>
+<proposition xml:id="GCD-implies-primeness">
+	<statement>
+		Let <m>A</m> be an integral domain. The GCD condition implies the primeness condition.
+	</statement>
+</proposition>
+<theorem xml:id="UFD-iff-GCD">
+	<statement>
+		Let <m>A</m> be an integral domain. Then <m>A</m> is factorial (or UFD) if and only if <m>A</m> satisfies the divisor chain condition and the GCD condition.
+	</statement>
+</theorem>
+<example xml:id="subring-of-UFD">
+	<title>(Subring of UFD need not be a UFD)</title>
+	<statement>
+		We will show in the later part that the ring of Gaussian integers <m>\Z[i]=\{a+bi:a,b\in\Z\}</m> is a UFD. Here we only show that its subring <me>\Z[2i]=\{a+2bi:a,b\in\Z\}</me> is not a UFD by showing that primeness condition does not hold.
+		<p>
+			 We show that <m>2i</m> is an irreducible element <m>\Z[2i]</m> which is not a prime element. Suppose that <m>2i=(a+2bi)(c+2di)</m> for some <m>a,b,cd\in\Z</m>. Considering the square of the norm in <m>\C</m> we have
+<me>4=(a^2+4b^2)(c^2+4d^2)=(a^2c^2+16b^2d^2)+4(b^2c^2+a^2d^2).</me> Note that all terms are non-negative integers. Hence if both <m>b,d</m> are nonzero then RHS will be strictly greater than <m>4</m>. Therefore either <m>b=0</m> or <m>d=0</m>. Suppose that <m>b=0</m>. Then the above equation becomes
+<me>4=a^2c^2+4a^2d^2=a^2(c^2+4d^2)</me> Thus <m>a\neq 0</m> and either <m>d=0</m> or <m>d=\pm 1</m>. If <m>d=0</m> then <m>4=a^2c^2</m>, i.e, <m>2=\pm ac\in\Z</m>, i.e., either <m>a=\pm 2</m> or <m>c=\pm 2</m>. This will contradiction to the assumption, because in this case <m>b=d=0</m> <m>2i=(a+2bi)(c+2di)=2</m>. Other case is left to the reader.
+
+Thus <m>2i</m> is irreducible. Note that <m>2i\mid 2\cdot 2</m> however <m>2i\nmid 2</m>. Hence <m>\Z[2i]</m> does not satisfy the primeness condition and therefore it is not a UFD.
+		</p>
+	</statement>
+</example>
+<example xml:id="quotient-of-UFD">
+	<title>(Quotient of a UFD is need not be a UFD)</title>
+	<statement>
+		In this example we use the fact that if <m>A</m> is UFD then the polynomial ring over <m>A</m>, <m>A[x]</m> is also a UFD. This fact will be proved in the next chapter. Thus if <m>F</m> is a field then <m>F[x,y]</m> is a UFD. Consider the following subring of <m>F[x]</m>:
+		<me>R=F+x^2F[x]=\left\{\sum_{i=0}^{n}a_ix^i:n\in\N\text{ and }a_1=0\right\}.</me>
+		Verify that the units of <m>R</m> are same as the units of <m>F[x]</m>, i.e., units of <m>R</m> are nonzero elements of <m>F</m>, <m>F^\times</m>. We claim that <m>x^2</m> is irreducible in <m>R</m> but it is not a prime element. Indeed, suppose that <m>r,s\in R</m> are such that <m>x^2=rs</m>. Since <m>R</m> is a subring of <m>F[x]</m> the same factorization can be considered in <m>F[x]</m>. However as <m>F[x]</m> is a UFD we must have <m>r\sim x\in F[x]</m> and <m>s\sim x\in F[x]</m>. Since <m>x\not\in R</m> and units of <m>R</m> are <m>F^\times</m> we get <m>x^2</m> is irreducible in <m>R</m>. Furthermore, as <m>x\not\in R</m> we have <m>x^2\nmid x^3</m>. However, <m>x^2\mid(x^3)(x^3)</m>. Hence <m>x^2</m> is irreducible but not a prime in <m>R</m>.
+		<p>
+			Consider a ring homomorphism <m>\ev\colon F[x,y]\to F[x]</m> given by <me>f(x,y)\mapsto f(x^2,x^3)</me>
+			The image of this map is the ring <m>R</m>. We now compute its kernel. Note that <m>(y^2-x^3)\subseteq\ker(\ev)</m>. Now suppose that <m>f\in\ker(\ev)</m>. We use division algorithm in <m>F[x][y]</m>:
+			<me>f(x,y)=q(x,y)(y^2-x^3)+(a(x)y+b(x))\quad\text{with}\;a(x),b(x)\in F[x].</me>
+			Hence <me>0=f(x^2,x^3)=a(x^2)x^3+b(x^2),\quad{i.e.,}\quad b(x^2)=-a(x^2)x^3.</me>
+			Comparing degree on the both side we must have <m>a(x)=0=b(x)</m>. Therefore, <m>(y^2-x^3)=\ker(\ev)</m>. By <xref ref="FIT"/> 
+			<me>F[x,y]\big/(y^2-x^3)\simeq R</me>. 
+			Thus quotient of a UFD need not be a UFD.
+		</p>
+	</statement>
+</example>
+</section>

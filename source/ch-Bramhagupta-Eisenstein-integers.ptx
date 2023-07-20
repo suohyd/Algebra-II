@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-Bramhagupta-Eisenstein-integers" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Brahmagupta's equations and Eisenstein integers</title>
+  <xi:include href="./sec-Brahmagupta-equation.ptx"/>
+  <xi:include href="./sec-Eisenstein-integers.ptx"/>
+</chapter>

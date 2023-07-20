@@ -1,0 +1,32 @@
+<section xml:id="sec-multiplicatively-closed-subset">
+	<title>Multiplicatively closed subset</title>
+	<introduction>
+		We begin with the definition of multiplicatively closed subset of a commutative ring.
+	</introduction>
+	<definition>
+		<statement>
+			A subset <m>S</m> of a commutative ring is said to be <term>multiplicatively closed</term> if following conditions are satisfied:
+			<ol>
+				<li><m>1\in S</m></li>
+				<li>If <m>a,b\in S</m> then <m>ab\in S</m></li>
+			</ol>
+		</statement>
+	</definition>
+	<example xml:id="Compliment-of-prime-ideal">
+		<title>(Compliment of a prime ideal)</title>
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>\mfp</m> be a prime ideal in <m>A</m>. It is straightforward to verify that <m>A\setminus\mfp</m> is a multiplicatively closed subset of <m>A</m>.
+		</statement>
+	</example>
+	<example>
+		<title>(Non-zero elements of an integral domain)</title>
+		<statement>
+			Let <m>A</m> be an integral domain. The subset of all nonzero element of <m>A</m> is a multiplicatively closed set.
+		</statement>
+	</example>
+	<example>
+		<statement>
+			Let <m>A</m> be a commutative ring and let <m>a\in A</m>. The set <m>\{a^n:n\geq 0\}</m> is a multiplicative subset of <m>A</m>.
+		</statement>
+	</example>
+</section>

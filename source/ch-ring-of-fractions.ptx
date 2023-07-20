@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-ring-of-fractions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Ring of fractions</title>
+  <xi:include href="./sec-multiplicatively-closed-subset.ptx"/>
+  <xi:include href="./sec-ring-of-fractions.ptx"/>
+</chapter>

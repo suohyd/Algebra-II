@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- The docinfo block is the analogue to the latex preamble -->
+<!-- This is where you can define macros and other book-wide -->
+<!--  settings.                                              -->
+<docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<!-- The next three lines are likely for mature projects only: -->
+
+<!-- <brandlogo url="" source="images/cover.png"/> -->
+<!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+<!-- <document-id>unique-book-id</document-id> -->
+
+<!-- macros for defining latex math shortcuts. It is good practice  -->
+<!-- to define these semantically, so that the macro relates to what-->
+<!-- it defines.                                                    -->
+
+<macros>
+      \def\R{\mathbb{R}}
+      \def\C{\mathbb{C}}
+      \def\Q{\mathbb{Q}}
+      \def\N{\mathbb{N}}
+      \def\Z{\mathbb{Z}}
+      \def\mfa{\mathfrak{a}}
+      \def\mfb{\mathfrak{b}}
+      \def\mfc{\mathfrak{c}}
+      \def\mfp{\mathfrak{p}}
+      \def\mfq{\mathfrak{q}}
+      \def\mfm{\mathfrak{m}}
+      \def\ev{\mathrm{ev}}
+      \def\Im{\mathrm{Im}}
+      \def\End{\mathrm{End}}
+      \def\Aut{\mathrm{Aut}}
+      \def\Int{\mathrm{Int}}
+      \def\Hom{\mathrm{Hom}}
+      \def\Iso{\mathrm{Iso}}
+      \def\GL{\mathrm{GL}}
+      \def\ker{\mathrm{ker }}
+      \def\Span{\mathrm{Span}}
+      \def\tr{\mathrm{tr}}
+      \def\Rings{\mathrm{Rings}}
+      \def\Alg{{F\text{-Alg}}}
+      \def\Ann{{\rm Ann}}
+      \newcommand{\unit}{1\!\!1}
+
+      <latex-image-preamble>
+        \usepackage{tikz}
+      </latex-image-preamble>
+
+</macros>
+
+<!-- If you put any latex-image elements you can include preambles  -->
+<!-- for those in the next element.                                 -->
+<latex-image-preamble>
+  \usepackage{tikz, pgfplots}
+  \usetikzlibrary{positioning,matrix,arrows}
+  \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+  \usetikzlibrary{decorations.markings} 
+</latex-image-preamble>
+
+<!-- It is possible to rename elements using the tags below -->
+  <rename element="investigation" xml:lang="en-US">Puzzle</rename>
+  <rename element="assemblage" xml:lang="en-US">Summary</rename>
+
+<!-- Specify the default type of cross reference:           -->
+  <cross-references text="type-global" />
+  
+
+</docinfo>
+

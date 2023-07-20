@@ -1,0 +1,44 @@
+<section xml:id="sec-examples-irreducibility">
+	<title>Examples</title>
+	<example xml:id="affine-automorphism">
+		<title>(Affine automorphism)</title>
+		<statement>
+			Let <m>F</m> be a field and let <m>a,b\in F</m> with <m>a\neq 0</m>. We show that <m>\varphi\colon F[x]\to F[x]</m> given by <m>\sum \alpha_ix^i\mapsto\sum \alpha_i(ax+b)^i</m> is a ring automorphism.
+			<p>
+				We first show that <m>\varphi</m> is a ring homomorphism.
+				<ol>
+					<li><me>\varphi\left(\sum\alpha_ix^i+\sum_i\beta_ix^i\right)=\varphi\left(\sum(\alpha_i+\beta_i)x^i\right)=\sum(\alpha_i+\beta_i)(ax+b)^i=\varphi\left(\sum\alpha_ix^i\right)+\varphi\left(\sum\beta_ix^i\right).</me></li>
+					<li><me>\varphi\left(\left(\sum\alpha_ix^i\right)\left(\sum\beta_jx^j\right)\right)=\varphi\left(\sum_k(\sum_{i=0}^k\alpha_i\beta_{k-i})x^k\right)=\sum_k\left(\sum_{i=0}^k\alpha_i\beta_{k-i}\right)(ax+b)^k</me>. While <me>\varphi\left(\sum\alpha_ix^i\right)\varphi\left(\sum\beta_jx^j\right)=\left(\sum\alpha_i(ax+b)^i\right)\left(\sum\beta_j(ax+b)^j\right)=\sum_k\left(\sum_{i=0}^k\alpha_i\beta_{k-i}\right)(ax+b)^k.</me></li>
+				</ol>
+			</p>
+			<p>
+				Consider the map <m>\phi\colon F[x]\to F[x]</m> given by <me>\sum\alpha_ix^i\mapsto\sum\alpha_i(x/a-b/a)^i.</me>
+				By the arguments in the last paragraph we see that <m>\phi</m> is a ring homomorphism. Furthermore, using the fact that <m>\varphi</m> and <m>\phi</m> are ring homomorphism we get the following.
+				<me>\phi\circ\varphi\left(\sum\alpha_kx^k\right)=\phi\left(\sum\alpha_k(ax+b)^k\right)=\sum\alpha_k\phi\left(ax+b\right)^k=\sum\alpha_k\left(a(x/a-b/a)+b\right)^k=\sum\alpha_kx^k.</me>
+				<me>\varphi\circ\phi\left(\sum\alpha_kx^k\right)=\varphi\left(\sum\alpha_k(x/a-b/a)^k\right)=\sum\alpha_k\varphi\left(x/a-b/a\right)^k=\sum\alpha_k\left((ax+b)/a-b/a\right)^k=\sum\alpha_kx^k.</me>
+				This shows that <m>\varphi</m> is a ring automorphism.
+			</p>
+		</statement>
+	</example>
+	<example>
+		<statement>
+			The polynomial <m>x^4+1\in\Q[x]</m> is irreducible in <m>\Q[x]</m>. Use the affine automorphism (refer <xref ref="affine-automorphism"/>) given by <m>x\mapsto x+1</m> and then apply Eisenstein's criterion.
+		</statement>
+	</example>
+	<example>
+		<statement>
+			We show that <m>x^4+4</m> is reducible over <m>\Q</m>. We have 
+			<me>x^4+4=(x^4+4x^2+4)-(2x)^2=(x^2+2)^2-(2x)^2=(x^2+2x+2)(x^2-2x+2)\in\Q[x].</me>
+			By <xref ref="rational-root-criterion"/> the polynomial <m>x^4+4</m> has no root in <m>\Q</m>. More directly, since for any <m>r/s\in\Q</m> we have <m>(r/s)^4\geq 0</m> and hence <m>(r/s)^4+4\gt 0</m>.
+		</statement>
+	</example>
+	<example xml:id="pth-cyclotomic-polynomial">
+		<title>(<m>p</m>-th Cyclotomic polynomial)</title>
+		<statement>
+			For a prime number <m>p</m> we consider <m>\Phi_p(x)=x^{p-1}+x^{p-2}+\cdots+x+1\in\Q[x]</m>. This polynomial is called <term>cyclotomic polynomial</term>. Note that 
+			<me>\Phi_p(x)=\frac{x^p-1}{x-1}.</me> We show that <m>\Phi_p(x)</m> is irreducible over <m>\Q</m> using Eisenstein's criterion.
+			Consider <md><mrow>\Phi_p(x+1)\amp=\frac{(x+1)^p-1}{x}</mrow><mrow>\amp=\frac{\left(\sum_{k=0}^p{p\choose k} x^k\right)-1}{x}</mrow><mrow>\amp= p+{p\choose 2}x+\cdots+x^{p-1}</mrow></md>
+			For each <m>k\in{1,2,\ldots,p-1}</m> the prime <m>p</m> divides <m>{p\choose k}</m>. Hence, Eisenstein's criterion with prime <m>p</m> implies that <m>\Phi_p(x+1)</m> is irreducible over <m>\Z[x]</m> and hence <m>\Phi_p(x)</m> is irreducible over <m>\Z[x]</m> by <xref ref="affine-automorphism"/>. Now assume that <m>\Phi_p(x)=gh</m> with <m>g,h\in\Q[x]</m>. By clearing denominators we get <m>r\in\Z</m> such that <m>r\cdot\Phi_p(x)=\tilde{g}\tilde{h}\in\Z[x]</m>. Let <m>p</m> be a prime factor of <m>r</m>. Therefore, <m>\overline{0}=\overline{\tilde{g}}\overline{\tilde{h}}\in\left(\Z/p\Z\right)[x]</m>. Since <m>\Z/p\Z</m> is an integral domain we must have either all coefficients <m>\tilde{g}\in p</m> or all coefficients <m>\tilde{h}\in p</m>. Hence, we can cancel <m>p</m> from the equation <m>r\cdot \Phi_p(x)=\tilde{g}\tilde{h}</m>. Continuing in this way we can cancel all prime factors of <m>r</m>, and we get the equation <m>\Phi_p(x)=G(x)H(x)</m> with <m>G,H\in\Z[x]</m>. However, we already proved that <m>\Phi_p(x)</m> is irreducible over <m>\Z</m>, i.e., either <m>G(x)=\pm 1</m> or <m>H(x)=\pm 1</m>. Hence proved.
+		</statement>
+	</example>
+</section>

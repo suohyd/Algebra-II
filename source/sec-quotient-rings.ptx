@@ -1,0 +1,35 @@
+<section xml:id="sec-quotient-rings">
+	<title>Definition</title>
+	<definition xml:id="def-quotient-ring">
+		<title>(Quotient ring)</title>
+		<statement>
+			Let <m>R</m> be a ring with unity and <m>I</m> be a two-sided ideal in <m>R</m>. The set of all cosets of <m>R</m> modulo <m>I</m> is denoted by <m>R/I</m>. Thus,
+			<me>R/I=\{r+I:r\in R\}.</me>
+			Since <m>I</m> is a subgroup of an abelian group <m>(R,+)</m>, <m>R/I</m> is an abelian group. We define multiplication on <m>R/I</m> using multiplication on <m>R</m>:
+			<me>(r+I)\cdot(s+I)=rs+I.</me>
+			<ol>
+				<li>
+					<title>[Well-definedness of the multiplication]</title>
+					We only show that if <m>r+I=r^\prime+I</m> then <m>(r+I)\cdot (s+I)=(r^\prime+I)(s+I)</m>. As <m>r+I=r^\prime+I</m>, i.e., <m>r-r^\prime\in I</m>, and <m>I</m> is an ideal we have <me>(r-r^\prime)s=rs-r^\prime s\in I.</me> In particular, <m>rs+I=(r+I)\cdot (s+I)=(r^\prime+I)(s+I)=r^\prime s+I.</m>
+				</li>
+				<li>
+					Verify that <m>0+I</m> is the additive identity of <m>R/I</m>, and <m>1+I</m> is the unity in <m>R/I</m>.
+				</li>
+				<li>
+					Verify that the addition and multiplication on <m>R/I</m> satisfy distributive laws given in <xref ref="def-rings"/>(4).
+				</li>
+			</ol>
+			Hence <m>R/I</m> is a ring with unity.
+		</statement>
+	</definition>
+	<lemma xml:id="canonical-quotient-map">
+		<statement>
+			The canonical map <m>\pi\colon R\to R/I</m> defined by <me>r\mapsto r+I</me> is a ring epimorphism with kernel, <m>\ker(\pi)=I</m>.
+		</statement>
+	</lemma>
+	<convention>
+		<statement>
+			Let <m>R</m> be a ring and let <m>I</m> be a two-sided ideal of <m>R</m>. We write <m>r\equiv s\mod I</m> for <m>r-s\in I</m>.
+		</statement>
+	</convention>
+</section>

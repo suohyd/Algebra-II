@@ -1,0 +1,43 @@
+<section xml:id="sec-Eisenstein-integers">
+	<title>Eisenstein integer</title>
+	<introduction>
+		Throughout this section we let <m>\omega=\frac{-1}{2}+\frac{\sqrt{-3}}{2}</m>. This is a primitive <m>3</m>-rd root of unity and it satisfies the following quadratic irreducible polynomial:
+		<men xml:id="minimal-polynomial-of-omega">x^2+x+1,\quad\text{i.e.,}\quad\omega^2+\omega+1=0.</men>
+	</introduction>
+	<definition xml:id="def-eisenstein-integers">
+		<title>(Eisenstein integers)</title>
+		The ring <m>\Z[\omega]=\{a+b\omega:a,b\in\Z\}</m> is called the ring of Eisenstein integers.
+	</definition>
+	<exercise>
+		<statement>
+			The set <m>\Z[\omega]</m> is indeed a ring. You may need to use the fact that <m>\omega^2+\omega+1=0</m>.
+		</statement>
+	</exercise>
+	<lemma>
+		<statement>
+			The map <me>N\colon\Z[\omega]\to\Z\quad\text{given by}\quad a+b\omega\mapsto a^2+b^2-ab</me> is multiplicative and non-negative. Furthermore, <m>N(a+b\omega)=0</m> if and only if <m>a=b=0</m>.
+		</statement>
+	</lemma>
+		<proof>
+			By completing the square we get 
+			<me>a^2+b^2-ab=\left(a-\frac{b}{2}\right)^2+\frac{3}{4}b^2.</me>
+			This observation may be used to get a proof of the result.
+		</proof>
+<lemma xml:id="units-in-eisenstein-integers">
+	<title>(Units in Eisenstein integers)</title>
+	<statement>
+		An element <m>a+b\omega\in\Z[\omega]</m> is a unit if and only if <m>N(a+b\omega)=1</m>. Only units in <m>\Z[\omega]</m> are <m>\pm 1,\pm\omega,\pm\omega^2</m>.
+	</statement>
+</lemma>
+<proof>
+	Suppose that <m>N(a+b\omega)=1</m>, i.e., <m>\left(a-\frac{b}{2}\right)^2+\frac{3}{4}b^2=1</m>. Hence <m>|b|\leq 1</m>, i.e., <m>b=0,\pm 1</m>. Thus we should have
+	<me>(a,b)=\{(\pm 1,0),(0,\pm 1),(-1,-1),(1,1)\}</me> and corresponding Eisenstein integers are
+	<me>\{\pm 1,\pm\omega,-1-\omega,1+\omega\}</me>
+	Every element in the above set is a unit (see equation <xref ref="minimal-polynomial-of-omega"/>). Furthermore, <m>\pm(1+\omega)=\mp\omega^2</m> by equation <xref ref="minimal-polynomial-of-omega"/>.
+</proof>
+<theorem>
+	<statement>
+		The ring of Eisenstein integers is an Euclidean domain.
+	</statement>
+</theorem>
+</section>

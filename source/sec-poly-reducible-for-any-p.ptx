@@ -1,0 +1,63 @@
+<section xml:id="sec-poly-reducible-for-any-p">
+	<title>Polynomial reducible over every <m>\mathbb{F}_p</m></title>
+	<introduction>In this section we give an example of an irreducible polynomial over <m>\Q</m> which is reducible over <m>\mathbb{F}_p</m> for any prime <m>p</m>.</introduction>
+	<p>We show that <m>x^4+1</m> is reducible over every <m>\mathbb{F}_p</m>, where <m>p</m> is an odd prime number. The case when <m>p=2</m> is left to the reader.</p>
+<lemma xml:id="neg-unity-is-square">
+	<statement>
+		If <m>p</m> is a prime number such that <m>p\equiv 1\mod 4</m> then <m>-1\in\mathbb{F}_p^{\times2}</m>.
+	</statement>
+</lemma>
+<proof>
+	Since <m>p\equiv 1\mod 4</m> we have <m>p-1\big/2\in2\N</m>. By Wilson's theorem, <m>-1\equiv (p-1)!\mod p</m>. Thus
+	<md>
+		<mrow>-1\amp\equiv (p-1)!</mrow>
+		<mrow>\amp\equiv \left(1\cdot 2\cdots\frac{p-1}{2}\right)\left((-1)\cdot (-2)\cdots\left(-\frac{p-1}{2}\right)\right)</mrow>
+		<mrow>\amp\equiv (-1)^{\frac{p-1}{2}}\left(1\cdot 2\cdots\frac{p-1}{2}\right)^2</mrow>
+		<mrow>\amp\equiv \left(1\cdot 2\cdots\frac{p-1}{2}\right)^2</mrow>
+	</md>
+</proof>
+<lemma xml:id="product-of-nonsquare-is-a-square">
+	<statement>
+		Suppose that <m>p</m> is an odd prime number. If <m>a,b\in\mathbb{F}_p^{\times}</m> are such that neither <m>a</m> nor <m>b</m> is a square in <m>\mathbb{F}_p</m> then <m>ab\in\mathbb{F}_p^{\times2}</m>
+	</statement>
+</lemma>
+<proof>
+	Consider the squaring map which is a group homomorphism:
+	<me>\varphi\colon\mathbb{F}_p^\times\to\mathbb{F}_p^\times\quad\text{given by}\quad x\mapsto x^2.</me>
+	The kernel is <m>\{\pm 1\}</m>. Therefore, <m>|{\rm Im}(\varphi)|=\tfrac{p-1}{2}</m>, i.e., <m>[\mathbb{F}_p^\times:{\rm Im}(\varphi)]=2</m>. This implies that <m>a\,{\rm Im}(\varphi)\cdot b\,{\rm Im}(\varphi)=ab\,{\rm Im}(\varphi)={\rm Im}(\varphi)</m>, i.e., <m>ab\in{\rm Im}(\varphi)</m>, i.e., <m>ab\in\mathbb{F}_p^{\times 2}</m>.
+</proof>
+<proposition>
+	<statement>
+		If <m>p\equiv -1\mod 4</m> then <m>x^4+1</m> is reducible over <m>\mathbb{F}_p</m>.
+	</statement>
+</proposition>
+<proof>
+	By <xref ref="neg-unity-is-square"/> there exists <m>a\in\mathbb{F}_p</m> such that <m>-1=a^2</m>. Then
+	<me>x^4+1=x^4-a^2=(x^2-a)(x^2+a).</me>
+</proof>
+<!--<remark>
+	<statement>
+		Show that converse of the above statement is also true.
+	</statement>
+</remark>-->
+<p>We make some computations.
+<md>
+	<mrow>x^4+1\amp=(x^2+ax+b)(x^2+cx+d)</mrow>
+	<mrow>\amp=x^4+(a+c)x^3+(ac+b+d)x^2+(ad+bc)x+bd</mrow>
+</md>
+Hence <me>a=-c;\;ac+b+d=0;\;ad+bc=0;\;bd=1.</me>
+Therefore, <m>b=d=\pm 1</m>, <m>c=-a</m>, and <m>a^2=\pm 2</m>. So, if there is a factorization of <m>x^4+1</m> into quadratic polynomials then we necessarily have 
+<men xml:id="quadratic-factorization">
+	x^4+1=(x^2+ax\pm 1)(x^2-ax\pm 1)\quad\text{with}\;b=d=\pm 1, c=-a,\text{ and }a^2=\pm2
+</men>
+</p>
+<proposition>
+	<statement>
+		If <m>p\equiv 3\mod 4</m> then <m>x^4+1</m> is reducible over <m>\mathbb{F}_p</m>.
+	</statement>
+</proposition>
+<proof>
+	In view of <xref ref="neg-unity-is-square"/> we assume that <m>-1</m> is not a square in <m>\mathbb{F}_p</m>. Note that if <m>-1</m> is not a square then either <m>2</m> or <m>- 2</m> are squares in <m>\mathbb{F}_p</m>. Indeed if <m>-1</m> and <m>2</m> (resp., <m>-2</m>) is not a square then, by <xref ref="product-of-nonsquare-is-a-square"/>, their product <m>-2</m> (resp., <m>2</m>) is a square. If <m>\pm 2\in\mathbb{F}_p^{\times2}</m>, then we have, by <xref ref="quadratic-factorization"/>, <m>x^4+1</m> is reducible over <m>\mathbb{F}_p^\times</m>. 
+</proof>
+
+</section>

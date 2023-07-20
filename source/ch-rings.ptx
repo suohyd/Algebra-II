@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<chapter xml:id="ch-rings" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Rings</title>
+  <introduction>
+    <!-- <p>This is the introduction to the chapter</p> -->
+  </introduction>
+  <xi:include href="./sec-def-rings.ptx"/>
+  <xi:include href="./sec-examples-rings.ptx"/>
+  <xi:include href="./sec-types-of-ring-elements.ptx"/>
+  <xi:include href="./sec-types-of-rings.ptx"/>
+  <xi:include href="./sec-subrings-ideals.ptx"/>
+  <xi:include href="./sec-examples-subrings-ideals.ptx"/>
+  <xi:include href="./sec-algebra-of-ideals.ptx"/>
+  <xi:include href="./sec-quaternions.ptx"/>
+  <xi:include href="./sec-examples-of-algebras.ptx"/>
+  <xi:include href="./sec-exercises-rings.ptx"/>
+</chapter>

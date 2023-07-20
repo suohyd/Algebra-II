@@ -1,0 +1,87 @@
+<exercises xml:id="ex-prime-maximal-ideals">
+	<exercise>
+		<statement>
+			Let <m>f\colon R\to S</m> be a ring homomorphism of commutative rings. Show that inverse image of a prime ideal under <m>f</m> is a prime ideal.
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Give an example of a ring homomorphism of commutative rings such that the inverse image of a maximal ideal need not be a maximal ideal.
+		</statement>
+		<hint>
+			Consider the inclusion ring homomorphism <m>\Z\to\Q</m>.
+		</hint>
+	</exercise>
+	<exercise>
+		<statement>
+			Show that in a finite commutative ring every prime ideal is a maximal ideal.
+		</statement>
+		<hint>
+			Let <m>A</m> be a finite commutative ring, and let <m>\mfp</m> be a nonzero prime ideal in <m>A</m>. Thus <m>A/\mfp</m> is a finite integral domain, therefore <m>A/\mfp</m> is a field.
+		</hint>
+	</exercise>
+	<exercise>
+		<statement>
+			Suppose that <m>A</m> is a commutative ring in which <m>a^n=a</m> for every <m>a\in A</m> and some <m>n\in\N</m>. Show that every prime ideal in <m>A</m> is maximal.
+		</statement>
+		<hint>
+			Let <m>\mfp</m> be a prime ideal in <m>A</m>. Let <m>0\neq\overline{a}\in A/\mfp</m>. We have <m>\overline{a}^{n}=\overline{a}\in A/\mfp</m>, i.e., <m>\overline{a}\left(\overline{a}^{n-1}-1\right)=0\in A/\mfp</m>. Since <m>\mfp</m> is prime, <m>A/\mfp</m> is an integral domain. Thus either <m>\overline{a}=0\in A/\mfp</m> or <m>\overline{a}^{n-1}=1\in A/\mfp</m>.
+		</hint>
+	</exercise>
+	<exercise>
+		<statement>
+			Let <m>A</m> be a commutative ring, and let <m>\mfa</m> be an ideal in <m>A</m>. Define <me>{\rm rad}(\mfa)=\{a\in A:a^n\in\mfa\quad{\text{for some natural number}\;n}\;\text{that may depend on}\;a\}</me>. Show that <m>{\rm rad}(\mfa)</m> is an ideal in <m>A</m>. Further show that if <m>\mfp</m> is a prime ideal in <m>A</m> then <m>{\rm rad}(\mfp)=\mfp</m>.
+		</statement>
+	</exercise>
+	<exercise>
+		<statement>
+			Let <m>C[0,1]</m> be the ring of all continuous real-valued functions on <m>[0,1]</m>. Show that the maximal ideals of <m>C[0,1]</m> are of the following form 
+			<me>\mfm_a=\left\{f\in C[0,1]:f(a)=0\right\}\quad\text{for some}\;a\in [0,1].</me>
+		</statement>
+		<hint>
+			Let <m>\mfm</m> be a maximal ideal in <m>C[0,1]</m>. Assume that <m>\mfm\neq\mfm_a</m> for any <m>a\in [0,1]</m>, i.e., given <m>a\in [0,1]</m> there exists <m>f_a\in\mfm\subset C[0,1]</m> such that <m>f_a(a)\neq 0</m>. Since <m>f_a</m> is continuous function there exists an open interval <m>U_a\subset [0,1]</m> containing <m>a</m> such that <m>f_a(u)\neq 0</m> for any <m>u\in U_a</m>. In this way we get an open covering of a compact space <m>[0,1]</m>. Thus there are <m>a_1,a_2,\ldots,a_n\in [0,1]</m> such that <m>[0,1]=\bigcup_{i=1}^nU_{a_i}</m>. Since <m>\mfm</m> is an ideal, the function <m>\sum_{i=1}^nf_{a_i}^2\in\mfm</m> and this function does not vanish on <m>[0,1]</m>. Thus <m>\sum_{i=1}^nf_{a_i}^2(x)\gt 0</m> for any <m>x\in [0,1]</m>. Hence <m>\tfrac{1}{\sum_{i=1}^nf_{a_i}^2}\in C[0,1]</m>.
+		</hint>
+	</exercise>
+	<exercise>
+		<statement>
+			Let <m>C[0,1]</m> be the ring of all continuous real-valued functions on <m>[0,1]</m>. Let <m>a,b\in [0,1]</m> be distinct real numbers. Show that <me>I=\{f\in C[0,1]:f(a)=f(b)=0\}</me> is an ideal of <m>C[0,1]</m> which is not a prime ideal.
+		</statement>
+		<hint>
+			Consider functions <m>f(x)=x-a</m> and <m>g(x)=x-b</m>.
+		</hint>
+	</exercise>
+	<exercisegroup>
+		<introduction>
+			Let <m>A</m> be a commutative ring, and let <m>I</m> be an ideal of <m>A</m>. In each of the following cases decide whether or not <m>I</m> is a prime ideal of <m>A</m> or not.
+		</introduction>
+		<exercise>
+			<statement>
+				<m>A=\C[x,y]</m> and <m>I=(x,y)</m>
+			</statement>
+			<hint>
+				<m>\C[x,y]\big/(x,y)\simeq\C</m>.
+			</hint>
+		</exercise>
+		<!--<exercise>
+			<statement>
+				<m>A=\R[x,y,z]</m> and <m>I=(x^2+1)</m>
+			</statement>
+		</exercise>-->
+			<exercise>
+				<statement>
+					<m>A=\C[x,y]</m> and <m>I=(x^2+y^2)</m>
+				</statement>
+				<hint>
+					<m>x^2+y^2=(x+iy)(x-iy)\in\C[x,y]</m>.
+				</hint>
+		</exercise>
+		<exercise>
+			<statement>
+				<m>A=\Q[x]</m> and <m>I=(x^n-1)</m>
+			</statement>
+			<hint>
+				<m>x^n-1=(x-1)(x^{n-1}+\cdots+1)\in\Q[x]</m>.
+			</hint>
+		</exercise>
+	</exercisegroup>
+</exercises>
