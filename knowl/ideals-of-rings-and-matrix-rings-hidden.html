@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like">Let <span class="process-math">\(R\)</span> be a ring and let <span class="process-math">\(M_n(R)\)</span> be the ring of matrices over <span class="process-math">\(R\text{.}\)</span> If <span class="process-math">\(S\)</span> is a subset of <span class="process-math">\(R\)</span> we denote by <span class="process-math">\(M_n(S)\)</span> the set of all <span class="process-math">\(n\times n\)</span> matrices with entries from <span class="process-math">\(S\text{.}\)</span> <div class="para">We show that every ideal, i.e., every two-sided ideal of <span class="process-math">\(M_n(R)\)</span> is of the form <span class="process-math">\(M_n(I)\)</span> for some ideal <span class="process-math">\(I\)</span> of <span class="process-math">\(R\text{.}\)</span>
+</div> <div class="para">We leave it to the reader to verify that if <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(R\)</span> then <span class="process-math">\(M_n(I)\)</span> is an ideal of <span class="process-math">\(M_n(R)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(\mathcal{J}\)</span> be an ideal of <span class="process-math">\(M_n(R)\text{.}\)</span> Consider the following subset of <span class="process-math">\(R\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+I=\{a\in R:a\text{ is the }(1,1)\text{-th entry of }A\in\mathcal{J}\}
+\end{equation*}
+</div>
+<div class="para">The set <span class="process-math">\(I\)</span> is an ideal of <span class="process-math">\(R\text{.}\)</span> Let <span class="process-math">\(E_{ij}\)</span> be a matrix such that <span class="process-math">\((i,j)\)</span>-th entry is <span class="process-math">\(1\)</span> and all other entries are zero. Then for any <span class="process-math">\(A\in M_n(R)\)</span> we have the following.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E_{ij}AE_{k\ell}=a_{jk}E_{i\ell}
+\end{equation*}
+</div>
+<div class="para">Therefore, for <span class="process-math">\(A\in\mathcal{J}\)</span> we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E_{1j}AE_{k1}=a_{jk}E_{11}\in\mathcal{J}.
+\end{equation*}
+</div>
+<div class="para">By the construction of <span class="process-math">\(I\)</span> we get that <span class="process-math">\(a_{jk}\in I\)</span> for any <span class="process-math">\(j,k\in\{1,2,\ldots,n\}\text{.}\)</span> In particular, <span class="process-math">\(\mathcal{J}\subseteq M_n(I)\text{.}\)</span>
+</div>
+</div> <div class="para">Conversely, suppose <span class="process-math">\(B=(b_{ij})\in M_n(I)\text{.}\)</span> By the construction of <span class="process-math">\(I\text{,}\)</span> <span class="process-math">\(b_{ij}\)</span> is the <span class="process-math">\((1,1)\)</span>-th entry of some <span class="process-math">\(B^\prime\in\mathcal{J}\)</span> (here <span class="process-math">\(B^\prime\)</span> may depend on <span class="process-math">\(b_{ij}\)</span>). Thus, <span class="process-math">\(E_{i1}B^\prime E_{1j}=b_{ij}E_{ij}\in\mathcal{J}\text{.}\)</span> Hence, <span class="process-math">\(\sum b_{ij}E_{ij}=B^\prime\in\mathcal{J}\)</span> and therefore, <span class="process-math">\(M_{n}(I)\subseteq\mathcal{J}\text{.}\)</span>
+</div></article></body>
+</html>

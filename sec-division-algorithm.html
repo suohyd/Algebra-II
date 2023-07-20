@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Division algorithm</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra-II">
+<meta property="book:author" content="A. Soman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Algebra-II-book.html"><span class="title">Algebra-II:</span> <span class="subtitle">Companion notes</span></a></h1>
+<p class="byline">A. Soman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-polynomial-rings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-arithmetic-of-Z-and-polynomials.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="sec-arithmetic-in-polynomials.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\mfa{\mathfrak{a}}
+\def\mfb{\mathfrak{b}}
+\def\mfc{\mathfrak{c}}
+\def\mfp{\mathfrak{p}}
+\def\mfq{\mathfrak{q}}
+\def\mfm{\mathfrak{m}}
+\def\ev{\mathrm{ev}}
+\def\Im{\mathrm{Im}}
+\def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
+\def\Int{\mathrm{Int}}
+\def\Hom{\mathrm{Hom}}
+\def\Iso{\mathrm{Iso}}
+\def\GL{\mathrm{GL}}
+\def\ker{\mathrm{ker }}
+\def\Span{\mathrm{Span}}
+\def\tr{\mathrm{tr}}
+\def\Rings{\mathrm{Rings}}
+\def\Alg{{F\text{-Alg}}}
+\def\Ann{{\rm Ann}}
+\newcommand{\unit}{1\!\!1}
+
+
+  \usepackage{tikz}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-rings.html" class="internal"><span class="codenumber">1</span> <span class="title">Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-def-rings.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-rings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Examples of Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-types-of-ring-elements.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Types of ring elements</span></a></div></li>
+<li><div class="toc-item"><a href="sec-types-of-rings.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Types of Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subrings-ideals.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Subrings and Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-subrings-ideals.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Examples of subrings and ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebra-of-ideals.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Algebra of ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quaternions.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Quaternion algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-of-algebras.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Examples of <span class="process-math">\(F\)</span>-algebras</span></a></div></li>
+<li><div class="toc-item"><a href="sec-exercises-rings.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-ring-homomorphisms.html" class="internal"><span class="codenumber">2</span> <span class="title">Ring homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ring-homomorphisms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-rings-algebras-homomorphisms.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="ex-ring-homomorphisms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-quotient-rings.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quotient-rings.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-isomorphism-theorems.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Isomorphism theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-prime-maximal-ideal-criterion.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Prime and maximal ideals</span></a></div></li>
+<li><div class="toc-item"><a href="ex-prime-maximal-ideals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-arithmetic-of-Z-and-polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Arithmetic in <span class="process-math">\(\Z\)</span> and polynomial rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-arithmetic-in-Z.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Arithmetic in <span class="process-math">\(\Z\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-prime-maximal-ideals-in-Z.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prime and maximal ideals in <span class="process-math">\(\Z\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-polynomial-rings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Polynomial rings</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="sec-division-algorithm.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Division algorithm</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arithmetic-in-polynomials.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Arithmetic in <span class="process-math">\(F[X]\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-Kronecker-theorem.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Kronecker’s Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="sec-irreducibility-criterions.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Irreducibility criterions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-irreducibility.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-poly-reducible-for-any-p.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Polynomial reducible over every <span class="process-math">\(\mathbb{F}_p\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-Chinese-remainder-theorem-commutative-rings.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Chinese Remainder Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="ex-arithmetic-in-PID.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-UFD-PID-ED.html" class="internal"><span class="codenumber">5</span> <span class="title">UFD-PID-ED</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-UFD-PID-ED.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-chain-conditions.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Chain conditions and Principal Ideal Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ED.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Euclidean Domains</span></a></div></li>
+<li><div class="toc-item"><a href="ex-UFD-PID-ED.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-ring-of-fractions.html" class="internal"><span class="codenumber">6</span> <span class="title">Ring of fractions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-multiplicatively-closed-subset.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Multiplicatively closed subset</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-of-fractions.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ring of fractions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-polynomial-ring-over-UFD.html" class="internal"><span class="codenumber">7</span> <span class="title">Polynomial rings over UFD</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-Gauss-Lemma.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Gauss’s Lemma</span></a></div></li>
+<li><div class="toc-item"><a href="sec-polynomial-rings-over-UFD-is-UFD.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Polynomial ring over a UFD is a UFD</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-Bramhagupta-Eisenstein-integers.html" class="internal"><span class="codenumber">8</span> <span class="title">Brahmagupta’s equations and Eisenstein integers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-Brahmagupta-equation.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Brahmagupta’s equations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-Eisenstein-integers.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Eisenstein integer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-linear-algebra.html" class="internal"><span class="codenumber">9</span> <span class="title">Modules over rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modules.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-of-modules.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-min-poly-of-linear-map.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Minimal polynomial of a linear map</span></a></div></li>
+<li><div class="toc-item"><a href="sec-submodules.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Submodules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-module-hom.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Module homomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sums-products-of-modules.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Sums, products, and direct sums</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sec-division-algorithm"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.4</span> <span class="title">Division algorithm</span>
+</h2>
+<article class="theorem theorem-like" id="division-algorithm"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">(Division Algorithm).</span>
+</h3>Let <span class="process-math">\(A\)</span> be a commutative ring with unity. Let <span class="process-math">\(f(X)\)</span> and <span class="process-math">\(0\neq g(X)\)</span> be elements of <span class="process-math">\(A[X]\text{.}\)</span> Suppose that <span class="process-math">\(LC(g(X))=b_m\)</span> and <span class="process-math">\(\deg(g)=m\text{.}\)</span> Then there exists <span class="process-math">\(k\in\N\text{,}\)</span> and <span class="process-math">\(q(X),r(X)\in A[X]\)</span> with <span class="process-math">\(\deg(r)\lt\deg(g)\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+b_m^kf(X)=q(X)g(X)+r(X).
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-16"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-16"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-16"><article class="hiddenproof">If <span class="process-math">\(\deg(f)\lt\deg(g)\)</span> then the resuLC follows by taking <span class="process-math">\(k=0\)</span> and <span class="process-math">\(q(X)=0\text{.}\)</span> So, assume that <span class="process-math">\(\deg(g)=m\leq\deg(f)\text{.}\)</span> Suppose that<div class="displaymath process-math">
+\begin{equation*}
+f(X)=a_0+a_1X+\cdots+a_nX^n\quad\text{and}\quad g(X)=b_0+b_1X+\cdots+b_mX^m.
+\end{equation*}
+</div>Put <span class="process-math">\(f_1(X)=b_mf(X)-a_nX^{n-m}g(X)\text{.}\)</span> Thus<div class="displaymath process-math">
+\begin{equation*}
+f_1(X)=b_ma_0+b_ma_1X+\cdots+b_ma_nX^n-a_nb_0X^{n-m}-a_nb_1X^{n-m+1}-\cdots-a_nb_mX^n.
+\end{equation*}
+</div>Therefore, <span class="process-math">\(\deg(f_1)\lt\deg(f)\text{.}\)</span> We use induction on <span class="process-math">\(\deg(f)\text{.}\)</span> Thus, by induction, there exists <span class="process-math">\(k_1\in\N\text{,}\)</span> and <span class="process-math">\(q_1(X),r(X)\in A[X]\)</span> with <span class="process-math">\(\deg(r)\lt\deg(g)\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+b_m^{k_1}f_1(X)=q_1(X)g(X)+r(X).
+\end{equation*}
+</div>Hence,<div class="displaymath process-math">
+\begin{equation*}
+b_m^{k_1}f_1(X)=b_m^{k_1+1}f(X)-b_m^{k_1}a_nX^{n-m}g(X)=(q_1(X)+b_m^{k_1}a_nX^{n-m})g(X)+r(X).
+\end{equation*}
+</div></article></div>
+<article class="corollary theorem-like" id="division-algorithm-for-LC-unit"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.4.2</span><span class="period">.</span>
+</h3>If <span class="process-math">\(LC(g)=b_m\)</span> is invertible then there exists <span class="process-math">\(q(X),r(X)\in A[X]\)</span> with <span class="process-math">\(\deg(r)\lt\deg(g)\)</span> such that<div class="displaymath process-math">
+\begin{equation*}
+f(X)=q(X)g(X)+r(X).
+\end{equation*}
+</div>Moreover, <span class="process-math">\(q(X)\)</span> and <span class="process-math">\(r(X)\)</span> are uniquely determined.</article><article class="remark remark-like" id="remark-9"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.4.3</span><span class="period">.</span>
+</h3>The above <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a> is particularly useful when we consider polynomial ring in several variables over a field.</article><article class="definition definition-like" id="def-divisor-polynomial"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">(Divisor).</span>
+</h3> Let <span class="process-math">\(A\)</span> be a commutative ring and let <span class="process-math">\(f,g\in A[X]\text{.}\)</span> We say that <span class="process-math">\(g\)</span> divides <span class="process-math">\(f\text{,}\)</span> and write it as <span class="process-math">\(g\mid f\text{,}\)</span> if there exists <span class="process-math">\(q(X)\in A[X]\)</span> such that <span class="process-math">\(f(X)=q(X)g(X)\text{.}\)</span></article><article class="observation remark-like" id="observation-9"><h3 class="heading">
+<span class="type">Observation</span><span class="space"> </span><span class="codenumber">4.4.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-56">
+<div class="para">Let <span class="process-math">\(A\)</span> be a commutative ring. Suppose that <span class="process-math">\(a\in A\)</span> and <span class="process-math">\(f,g\in A[X]\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(fg)(a)=f(a)g(a)=g(a)f(a).
+\end{equation*}
+</div>
+<div class="para">In other words, the evaluation map <span class="process-math">\(\ev_a\colon F[X]\to F[X]\)</span> is a ring homomorphism. We use this observation without explicitly mentioning it.</div>
+</div> <div class="para" id="p-57">If ring is not commutative then <span class="process-math">\((fg)(a)\)</span> need not be the same as <span class="process-math">\(f(a)g(a)\text{.}\)</span> We first recall that <span class="process-math">\((fg)(a)\)</span> is obtained as follows: First write <span class="process-math">\(fg\)</span> in the form <span class="process-math">\(c_0+c_1X+\cdots+c_rX^r\)</span> and then <span class="process-math">\((fg)(a)=c_0+c_1a+\cdots+c_ra^r\text{.}\)</span>
+</div> <div class="para logical" id="p-58">
+<div class="para">Suppose that <span class="process-math">\(R=M_2(\R)\)</span> and consider the following polynomials over <span class="process-math">\(M_2(\R)\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(X)=X-\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\in M_2(\R)[X]\quad\text{and}\quad g(X)=X-\begin{pmatrix}
+0\amp1\\-1\amp0
+\end{pmatrix}\in M_2(\R)[X].
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(fg)(X)=X^2-\begin{pmatrix}1\amp1\\-1\amp-1\end{pmatrix}X+\begin{pmatrix}
+0\amp1\\1\amp0
+\end{pmatrix}\in M_2(\R)[X].
+\end{equation*}
+</div>
+<div class="para">We can then see that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(fg)\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)\neq 0\text{,}
+\end{equation*}
+</div>
+<div class="para">while</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)g\left(\begin{pmatrix}
+1\amp0\\0\amp-1
+\end{pmatrix}\right)=0\text{.}
+\end{equation*}
+</div>
+</div></article><article class="definition definition-like" id="def-root"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">(Root of a polynomial).</span>
+</h3> Let <span class="process-math">\(A\)</span> be a commutative ring and <span class="process-math">\(f\in A[X]\text{.}\)</span> An element <span class="process-math">\(a\in A\)</span> is said to be a <dfn class="terminology">root of <span class="process-math">\(f(X)\)</span> in <span class="process-math">\(A\)</span></dfn> if <span class="process-math">\(f(a)=0\text{.}\)</span></article><article class="lemma theorem-like" id="root-iff-linear-factor"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.4.7</span><span class="period">.</span><span class="space"> </span><span class="title">(Root iff linear factor).</span>
+</h3>Let <span class="process-math">\(A\)</span> be a nonzero commutative ring. Suppose that <span class="process-math">\(a\in A\)</span> and <span class="process-math">\(f\in A[X]\text{.}\)</span> We have <span class="process-math">\(f(a)=0\)</span> if and only if <span class="process-math">\(f(X)=q(X)(X-a)\)</span> for some <span class="process-math">\(q(X)\in A[X]\text{.}\)</span></article><article class="hiddenproof" id="proof-17"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-17"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-17"><article class="hiddenproof">Indeed, as <span class="process-math">\(LC(X-a)=1\in A\)</span> is a unit, by <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, there exists <span class="process-math">\(q(X),r(X)\in A[X]\)</span> with <span class="process-math">\(\deg(r)\lt 1\)</span> (i.e., <span class="process-math">\(r(X)\)</span> is a constant polynomial) such that <span class="process-math">\(f(X)=q(X)(X-a)+r(X)\text{.}\)</span> Since <span class="process-math">\(f(a)=0\)</span> we get <span class="process-math">\(0=f(a)=q(a)\cdot 0+r(a)\text{.}\)</span> Thus <span class="process-math">\(r(X)\text{,}\)</span> which is a constant polynomial, must be zero. Hence we get the resuLC.</article></div>
+<article class="lemma theorem-like" id="lemma-11"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">4.4.8</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(A\)</span> be an integral domain, and let <span class="process-math">\(f(X)\in A[X]\)</span> be a nonzero polynomial. If <span class="process-math">\(a_1,\ldots,a_n\in A\)</span> are pairwise distinct roots of <span class="process-math">\(f\)</span> then <span class="process-math">\((X-a_1)\cdots(X-a_n)\)</span> divides <span class="process-math">\(f\text{.}\)</span></article><article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof">The case when <span class="process-math">\(n=1\)</span> is <a href="" class="xref" data-knowl="./knowl/root-iff-linear-factor.html" title="Lemma 4.4.7: (Root iff linear factor)">Lemma 4.4.7</a>. We now assume that <span class="process-math">\(n\gt 1\text{.}\)</span> By repeated application of <a href="" class="xref" data-knowl="./knowl/root-iff-linear-factor.html" title="Lemma 4.4.7: (Root iff linear factor)">Lemma 4.4.7</a>, <span class="process-math">\(f(X)=(X-a_1)^rg(X)\)</span> and <span class="process-math">\(g(a_1)\neq 0\text{.}\)</span> Since <span class="process-math">\(A\)</span> is an integral domain, <span class="process-math">\(\deg(g)\leq\deg(f)-r\lt\deg(f)\text{.}\)</span> Moreover for <span class="process-math">\(2\leq i\leq n\text{,}\)</span> <span class="process-math">\(0=f(a_i)=(a_i-a_1)^rg(a_i)\text{.}\)</span> Since <span class="process-math">\(A\)</span> is an integral domain and <span class="process-math">\(a_i\neq a_1\text{,}\)</span> we have <span class="process-math">\(g(a_i)=0\text{.}\)</span> By induction, <span class="process-math">\((X-a_2)\cdots(X-a_n)\)</span> divides <span class="process-math">\(g(X)\text{.}\)</span> Therefore, we get the resuLC.</article></div>
+<article class="corollary theorem-like" id="finite-roots"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.4.9</span><span class="period">.</span><span class="space"> </span><span class="title">(Finite roots).</span>
+</h3>Let <span class="process-math">\(F\)</span> be a field and <span class="process-math">\(0\neq f(X)\in F[X]\text{.}\)</span> Then <span class="process-math">\(f(X)\)</span> has at most <span class="process-math">\(\deg(f)\)</span> many roots in <span class="process-math">\(F\text{.}\)</span></article><article class="remark remark-like" id="remark-10"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">4.4.10</span><span class="period">.</span>
+</h3>Let <span class="process-math">\(A=\prod_{n\in\N}\Z/3\Z\text{,}\)</span> a product ring as defined in <a href="" class="xref" data-knowl="./knowl/example-product-of-rings.html" title="Example 1.2.10: (Product of rings)">Example 1.2.10</a>. It is a commutative ring but not an integral domain. There are infinitely many roots of the polynomial <span class="process-math">\(X^2-1_A\in A[X]\)</span> in <span class="process-math">\(A\text{.}\)</span> For instance, let <span class="process-math">\(a_{n}=(1,\ldots,1,-1,1,\ldots)\in A\)</span> be such that <span class="process-math">\(-1\in\Z/3\Z\)</span> occurs at <span class="process-math">\(n\)</span>-th place and all other entries are <span class="process-math">\(1\in\Z/3\Z\text{.}\)</span> Then, <span class="process-math">\(a_{n}\)</span> is a root of <span class="process-math">\(X^2-1_A\)</span> for each <span class="process-math">\(1\leq n\lt\infty\text{.}\)</span></article><article class="example example-like" id="Gaussian-integers-as-quotient-rings"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-Gaussian-integers-as-quotient-rings"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.11</span><span class="period">.</span><span class="space"> </span><span class="title">(Gaussian integers as a quotient ring).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-Gaussian-integers-as-quotient-rings"><article class="example example-like">We show that <span class="process-math">\(\Z[i]\simeq\Z[X]/(X^2+1)\text{.}\)</span> Consider the map <span class="process-math">\(\ev_i\colon\Z[X]\to\Z[i]\)</span> defined by<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/root-iff-linear-factor.html ./knowl/FIT.html">
+\begin{equation*}
+\sum_ka_kX^k\mapsto\sum_ka_ki^k
+\end{equation*}
+</div>Check that the map <span class="process-math">\(\ev_i\)</span> is a ring epimorphism. We compute its kernel, <span class="process-math">\(\ker(\ev_i)=\{f\in\Z[X]:f(i)=0\}\text{.}\)</span> The ideal generated by <span class="process-math">\(X^2+1\text{,}\)</span> <span class="process-math">\((X^2+1)\subseteq\ker(\ev_i)\text{.}\)</span> Now suppose that <span class="process-math">\(f\in\ker(\ev_i)\text{.}\)</span> Since the <span class="process-math">\(LC(X^2+1)=1\in\Z\)</span> is invertible in <span class="process-math">\(\Z\text{,}\)</span> we use <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, to obtain <span class="process-math">\(q(X),r(X)\in\Z[X]\)</span> with <span class="process-math">\(\deg(r)\lt 2\)</span> such that <span class="process-math">\(f(X)=q(X)(X^2+1)+r(X)\text{.}\)</span> Hence,<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/root-iff-linear-factor.html ./knowl/FIT.html">
+\begin{equation*}
+0=f(i)=q(i)(i^2+1)+r(i)\in\Z[i],\quad\text{i.e.,}\quad r(i)=0.
+\end{equation*}
+</div>If <span class="process-math">\(r(X)\neq 0\)</span> then , by <a href="" class="xref" data-knowl="./knowl/root-iff-linear-factor.html" title="Lemma 4.4.7: (Root iff linear factor)">Lemma 4.4.7</a>, <span class="process-math">\(r(X)=n(X-i)\in\Z[X]\)</span> for some <span class="process-math">\(n\in\Z\text{.}\)</span> This implies that <span class="process-math">\(i\in\Z\text{,}\)</span> a contradiction. Hence <span class="process-math">\(r(X)=0\)</span> and <span class="process-math">\(f\in(X^2+1)\text{.}\)</span> Therefore, <span class="process-math">\(\ker(\ev_i)=(X^2+1)\)</span> and by <a href="" class="xref" data-knowl="./knowl/FIT.html" title="Theorem 3.2.3: (First Isomorphism Theorem)">Theorem 3.2.3</a>, we get the resuLC.</article></div>
+<article class="example example-like" id="radical-ideal-twisted-cubic-curve"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-radical-ideal-twisted-cubic-curve"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.12</span><span class="period">.</span><span class="space"> </span><span class="title">(Radical of <span class="process-math">\((Y^2-X^3)\)</span>).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-radical-ideal-twisted-cubic-curve"><article class="example example-like"><div class="para" id="p-59">The below example has connections to geometry. We will not make the connection explicit in this course. However, you may see the curve <span class="process-math">\(Y^2-X^3\)</span> in <span class="process-math">\(\R^2\)</span> <a class="external" href="https://www.wolframalpha.com/input?i=plot+y%5E2%3Dx%5E3" target="_blank">here</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 1 </sup></a>.</div> Consider <span class="process-math">\(\Q[X,Y]\)</span> and the ideal generated by <span class="process-math">\(Y^2-X^3\in\Q[X,Y]\text{,}\)</span> <span class="process-math">\((Y^2-X^3)\text{.}\)</span>  We show that if <span class="process-math">\(f(X,Y)\in\Q[X,Y]\)</span> is such that <span class="process-math">\(f(a^2,a^3)\)</span> for any <span class="process-math">\(a\in\Q\)</span> then <span class="process-math">\(f(X,Y)\in(Y^2-X^3)\text{.}\)</span> We consider <span class="process-math">\(f(X,Y),Y^2-X^3\)</span> as polynomials over <span class="process-math">\(\Q[X]\)</span> in variable <span class="process-math">\(Y\text{.}\)</span> Thus we can apply <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a> to get the following.<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/finite-roots.html">
+\begin{equation*}
+f=q(X,Y)(Y^2-X^3)+r(X)Y+s(X),\quad\text{where}\quad r(X),s(X)\in\Q[X]
+\end{equation*}
+</div>By the assumption, <span class="process-math">\(f(a^2,a^3)=0\)</span> for every <span class="process-math">\(a\in\Q\text{,}\)</span> and hence we get that<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/finite-roots.html">
+\begin{equation*}
+r(a^2)a^3+s(a^2)=0\quad\text{for every}\quad a\in\Q.
+\end{equation*}
+</div>This shows that the polynomial <span class="process-math">\(r(X^2)X^3+s(X^2)\in\Q[X]\)</span> has infinitely many roots in <span class="process-math">\(\Q\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/finite-roots.html" title="Corollary 4.4.9: (Finite roots)">Corollary 4.4.9</a>, we must have <span class="process-math">\(r(X^2)X^3+s(X^2)=0\in\Q[X]\text{.}\)</span> Comparing even degree and odd degree terms we get that <span class="process-math">\(r=s=0\in\Q[X]\text{.}\)</span> Thus, <span class="process-math">\(f\in(Y^2-X^3)\)</span> and the resuLC is proved.</article></div>
+<article class="example example-like" id="maximal-ideals-in-poly-in-several-variables"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-maximal-ideals-in-poly-in-several-variables"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.13</span><span class="period">.</span><span class="space"> </span><span class="title">(Examples of maximal ideals in <span class="process-math">\(F[X_1,\ldots,X_n]\)</span>).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-maximal-ideals-in-poly-in-several-variables"><article class="example example-like">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(F[X_1,X_2,\ldots,X_n]\)</span> be the polynomial ring over <span class="process-math">\(F\)</span> in <span class="process-math">\(n\)</span> variables. We give examples of maximal ideals in <span class="process-math">\(F[X_1,\ldots,X_n]\text{.}\)</span> Fix <span class="process-math">\(a_1,a_2,\ldots,a_n\in F\text{.}\)</span> <div class="para logical" id="p-60">
+<div class="para">Consider the evaluation <span class="process-math">\(F\)</span>-algebra homomorphism.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ev_{(a_1,\ldots,a_n)}\colon F[X_1,\ldots,X_n]\to F\quad\text{given by}\quad \sum a_{i_1\cdots i_n}X_1^{i_1}\cdots X_n^{i_n}\mapsto\sum a_{i_1\cdots i_n}a_1^{i_1}\cdots a_n^{i_n}
+\end{equation*}
+</div>
+<div class="para">Thus the kernel of this map is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ker(\ev_{(a_1,\ldots,a_n)})=\{f\in F[X_1,\ldots,X_n]:f(a_1,a_2,\ldots,a_n)=0\}.
+\end{equation*}
+</div>
+<div class="para">Hence the ideal generated by <span class="process-math">\(X_1-a_1,\ldots,X_n-a_n\text{,}\)</span> <span class="process-math">\((X_1-a_1,\ldots,X_n-a_n)\subseteq\ker(\ev_{(a_1,\ldots,a_n)})\text{.}\)</span> We claim that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(X_1-a_1,\ldots,X_n-a_n)=\ker(\ev_{(a_1,\ldots,a_n)}).
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-61">
+<div class="para">Let <span class="process-math">\(f\in\ker(\ev_{(a_1,\ldots,a_n)})\text{.}\)</span> We consider <span class="process-math">\(f\in F[X_1,\ldots,X_{n-1}][X_n]\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a> there exists <span class="process-math">\(q_n,r_n\in F[X_1,\ldots,X_{n-1}][X_n]\)</span> with <span class="process-math">\(\deg r_n\lt\deg (X_n-a_n)=1\text{,}\)</span> i.e., <span class="process-math">\(r_n\)</span> is a constant polynomial in <span class="process-math">\(F[X_1,\ldots,X_{n-1}][X_n]\text{,}\)</span> i.e., <span class="process-math">\(r_n\in F[X_1,\ldots,X_{n-1}]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html" id="first-eq">
+\begin{equation}
+f=q_n(X_n-a_n)+r_n.\tag{4.4.1}
+\end{equation}
+</div>
+<div class="para">We thus have <span class="process-math">\(0=f(a_1,\ldots,a_n)=0=r_n(a_1,\ldots,a_n)\text{.}\)</span> We now consider <span class="process-math">\(r_n\in F[X_1,\ldots,X_{n-2}][X_{n-1}]\text{.}\)</span> Again applying <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, there exists <span class="process-math">\(q_{n-1},r_{n-1}\in F[X_1,\ldots,X_{n-2}][X_{n-1}]\)</span> with <span class="process-math">\(\deg r_{n-1}\lt\deg (X_{n-1}-a_{n-1})=1\text{,}\)</span> i.e., <span class="process-math">\(r_{n-1}\)</span> is a constant polynomial in <span class="process-math">\(F[X_1,\ldots,X_{n-2}][X_{n-1}]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+r_n=q_{n-1}(X_{n-1}-a_{n-1})+r_{n-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus we also get <span class="process-math">\(0=r_{n}(a_1,\ldots,a_{n-1})=r_{n-1}(a_1,\ldots,a_{n-1})\text{.}\)</span> Continuing in this way we get that <span class="process-math">\(r_2\in F[X_1]\)</span> and, by <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, there exists <span class="process-math">\(q_1,r_1\in F[X_1]\)</span> with <span class="process-math">\(\deg r_1\lt\deg(X_1-a_1)=1\text{,}\)</span> i.e., <span class="process-math">\(r_1\in F\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+r_2=q_1(X_1-a_1)+r_1.
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(0=r_2(a_1)=r_1\text{,}\)</span> i.e., <span class="process-math">\(r_2=q_1(X_1-a_1)\text{.}\)</span> Putting successive expression of <span class="process-math">\(r_n,r_{n-1},\ldots,r_2\)</span> in <a href="" class="xref" data-knowl="./knowl/first-eq.html" title="Equation 4.4.1">(4.4.1)</a> we get that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+f=q_n(X_n-a_n)+q_{n-1}(X_{n-1}-a_{n-1})+\cdots+q_2(X_2-a_1)+q_1(X_1-a_1).
+\end{equation*}
+</div>
+<div class="para">Hence <span class="process-math">\(\ker(\ev_{(a_1,\ldots,a_n)})\subseteq (X_1-a_1,\ldots,X_n-a_n)\)</span> and we get the desired resuLC.</div>
+</div> <div class="para" id="p-62">The <span class="process-math">\(\ev_{(a_1,\ldots,a_n)}\)</span> is surjective. Hence, by <a href="" class="xref" data-knowl="./knowl/FIT.html" title="Theorem 3.2.3: (First Isomorphism Theorem)">Theorem 3.2.3</a>, <span class="process-math">\(F[X_1,\ldots,X_n]\big/(X_1-a_1,\ldots,X_n-a_n)\simeq F\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/prime-maximal-criterion-using-quotient.html" title="Proposition 3.3.4">Proposition 3.3.4</a> the ideal generated by <span class="process-math">\(X_1-a_1,\ldots,X_n-a_n\text{,}\)</span> <span class="process-math">\((X_1-a_1,\ldots,X_n-a_n)\)</span> is maximal.</div></article></div>
+<article class="definition definition-like" id="def-irreducible-polynomial"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.4.14</span><span class="period">.</span><span class="space"> </span><span class="title">(Reducible and irreducible polynomial in <span class="process-math">\(F[X]\)</span>).</span>
+</h3> <div class="para" id="p-63">Let <span class="process-math">\(F\)</span> be a field. A nonconstant polynomial <span class="process-math">\(f(X)\in F[X]\)</span> is said to be an <dfn class="terminology">reducible polynomial</dfn> if there exists nonconstant polynomials <span class="process-math">\(g,h\in F[X]\)</span> with <span class="process-math">\(\deg(g)\lt\deg(f)\)</span> and <span class="process-math">\(\deg(h)\lt\deg(f)\)</span> such that <span class="process-math">\(f=gh\text{.}\)</span>
+</div> <div class="para" id="p-64">A nonconstant polynomial in <span class="process-math">\(F[X]\)</span> is called an <dfn class="terminology">irreducible polynomial in F[X]</dfn> or an <dfn class="terminology">irreducible polynomial over <span class="process-math">\(F\)</span></dfn> if it is not reducible.</div></article><article class="example example-like" id="example-54"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-54"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4.15</span><span class="period">.</span><span class="space"> </span><span class="title">(Irreduciblility of polynomial depends on the underlying field).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-54"><article class="example example-like">If we consider <span class="process-math">\(X^2+1\)</span> over <span class="process-math">\(\Q\)</span> or <span class="process-math">\(\R\)</span> then this polynomial is irreducible. However the same polynomial is reducible over <span class="process-math">\(\C\text{.}\)</span> Indeed, <span class="process-math">\(X^2+1=(X-i)(X+i)\text{,}\)</span> where <span class="process-math">\(i\in\C\)</span> is such that <span class="process-math">\(i^2=-1\text{.}\)</span></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn"><code class="code-inline tex2jax_ignore">www.wolframalpha.com/input?i=plot+y%5E2%3Dx%5E3</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-polynomial-rings.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-arithmetic-in-polynomials.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

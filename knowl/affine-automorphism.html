@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.8.1</span><span class="period">.</span><span class="space"> </span><span class="title">(Affine automorphism).</span>
+</h3>Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(a,b\in F\)</span> with <span class="process-math">\(a\neq 0\text{.}\)</span> We show that <span class="process-math">\(\varphi\colon F[x]\to F[x]\)</span> given by <span class="process-math">\(\sum \alpha_ix^i\mapsto\sum \alpha_i(ax+b)^i\)</span> is a ring automorphism. <div class="para logical">
+<div class="para">We first show that <span class="process-math">\(\varphi\)</span> is a ring homomorphism.</div>
+<ol class="decimal">
+<li><div class="para"><div class="displaymath process-math">
+\begin{equation*}
+\varphi\left(\sum\alpha_ix^i+\sum_i\beta_ix^i\right)=\varphi\left(\sum(\alpha_i+\beta_i)x^i\right)=\sum(\alpha_i+\beta_i)(ax+b)^i=\varphi\left(\sum\alpha_ix^i\right)+\varphi\left(\sum\beta_ix^i\right).
+\end{equation*}
+</div></div></li>
+<li><div class="para">
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi\left(\left(\sum\alpha_ix^i\right)\left(\sum\beta_jx^j\right)\right)=\varphi\left(\sum_k(\sum_{i=0}^k\alpha_i\beta_{k-i})x^k\right)=\sum_k\left(\sum_{i=0}^k\alpha_i\beta_{k-i}\right)(ax+b)^k\text{.}
+\end{equation*}
+</div>While<div class="displaymath process-math">
+\begin{equation*}
+\varphi\left(\sum\alpha_ix^i\right)\varphi\left(\sum\beta_jx^j\right)=\left(\sum\alpha_i(ax+b)^i\right)\left(\sum\beta_j(ax+b)^j\right)=\sum_k\left(\sum_{i=0}^k\alpha_i\beta_{k-i}\right)(ax+b)^k.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div> <div class="para logical">
+<div class="para">Consider the map <span class="process-math">\(\phi\colon F[x]\to F[x]\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum\alpha_ix^i\mapsto\sum\alpha_i(x/a-b/a)^i.
+\end{equation*}
+</div>
+<div class="para">By the arguments in the last paragraph we see that <span class="process-math">\(\phi\)</span> is a ring homomorphism. Furthermore, using the fact that <span class="process-math">\(\varphi\)</span> and <span class="process-math">\(\phi\)</span> are ring homomorphism we get the following.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi\circ\varphi\left(\sum\alpha_kx^k\right)=\phi\left(\sum\alpha_k(ax+b)^k\right)=\sum\alpha_k\phi\left(ax+b\right)^k=\sum\alpha_k\left(a(x/a-b/a)+b\right)^k=\sum\alpha_kx^k.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi\circ\phi\left(\sum\alpha_kx^k\right)=\varphi\left(\sum\alpha_k(x/a-b/a)^k\right)=\sum\alpha_k\varphi\left(x/a-b/a\right)^k=\sum\alpha_k\left((ax+b)/a-b/a\right)^k=\sum\alpha_kx^k.
+\end{equation*}
+</div>
+<div class="para">This shows that <span class="process-math">\(\varphi\)</span> is a ring automorphism.</div>
+</div></article><span class="incontext"><a href="sec-examples-irreducibility.html#affine-automorphism" class="internal">in-context</a></span>
+</body>
+</html>

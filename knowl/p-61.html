@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f\in\ker(\ev_{(a_1,\ldots,a_n)})\text{.}\)</span> We consider <span class="process-math">\(f\in F[X_1,\ldots,X_{n-1}][X_n]\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a> there exists <span class="process-math">\(q_n,r_n\in F[X_1,\ldots,X_{n-1}][X_n]\)</span> with <span class="process-math">\(\deg r_n\lt\deg (X_n-a_n)=1\text{,}\)</span> i.e., <span class="process-math">\(r_n\)</span> is a constant polynomial in <span class="process-math">\(F[X_1,\ldots,X_{n-1}][X_n]\text{,}\)</span> i.e., <span class="process-math">\(r_n\in F[X_1,\ldots,X_{n-1}]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation}
+f=q_n(X_n-a_n)+r_n.\tag{4.4.1}
+\end{equation}
+</div>
+<div class="para">We thus have <span class="process-math">\(0=f(a_1,\ldots,a_n)=0=r_n(a_1,\ldots,a_n)\text{.}\)</span> We now consider <span class="process-math">\(r_n\in F[X_1,\ldots,X_{n-2}][X_{n-1}]\text{.}\)</span> Again applying <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, there exists <span class="process-math">\(q_{n-1},r_{n-1}\in F[X_1,\ldots,X_{n-2}][X_{n-1}]\)</span> with <span class="process-math">\(\deg r_{n-1}\lt\deg (X_{n-1}-a_{n-1})=1\text{,}\)</span> i.e., <span class="process-math">\(r_{n-1}\)</span> is a constant polynomial in <span class="process-math">\(F[X_1,\ldots,X_{n-2}][X_{n-1}]\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+r_n=q_{n-1}(X_{n-1}-a_{n-1})+r_{n-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus we also get <span class="process-math">\(0=r_{n}(a_1,\ldots,a_{n-1})=r_{n-1}(a_1,\ldots,a_{n-1})\text{.}\)</span> Continuing in this way we get that <span class="process-math">\(r_2\in F[X_1]\)</span> and, by <a href="" class="xref" data-knowl="./knowl/division-algorithm-for-LC-unit.html" title="Corollary 4.4.2">Corollary 4.4.2</a>, there exists <span class="process-math">\(q_1,r_1\in F[X_1]\)</span> with <span class="process-math">\(\deg r_1\lt\deg(X_1-a_1)=1\text{,}\)</span> i.e., <span class="process-math">\(r_1\in F\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+r_2=q_1(X_1-a_1)+r_1.
+\end{equation*}
+</div>
+<div class="para">Thus we have <span class="process-math">\(0=r_2(a_1)=r_1\text{,}\)</span> i.e., <span class="process-math">\(r_2=q_1(X_1-a_1)\text{.}\)</span> Putting successive expression of <span class="process-math">\(r_n,r_{n-1},\ldots,r_2\)</span> in <a href="" class="xref" data-knowl="./knowl/first-eq.html" title="Equation 4.4.1">(4.4.1)</a> we get that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/division-algorithm-for-LC-unit.html ./knowl/first-eq.html">
+\begin{equation*}
+f=q_n(X_n-a_n)+q_{n-1}(X_{n-1}-a_{n-1})+\cdots+q_2(X_2-a_1)+q_1(X_1-a_1).
+\end{equation*}
+</div>
+<div class="para">Hence <span class="process-math">\(\ker(\ev_{(a_1,\ldots,a_n)})\subseteq (X_1-a_1,\ldots,X_n-a_n)\)</span> and we get the desired resuLC.</div>
+</div>
+<span class="incontext"><a href="sec-division-algorithm.html#p-61" class="internal">in-context</a></span>
+</body>
+</html>

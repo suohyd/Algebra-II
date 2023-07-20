@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Algebra-II">
+<meta property="book:author" content="A. Soman">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.7/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.7/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Algebra-II-book.html"><span class="title">Algebra-II:</span> <span class="subtitle">Companion notes</span></a></h1>
+<p class="byline">A. Soman</p>
+</div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" class="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms" class="searchterms"></span>
+</h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="avatarbutton" class="avatarbutton name">You!</span><div id="preferences_menu_holder" class="preferences_menu_holder hidden"><ol id="preferences_menu" class="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="sec-ring-homomorphisms.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-ring-homomorphisms.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="ex-ring-homomorphisms.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" class="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\mfa{\mathfrak{a}}
+\def\mfb{\mathfrak{b}}
+\def\mfc{\mathfrak{c}}
+\def\mfp{\mathfrak{p}}
+\def\mfq{\mathfrak{q}}
+\def\mfm{\mathfrak{m}}
+\def\ev{\mathrm{ev}}
+\def\Im{\mathrm{Im}}
+\def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
+\def\Int{\mathrm{Int}}
+\def\Hom{\mathrm{Hom}}
+\def\Iso{\mathrm{Iso}}
+\def\GL{\mathrm{GL}}
+\def\ker{\mathrm{ker }}
+\def\Span{\mathrm{Span}}
+\def\tr{\mathrm{tr}}
+\def\Rings{\mathrm{Rings}}
+\def\Alg{{F\text{-Alg}}}
+\def\Ann{{\rm Ann}}
+\newcommand{\unit}{1\!\!1}
+
+
+  \usepackage{tikz}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-rings.html" class="internal"><span class="codenumber">1</span> <span class="title">Rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-def-rings.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-rings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Examples of Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-types-of-ring-elements.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Types of ring elements</span></a></div></li>
+<li><div class="toc-item"><a href="sec-types-of-rings.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Types of Rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-subrings-ideals.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Subrings and Ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-subrings-ideals.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Examples of subrings and ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-algebra-of-ideals.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Algebra of ideals</span></a></div></li>
+<li><div class="toc-item"><a href="sec-quaternions.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Quaternion algebra</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-of-algebras.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Examples of <span class="process-math">\(F\)</span>-algebras</span></a></div></li>
+<li><div class="toc-item"><a href="sec-exercises-rings.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-ring-homomorphisms.html" class="internal"><span class="codenumber">2</span> <span class="title">Ring homomorphisms</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-ring-homomorphisms.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Definition</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="sec-examples-rings-algebras-homomorphisms.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="ex-ring-homomorphisms.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-quotient-rings.html" class="internal"><span class="codenumber">3</span> <span class="title">Quotient rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-quotient-rings.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-isomorphism-theorems.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Isomorphism theorems</span></a></div></li>
+<li><div class="toc-item"><a href="sec-prime-maximal-ideal-criterion.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Prime and maximal ideals</span></a></div></li>
+<li><div class="toc-item"><a href="ex-prime-maximal-ideals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-arithmetic-of-Z-and-polynomials.html" class="internal"><span class="codenumber">4</span> <span class="title">Arithmetic in <span class="process-math">\(\Z\)</span> and polynomial rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-arithmetic-in-Z.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Arithmetic in <span class="process-math">\(\Z\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-prime-maximal-ideals-in-Z.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Prime and maximal ideals in <span class="process-math">\(\Z\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-polynomial-rings.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Polynomial rings</span></a></div></li>
+<li><div class="toc-item"><a href="sec-division-algorithm.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Division algorithm</span></a></div></li>
+<li><div class="toc-item"><a href="sec-arithmetic-in-polynomials.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Arithmetic in <span class="process-math">\(F[X]\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-Kronecker-theorem.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Kronecker’s Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="sec-irreducibility-criterions.html" class="internal"><span class="codenumber">4.7</span> <span class="title">Irreducibility criterions</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-irreducibility.html" class="internal"><span class="codenumber">4.8</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-poly-reducible-for-any-p.html" class="internal"><span class="codenumber">4.9</span> <span class="title">Polynomial reducible over every <span class="process-math">\(\mathbb{F}_p\)</span></span></a></div></li>
+<li><div class="toc-item"><a href="sec-Chinese-remainder-theorem-commutative-rings.html" class="internal"><span class="codenumber">4.10</span> <span class="title">Chinese Remainder Theorem</span></a></div></li>
+<li><div class="toc-item"><a href="ex-arithmetic-in-PID.html" class="internal"><span class="codenumber">4.11</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-UFD-PID-ED.html" class="internal"><span class="codenumber">5</span> <span class="title">UFD-PID-ED</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-UFD-PID-ED.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Unique Factorization Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-chain-conditions.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Chain conditions and Principal Ideal Domains</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ED.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Euclidean Domains</span></a></div></li>
+<li><div class="toc-item"><a href="ex-UFD-PID-ED.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-ring-of-fractions.html" class="internal"><span class="codenumber">6</span> <span class="title">Ring of fractions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-multiplicatively-closed-subset.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Multiplicatively closed subset</span></a></div></li>
+<li><div class="toc-item"><a href="sec-ring-of-fractions.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Ring of fractions</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-polynomial-ring-over-UFD.html" class="internal"><span class="codenumber">7</span> <span class="title">Polynomial rings over UFD</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-Gauss-Lemma.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Gauss’s Lemma</span></a></div></li>
+<li><div class="toc-item"><a href="sec-polynomial-rings-over-UFD-is-UFD.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Polynomial ring over a UFD is a UFD</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-Bramhagupta-Eisenstein-integers.html" class="internal"><span class="codenumber">8</span> <span class="title">Brahmagupta’s equations and Eisenstein integers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-Brahmagupta-equation.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Brahmagupta’s equations</span></a></div></li>
+<li><div class="toc-item"><a href="sec-Eisenstein-integers.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Eisenstein integer</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="ch-linear-algebra.html" class="internal"><span class="codenumber">9</span> <span class="title">Modules over rings</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="sec-modules.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition</span></a></div></li>
+<li><div class="toc-item"><a href="sec-examples-of-modules.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Examples</span></a></div></li>
+<li><div class="toc-item"><a href="sec-min-poly-of-linear-map.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Minimal polynomial of a linear map</span></a></div></li>
+<li><div class="toc-item"><a href="sec-submodules.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Submodules</span></a></div></li>
+<li><div class="toc-item"><a href="sec-module-hom.html" class="internal"><span class="codenumber">9.5</span> <span class="title">Module homomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="sec-sums-products-of-modules.html" class="internal"><span class="codenumber">9.6</span> <span class="title">Sums, products, and direct sums</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-examples-rings-algebras-homomorphisms"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Examples</span>
+</h2>
+<article class="example example-like" id="initial-object-in-Rings"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-initial-object-in-Rings"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">(Canonical map from <span class="process-math">\(\Z\)</span> to a ring).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-initial-object-in-Rings"><article class="example example-like">Let <span class="process-math">\(R\)</span> be any ring with unity. We always have a unique ring homomorphism from <span class="process-math">\(\Z\)</span> to <span class="process-math">\(R\text{:}\)</span><div class="displaymath process-math">
+\begin{equation*}
+i_{\Z}\colon\Z\to R\quad\text{given by}\quad n\mapsto n\cdot 1_R=\underbrace{1_R+\cdots+1_R}_{n\text{-times}}
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="terminal-object-in-Rings"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-terminal-object-in-Rings"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">(Ring homomorphism onto the trivial ring).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-terminal-object-in-Rings"><article class="example example-like">Let <span class="process-math">\(R\)</span> be a ring with unity and <span class="process-math">\(\{0\}\)</span> be a trivial ring. There is a ring epimorphism<div class="displaymath process-math">
+\begin{equation*}
+R\to\{0\}\quad\text{given by}\quad r\mapsto 0\,(=1).
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="canonical-epimorphism-for-Z"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-canonical-epimorphism-for-Z"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">(Epimorphism from <span class="process-math">\(\Z\)</span> onto <span class="process-math">\(\Z/n\Z\)</span>).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-canonical-epimorphism-for-Z"><article class="example example-like">Let <span class="process-math">\(\varphi\colon\Z\to\Z/n\Z\)</span> be a map defined by<div class="displaymath process-math">
+\begin{equation*}
+i\mapsto [i].
+\end{equation*}
+</div>Verify that <span class="process-math">\(\varphi\)</span> is a ring epimorphism.</article></div>
+<article class="example example-like" id="embedding-of-field-in-algebra"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-embedding-of-field-in-algebra"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">(Embedding of <span class="process-math">\(F\)</span> into an <span class="process-math">\(F\)</span>-algebra).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-embedding-of-field-in-algebra"><article class="example example-like">Let <span class="process-math">\(A\)</span> be a nonzero <span class="process-math">\(F\)</span>-algebra. For this example we denote the unity of <span class="process-math">\(F\)</span> by <span class="process-math">\(1_F\)</span> and the unity of <span class="process-math">\(A\)</span> by <span class="process-math">\(1_A\text{.}\)</span> There is an <span class="process-math">\(F\)</span>-algebra monomomorphism from <span class="process-math">\(\varphi\colon F\to A\)</span> given by <span class="process-math">\(\alpha\mapsto \alpha\cdot 1_A\text{.}\)</span> Here ‘<span class="process-math">\(\cdot\)</span>’ denotes the scalar multiplication. By <a href="" class="xref" data-knowl="./knowl/field-extensions.html" title="Example 1.9.2: (Field extensions)">Example 1.9.2</a>, the field <span class="process-math">\(F\)</span> is an <span class="process-math">\(F\)</span>-algebra. By <a href="" class="xref" data-knowl="./knowl/def-algebra-homomorphism.html" title="Definition 2.1.15: (Algebra homomorphism)">Definition 2.1.15</a>, <span class="process-math">\(\varphi(1_F)=1_A\)</span> hence <span class="process-math">\(\varphi\)</span> is not a zero map. Since <span class="process-math">\(\varphi\)</span> is also an <span class="process-math">\(F\)</span>-vector space homomorphism, for any <span class="process-math">\(\alpha\in F\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/field-extensions.html ./knowl/def-algebra-homomorphism.html">
+\begin{equation*}
+\varphi(\alpha)=\varphi(\alpha 1_F)=\alpha\cdot\varphi(1_F)=\alpha\cdot 1_A\text{.}
+\end{equation*}
+</div>The kernel of <span class="process-math">\(\varphi\text{,}\)</span> <span class="process-math">\(\ker(\varphi)\subsetneq F\)</span> is a two-sided ideal of <span class="process-math">\(F\text{.}\)</span> Since every nonzero element of <span class="process-math">\(F\)</span> is invertible and <span class="process-math">\(\varphi\)</span> is a nonzero map, <span class="process-math">\(\ker(\varphi)=\{0\}\text{.}\)</span> Thus <span class="process-math">\(\varphi\colon F\to A\)</span> given by <span class="process-math">\(\alpha\mapsto\alpha\cdot 1_A\)</span> is a monomorphism.</article></div>
+<article class="example example-like" id="inclusion-of-subring"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-inclusion-of-subring"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">(Inclusion as a monomorphism of rings).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-inclusion-of-subring"><article class="example example-like">Let <span class="process-math">\(S\)</span> be a subring of a ring <span class="process-math">\(R\text{.}\)</span> The inclusion map<div class="displaymath process-math">
+\begin{equation*}
+i\colon S\to R\quad\text{given by}\quad s\mapsto s
+\end{equation*}
+</div>is a monomorphism of rings.</article></div>
+<article class="example example-like" id="morphism-from-simple-rings"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-morphism-from-simple-rings"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">(Homomorphisms from simple rings).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-morphism-from-simple-rings"><article class="example example-like">Let <span class="process-math">\(R\)</span> be a simple ring (see <a href="" class="xref" data-knowl="./knowl/def-simple-rings.html" title="Definition 1.5.10: (Simple Rings)">Definition 1.5.10</a>) and <span class="process-math">\(S\)</span> be a nonzero ring with unity. Any ring homomorphism <span class="process-math">\(\varphi\colon R\to S\)</span> is a ring monomorphism. Indeed, for any ring homomorphism <span class="process-math">\(\ker(\varphi)\)</span> is a two-sided ideal of <span class="process-math">\(R\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a simple ring and <span class="process-math">\(\varphi\)</span> is nonzero, the kernel of <span class="process-math">\(\varphi\text{,}\)</span> <span class="process-math">\(\ker(\varphi)=\{0\}\text{,}\)</span> i.e., <span class="process-math">\(\varphi\)</span> is a monomorphism. <div class="para" id="p-41">In particular a ring homomorphism from a division ring or a field to a nonzero ring with unity is a ring monomorphism.</div></article></div>
+<article class="example example-like" id="involution-on-C"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-involution-on-C"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">(Conjugation).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-involution-on-C"><article class="example example-like">Consider <span class="process-math">\(\C\)</span> as an <span class="process-math">\(\R\)</span>-algebra (refer to <a href="" class="xref" data-knowl="./knowl/field-extensions.html" title="Example 1.9.2: (Field extensions)">Example 1.9.2</a>). The conjugation<div class="displaymath process-math" data-contains-math-knowls="./knowl/field-extensions.html">
+\begin{equation*}
+\sigma\colon\C\to\C\quad\text{given by}\quad a+ib\mapsto a-ib
+\end{equation*}
+</div>is an <span class="process-math">\(\R\)</span>-algebra automorphism.</article></div>
+<article class="example example-like" id="iso-between-matrices-opposite-algebra"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-iso-between-matrices-opposite-algebra"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">(Isomorphism between matrices and its opposite algebra).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-iso-between-matrices-opposite-algebra"><article class="example example-like"> Let <span class="process-math">\(M_n(F)\)</span> be <span class="process-math">\(n\times n\)</span> matrices over <span class="process-math">\(F\text{.}\)</span> For <span class="process-math">\(A\in M_n(F)\)</span> we denote by <span class="process-math">\(A^t\in M_n(F)\)</span> the transpose of <span class="process-math">\(A\text{.}\)</span> Consider <span class="process-math">\(\varphi\colon M_n(F)\to M_n(F)^{\rm op}\)</span> given by<div class="displaymath process-math" data-contains-math-knowls="./knowl/ideals-of-rings-and-matrix-rings.html">
+\begin{equation*}
+A\mapsto \left(A^t\right)^{\rm op}.
+\end{equation*}
+</div>Note that<div class="displaymath process-math" data-contains-math-knowls="./knowl/ideals-of-rings-and-matrix-rings.html">
+\begin{equation*}
+\varphi(AB)=\left((AB)^t\right)^{\rm op}=\left(B^tA^t\right)^{\rm op}=\left(A^t\right)^{\rm op}\left(B^t\right)^{\rm op}=\varphi(A)\varphi(B).
+\end{equation*}
+</div>This is an <span class="process-math">\(F\)</span>-algebra homomorphism. The kernel of <span class="process-math">\(\varphi\text{,}\)</span> <span class="process-math">\(\ker(\varphi)\)</span> is a two-sided ideal of <span class="process-math">\(M_n(F)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/ideals-of-rings-and-matrix-rings.html" title="Example 1.6.9: (Correspondence between ideals of a ring R and ideals of a matrix ring over R)">Example 1.6.9</a>, <span class="process-math">\(\ker(\varphi)\)</span> is either <span class="process-math">\(M_n(F)\)</span> or <span class="process-math">\(\{0\}\text{.}\)</span> Since <span class="process-math">\(\varphi\)</span> is a nonzero map we must have <span class="process-math">\(\ker(\varphi)=\{0\}\text{,}\)</span> i.e., <span class="process-math">\(\varphi\)</span> is an <span class="process-math">\(F\)</span>-algebra monomorphism. In particular <span class="process-math">\(\varphi\)</span> is also an injective <span class="process-math">\(F\)</span>-linear map. As <span class="process-math">\(\dim_F\left(M_n(F)^{\rm op}\right)=\dim_F\left(M_n(F)\right)\)</span> we get that <span class="process-math">\(\varphi\)</span> is surjective. Therefore, <span class="process-math">\(\varphi\)</span> is an isomorphism of <span class="process-math">\(F\)</span>-algebras.</article></div>
+<article class="example example-like" id="matrices-over-matrices"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-matrices-over-matrices"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">(Matrix ring over a matrix ring).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-matrices-over-matrices"><article class="example example-like">We show that for a ring <span class="process-math">\(R\text{,}\)</span> there is a ring isomorphism <span class="process-math">\(M_n(M_m(R))\simeq M_{nm}(R)\text{.}\)</span> Let <span class="process-math">\(S=M_m(R)\text{,}\)</span> hence <span class="process-math">\(M_n\left(M_m(R)\right)=M_n(S)\text{.}\)</span> The typical element of <span class="process-math">\(M_n(S)\)</span> is of the following block form.<div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html">
+\begin{equation*}
+\begin{pmatrix}S_{11}\amp S_{12}\amp \cdots\amp S_{1n}\\S_{21}\amp S_{22}\amp \cdots\amp S_{2n}\\\vdots\amp \vdots\amp \ddots\amp \vdots\\S_{n1}\amp S_{n2}\amp \cdots\amp S_{nn}\end{pmatrix}\quad\text{where}\quad S_{ij}\in S=M_m(R)
+\end{equation*}
+</div>Hence the above matrix has <span class="process-math">\(nm\)</span> entries from <span class="process-math">\(R\)</span> in each row as well as in each column. Assume that <span class="process-math">\(S_{ij}=\left(s_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)\)</span> and <span class="process-math">\(T_{ij}=\left(t_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)\text{.}\)</span> So the above matrix becomes:<div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html" id="peeled-onion">
+\begin{equation}
+\begin{pmatrix}
+s_{11}(11)\amp \cdots\amp s_{11}(1m)\amp s_{12}(11)\amp \cdots\amp s_{12}(1m)\amp \cdots\amp s_{1n}(11)\amp \cdots\amp s_{1n}(1m)\\s_{11}(21)\amp \cdots\amp s_{11}(2m)\amp s_{12}(21)\amp \cdots\amp s_{12}(2m)\amp \cdots\amp s_{2n}(21)\amp \cdots\amp s_{2n}(1m)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{11}(m1)\amp \cdots\amp s_{11}(mm)\amp s_{12}(m1)\amp \cdots\amp s_{12}(mm)\amp \cdots\amp s_{2n}(m1)\amp \cdots\amp s_{2n}(mm)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{n1}(11)\amp \cdots\amp s_{n1}(1m)\amp s_{n2}(11)\amp \cdots\amp s_{n2}(1m)\amp \cdots\amp s_{nn}(11)\amp \cdots\amp s_{nn}(1m)\\s_{n1}(21)\amp \cdots\amp s_{n1}(2m)\amp s_{n2}(21)\amp \cdots\amp s_{n2}(2m)\amp \cdots\amp s_{nn}(21)\amp \cdots\amp s_{nn}(1m)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{n1}(m1)\amp \cdots\amp s_{n1}(mm)\amp s_{n2}(m1)\amp \cdots\amp s_{n2}(mm)\amp \cdots\amp s_{nn}(m1)\amp \cdots\amp s_{nn}(mm)
+\end{pmatrix}\tag{2.2.1}
+\end{equation}
+</div>The matrix multiplication of <span class="process-math">\((S_{ij}),(T_{ij})\in M_n(S)\)</span> is the following matrix in <span class="process-math">\(M_n(S)\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html" id="ring-hom-identity">
+\begin{equation}
+(S_{ij})(T_{ij})=\left(\sum_{k}S_{ik}T_{kj}\right)=\left(\sum_{k=1}^n\left(\sum_{\ell=1}^ms_{ik}(p\ell)\cdot t_{kj}(\ell q)\right)_{1\leq p,q\leq m}\right)\tag{2.2.2}
+\end{equation}
+</div>Define a map <span class="process-math">\(\varphi\colon M_n\left(M_m(R)\right)\to M_{nm}(R)\)</span> given by <span class="process-math">\((S_{ij})\mapsto\text{ matrix given in eq.}\)</span> <a href="" class="xref" data-knowl="./knowl/peeled-onion.html" title="Equation 2.2.1">(2.2.1)</a>. This is additive group homomorphism and eq. <a href="" class="xref" data-knowl="./knowl/ring-hom-identity.html" title="Equation 2.2.2">(2.2.2)</a> shows that <span class="process-math">\(\varphi\left((S_{ij})(T_{ij})\right)=\varphi\left(S_{ij}\right)\varphi\left(T_{ij}\right)\text{,}\)</span> and <span class="process-math">\(\varphi\)</span> maps unity to unity. Therefore, <span class="process-math">\(\varphi\)</span> is a nonzero ring homomorphism. Verify that <span class="process-math">\(\varphi\)</span> is a ring isomorphism.</article></div>
+<article class="example example-like" id="def-inner-automorphism"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-def-inner-automorphism"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">(Inner automorphism).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-def-inner-automorphism"><article class="example example-like">Let <span class="process-math">\(A\)</span> be a nonzero <span class="process-math">\(F\)</span>-algebra and let <span class="process-math">\(A^\times\)</span> be the set of all invertible elements of <span class="process-math">\(A\text{.}\)</span> Since <span class="process-math">\(0\neq 1\)</span> the set <span class="process-math">\(A^\times\)</span> is nonempty. Let <span class="process-math">\(a\in A^\times\text{.}\)</span> The inner automorphism of <span class="process-math">\(A\)</span> defined by <span class="process-math">\(a\in A^\times\)</span> is<div class="displaymath process-math">
+\begin{equation*}
+\Int(a)\colon A\to A\quad\text{given by}\quad x\mapsto axa^{-1}.
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="def-evaluation-map"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-def-evaluation-map"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span><span class="space"> </span><span class="title">(Evaluation map).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-def-evaluation-map"><article class="example example-like">Let <span class="process-math">\(F\)</span> be a field and let <span class="process-math">\(F[X]\)</span> be the polynomial ring over <span class="process-math">\(F\)</span> in one variable. Fix <span class="process-math">\(a\in F\text{.}\)</span> The evaluation at <span class="process-math">\(a\)</span> given below is an <span class="process-math">\(F\)</span>-algebra homomorphism.<div class="displaymath process-math">
+\begin{equation*}
+\ev_a\colon F[X]\to F\quad\text{given by}\quad \sum_i\alpha_iX^i\mapsto \sum_i\alpha_i\,a^i
+\end{equation*}
+</div>More generally, consider the polynomial ring <span class="process-math">\(F[X_1,\ldots,X_n]\)</span> over <span class="process-math">\(F\)</span> in <span class="process-math">\(n\)</span> variables. Fix <span class="process-math">\(a_1,a_2,\ldots,a_n\in F\text{.}\)</span> The evaluation map at <span class="process-math">\(a_1,\ldots,a_n\)</span> given below is an <span class="process-math">\(F\)</span>-algebra homomorphism.<div class="displaymath process-math">
+\begin{equation*}
+\ev_{(a_1,\ldots,a_n)}\colon F[X_1,\ldots,X_n]\to F\quad\text{given by}\quad \sum \alpha_{i_1\cdots i_n}X^{i_1}X^{i_2}\cdots X^{i_n}\mapsto \sum \alpha_{i_1\cdots i_n}a_1^{i_1}a_2^{i_2}\cdots a_n^{i_n}
+\end{equation*}
+</div></article></div>
+<article class="example example-like" id="matrix-representation-of-algebra"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-matrix-representation-of-algebra"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">(Homomorphism from algebra to the endomorphism ring).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-matrix-representation-of-algebra"><article class="example example-like">Let <span class="process-math">\(A\)</span> be a finite-dimensional <span class="process-math">\(F\)</span>-algebra (see <a href="" class="xref" data-knowl="./knowl/def-algebra-over-a-field.html" title="Definition 1.4.8: (Associative Algebra over a Field)">Definition 1.4.8</a>). By <a href="" class="xref" data-knowl="./knowl/embedding-of-field-in-algebra.html" title="Example 2.2.4: (Embedding of F into an F-algebra)">Example 2.2.4</a>, for any <span class="process-math">\(\alpha\in F\)</span> we have <span class="process-math">\(\alpha 1\in\mathcal{Z}(A)\text{.}\)</span> Given <span class="process-math">\(a\in A\)</span> the map <span class="process-math">\(L_a\colon A\to A\)</span> (resp., <span class="process-math">\(R_a\colon A\to A\)</span>) given by <span class="process-math">\(x\mapsto ax\)</span> (resp., <span class="process-math">\(x\mapsto xa\)</span>) is an <span class="process-math">\(F\)</span>-linear map. We show that the following maps are <span class="process-math">\(F\)</span>-algebra homomorphisms.<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-algebra-over-a-field.html ./knowl/embedding-of-field-in-algebra.html ./knowl/algebra-identity.html">
+\begin{equation*}
+L\colon A\to\End_F(A)\quad\text{given by}\quad a\mapsto L_a
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/def-algebra-over-a-field.html ./knowl/embedding-of-field-in-algebra.html ./knowl/algebra-identity.html">
+\begin{equation*}
+R\colon A^{\rm op}\to\End_F(A)\quad\text{given by}\quad a^{\rm op}\mapsto R_a
+\end{equation*}
+</div>Indeed, <ol class="decimal">
+<li id="li-43"><div class="para" id="p-derived-li-43">Maps <span class="process-math">\(L\)</span> and <span class="process-math">\(R\)</span> are <span class="process-math">\(F\)</span>-linear. For <span class="process-math">\(\alpha,\beta\in F\)</span> and <span class="process-math">\(a,b\in A\)</span> we have<div class="displaymath process-math" data-contains-math-knowls="./knowl/algebra-identity.html" id="md-13">
+\begin{align*}
+L_{\alpha\cdot a+\beta\cdot b}(x)\amp=(\alpha\cdot a+\beta\cdot b)x\\
+\amp=\alpha\cdot ax+\beta\cdot bx\\
+\amp=\alpha L_a(x)+\beta L_b(x)
+\end{align*}
+</div>Similarly, using <a href="" class="xref" data-knowl="./knowl/algebra-identity.html" title="Equation 1.4.1">(1.4.1)</a> and<div class="displaymath process-math" data-contains-math-knowls="./knowl/algebra-identity.html">
+\begin{equation*}
+\alpha\cdot a^{\rm op}+\beta\cdot b^{\rm op}=(\alpha\cdot a)^{\rm op}+(\beta\cdot b)^{\rm op}=(\alpha\cdot a+\beta\cdot b)^{\rm op}
+\end{equation*}
+</div>we get the following.<div class="displaymath process-math" data-contains-math-knowls="./knowl/algebra-identity.html" id="md-14">
+\begin{align*}
+R\left({\alpha\cdot a^{\rm op}+\beta\cdot b^{\rm op}}\right)(x)\amp=x(\alpha\cdot a+\beta\cdot b)\\
+\amp=x(\alpha\cdot a)+x(\beta\cdot b)\\
+\amp=\alpha\cdot (xa)+\beta\cdot (xb)\\
+\amp=\alpha R_{a}(x)+\beta R_{b}(x)
+\end{align*}
+</div>
+</div></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">Maps <span class="process-math">\(L\)</span> and <span class="process-math">\(R\)</span> are ring homomorphisms. Indeed,<div class="displaymath process-math" id="md-15">
+\begin{align*}
+L(ab)(x)\amp=L_{ab}(x)\\
+\amp=abx\\
+\amp=L_a\circ L_b(x)
+\end{align*}
+</div>Hence, <span class="process-math">\(L(ab)=L(a)L(b)\text{.}\)</span> We also have the following.<div class="displaymath process-math" id="md-16">
+\begin{align*}
+R(a^{\rm op}b^{\rm op})(x)\amp=R\left({(ba)^{\rm op}}\right)(x)\\
+\amp=xba\\
+\amp=R_a\circ R_b(x)
+\end{align*}
+</div>Hence, <span class="process-math">\(R(a^{\rm op}b^{\rm op})=R(a^{\rm op})R(b^{\rm op})\text{.}\)</span> We also have <span class="process-math">\(L(1)=\unit_A\)</span> and <span class="process-math">\(R(1)=\unit_A\text{.}\)</span>
+</div></li>
+</ol></article></div>
+<article class="example example-like" id="projections"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-projections"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.13</span><span class="period">.</span><span class="space"> </span><span class="title">(Projection maps).</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-projections"><article class="example example-like">Let <span class="process-math">\(I\)</span> be a nonempty indexing set. Let <span class="process-math">\(R_i\)</span> be rings, where <span class="process-math">\(i\in I\text{,}\)</span> and consider the product ring <span class="process-math">\(\prod_iR_i\)</span> (see <a href="" class="xref" data-knowl="./knowl/example-product-of-rings.html" title="Example 1.2.10: (Product of rings)">Example 1.2.10</a>). We denote the additive identity of <span class="process-math">\(R_i\)</span> by <span class="process-math">\(0_i\)</span> and the unity of <span class="process-math">\(R_i\)</span> by <span class="process-math">\(1_i\text{.}\)</span> For each <span class="process-math">\(k\in I\)</span> consider<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-product-of-rings.html">
+\begin{equation*}
+\pi_k\colon\prod_iR_i\to\prod_iR_i\quad\text{given by}\quad (x_i)_{i\in I}\mapsto (\delta_{ik}\,x_i)_{i\in I},
+\end{equation*}
+</div>where for each <span class="process-math">\(i\in I\text{,}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/example-product-of-rings.html">
+\begin{equation*}
+\delta_{ik}=\begin{cases}0_i\amp\text{if }i\neq k\\1_i\amp\text{if }i=k\end{cases}
+\end{equation*}
+</div>Verify that <span class="process-math">\(\pi_k\)</span> is a ring homomorphism, and that<div class="displaymath process-math" data-contains-math-knowls="./knowl/example-product-of-rings.html">
+\begin{equation*}
+\pi_k^2=\pi_k\quad\text{and}\quad\pi_k\circ\pi_\ell=\pi_\ell\circ\pi_k=0\quad\text{for}\;k\neq\ell.
+\end{equation*}
+</div>Thus, <span class="process-math">\(\pi_k\)</span> are orthogonal idempotents of the ring <span class="process-math">\(\End_\Rings(\prod_iR_i)\text{.}\)</span></article></div></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-ring-homomorphisms.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="ex-ring-homomorphisms.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

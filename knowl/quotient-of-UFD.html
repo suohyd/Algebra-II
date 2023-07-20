@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">(Quotient of a UFD is need not be a UFD).</span>
+</h3>In this example we use the fact that if <span class="process-math">\(A\)</span> is UFD then the polynomial ring over <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(A[x]\)</span> is also a UFD. This fact will be proved in the next chapter. Thus if <span class="process-math">\(F\)</span> is a field then <span class="process-math">\(F[x,y]\)</span> is a UFD. Consider the following subring of <span class="process-math">\(F[x]\text{:}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/FIT.html">
+\begin{equation*}
+R=F+x^2F[x]=\left\{\sum_{i=0}^{n}a_ix^i:n\in\N\text{ and }a_1=0\right\}.
+\end{equation*}
+</div>Verify that the units of <span class="process-math">\(R\)</span> are same as the units of <span class="process-math">\(F[x]\text{,}\)</span> i.e., units of <span class="process-math">\(R\)</span> are nonzero elements of <span class="process-math">\(F\text{,}\)</span> <span class="process-math">\(F^\times\text{.}\)</span> We claim that <span class="process-math">\(x^2\)</span> is irreducible in <span class="process-math">\(R\)</span> but it is not a prime element. Indeed, suppose that <span class="process-math">\(r,s\in R\)</span> are such that <span class="process-math">\(x^2=rs\text{.}\)</span> Since <span class="process-math">\(R\)</span> is a subring of <span class="process-math">\(F[x]\)</span> the same factorization can be considered in <span class="process-math">\(F[x]\text{.}\)</span> However as <span class="process-math">\(F[x]\)</span> is a UFD we must have <span class="process-math">\(r\sim x\in F[x]\)</span> and <span class="process-math">\(s\sim x\in F[x]\text{.}\)</span> Since <span class="process-math">\(x\not\in R\)</span> and units of <span class="process-math">\(R\)</span> are <span class="process-math">\(F^\times\)</span> we get <span class="process-math">\(x^2\)</span> is irreducible in <span class="process-math">\(R\text{.}\)</span> Furthermore, as <span class="process-math">\(x\not\in R\)</span> we have <span class="process-math">\(x^2\nmid x^3\text{.}\)</span> However, <span class="process-math">\(x^2\mid(x^3)(x^3)\text{.}\)</span> Hence <span class="process-math">\(x^2\)</span> is irreducible but not a prime in <span class="process-math">\(R\text{.}\)</span> <div class="para logical">
+<div class="para">Consider a ring homomorphism <span class="process-math">\(\ev\colon F[x,y]\to F[x]\)</span> given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/FIT.html">
+\begin{equation*}
+f(x,y)\mapsto f(x^2,x^3)
+\end{equation*}
+</div>
+<div class="para">The image of this map is the ring <span class="process-math">\(R\text{.}\)</span> We now compute its kernel. Note that <span class="process-math">\((y^2-x^3)\subseteq\ker(\ev)\text{.}\)</span> Now suppose that <span class="process-math">\(f\in\ker(\ev)\text{.}\)</span> We use division algorithm in <span class="process-math">\(F[x][y]\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/FIT.html">
+\begin{equation*}
+f(x,y)=q(x,y)(y^2-x^3)+(a(x)y+b(x))\quad\text{with}\;a(x),b(x)\in F[x].
+\end{equation*}
+</div>
+<div class="para">Hence</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/FIT.html">
+\begin{equation*}
+0=f(x^2,x^3)=a(x^2)x^3+b(x^2),\quad{i.e.,}\quad b(x^2)=-a(x^2)x^3.
+\end{equation*}
+</div>
+<div class="para">Comparing degree on the both side we must have <span class="process-math">\(a(x)=0=b(x)\text{.}\)</span> Therefore, <span class="process-math">\((y^2-x^3)=\ker(\ev)\text{.}\)</span> By <a href="" class="xref" data-knowl="./knowl/FIT.html" title="Theorem 3.2.3: (First Isomorphism Theorem)">Theorem 3.2.3</a>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/FIT.html">
+\begin{equation*}
+F[x,y]\big/(y^2-x^3)\simeq R\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus quotient of a UFD need not be a UFD.</div>
+</div></article><span class="incontext"><a href="sec-UFD-PID-ED.html#quotient-of-UFD" class="internal">in-context</a></span>
+</body>
+</html>

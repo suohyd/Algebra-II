@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="example example-like">We show that for a ring <span class="process-math">\(R\text{,}\)</span> there is a ring isomorphism <span class="process-math">\(M_n(M_m(R))\simeq M_{nm}(R)\text{.}\)</span> Let <span class="process-math">\(S=M_m(R)\text{,}\)</span> hence <span class="process-math">\(M_n\left(M_m(R)\right)=M_n(S)\text{.}\)</span> The typical element of <span class="process-math">\(M_n(S)\)</span> is of the following block form.<div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html">
+\begin{equation*}
+\begin{pmatrix}S_{11}\amp S_{12}\amp \cdots\amp S_{1n}\\S_{21}\amp S_{22}\amp \cdots\amp S_{2n}\\\vdots\amp \vdots\amp \ddots\amp \vdots\\S_{n1}\amp S_{n2}\amp \cdots\amp S_{nn}\end{pmatrix}\quad\text{where}\quad S_{ij}\in S=M_m(R)
+\end{equation*}
+</div>Hence the above matrix has <span class="process-math">\(nm\)</span> entries from <span class="process-math">\(R\)</span> in each row as well as in each column. Assume that <span class="process-math">\(S_{ij}=\left(s_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)\)</span> and <span class="process-math">\(T_{ij}=\left(t_{ij}(pq)\right)_{1\leq p,q\leq m}\in M_m(R)\text{.}\)</span> So the above matrix becomes:<div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html">
+\begin{equation}
+\begin{pmatrix}
+s_{11}(11)\amp \cdots\amp s_{11}(1m)\amp s_{12}(11)\amp \cdots\amp s_{12}(1m)\amp \cdots\amp s_{1n}(11)\amp \cdots\amp s_{1n}(1m)\\s_{11}(21)\amp \cdots\amp s_{11}(2m)\amp s_{12}(21)\amp \cdots\amp s_{12}(2m)\amp \cdots\amp s_{2n}(21)\amp \cdots\amp s_{2n}(1m)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{11}(m1)\amp \cdots\amp s_{11}(mm)\amp s_{12}(m1)\amp \cdots\amp s_{12}(mm)\amp \cdots\amp s_{2n}(m1)\amp \cdots\amp s_{2n}(mm)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{n1}(11)\amp \cdots\amp s_{n1}(1m)\amp s_{n2}(11)\amp \cdots\amp s_{n2}(1m)\amp \cdots\amp s_{nn}(11)\amp \cdots\amp s_{nn}(1m)\\s_{n1}(21)\amp \cdots\amp s_{n1}(2m)\amp s_{n2}(21)\amp \cdots\amp s_{n2}(2m)\amp \cdots\amp s_{nn}(21)\amp \cdots\amp s_{nn}(1m)\\
+\vdots\amp \ddots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\amp \cdots\amp \vdots\amp \ddots\amp \vdots\\
+s_{n1}(m1)\amp \cdots\amp s_{n1}(mm)\amp s_{n2}(m1)\amp \cdots\amp s_{n2}(mm)\amp \cdots\amp s_{nn}(m1)\amp \cdots\amp s_{nn}(mm)
+\end{pmatrix}\tag{2.2.1}
+\end{equation}
+</div>The matrix multiplication of <span class="process-math">\((S_{ij}),(T_{ij})\in M_n(S)\)</span> is the following matrix in <span class="process-math">\(M_n(S)\text{.}\)</span><div class="displaymath process-math" data-contains-math-knowls="./knowl/peeled-onion.html ./knowl/ring-hom-identity.html">
+\begin{equation}
+(S_{ij})(T_{ij})=\left(\sum_{k}S_{ik}T_{kj}\right)=\left(\sum_{k=1}^n\left(\sum_{\ell=1}^ms_{ik}(p\ell)\cdot t_{kj}(\ell q)\right)_{1\leq p,q\leq m}\right)\tag{2.2.2}
+\end{equation}
+</div>Define a map <span class="process-math">\(\varphi\colon M_n\left(M_m(R)\right)\to M_{nm}(R)\)</span> given by <span class="process-math">\((S_{ij})\mapsto\text{ matrix given in eq.}\)</span> <a href="" class="xref" data-knowl="./knowl/peeled-onion.html" title="Equation 2.2.1">(2.2.1)</a>. This is additive group homomorphism and eq. <a href="" class="xref" data-knowl="./knowl/ring-hom-identity.html" title="Equation 2.2.2">(2.2.2)</a> shows that <span class="process-math">\(\varphi\left((S_{ij})(T_{ij})\right)=\varphi\left(S_{ij}\right)\varphi\left(T_{ij}\right)\text{,}\)</span> and <span class="process-math">\(\varphi\)</span> maps unity to unity. Therefore, <span class="process-math">\(\varphi\)</span> is a nonzero ring homomorphism. Verify that <span class="process-math">\(\varphi\)</span> is a ring isomorphism.</article></body>
+</html>
