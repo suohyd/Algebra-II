@@ -3923,6 +3923,69 @@ var ptx_lunr_docs = [
   "number": "9.6.9",
   "title": "(Linear dependence of an element of a finite cyclic group).",
   "body": " (Linear dependence of an element of a finite cyclic group)  Consider an abelian group , i.e., consider as a -module. We show that any is -linearly independent. Indeed, for any we have .  "
+},
+{
+  "id": "sec-torsion-module-over-domain",
+  "level": "1",
+  "url": "sec-torsion-module-over-domain.html",
+  "type": "Section",
+  "number": "9.7",
+  "title": "Torsion module over an integral domain",
+  "body": " Torsion module over an integral domain   Let be an integral domain, and let be a left -module. The torsion submodule of is  If then we say that is a torsion  -module.  If then is said to be a torsion-free  -module.     (Finite abelian groups as torsion modules) Let be a finite abelian group, i.e., is a finite -module. We have .   (Free module is torsion-free)  Let be an integral domain. A free -module can be seen to be torsion-free.    (Rank module which is not a free module)  Consider an -module . We show that the rank of is . Suppose that and are two distinct elements of with either or . We then have the following relation that implies that are -linearly dependent. If both and then implies that are -linearly dependent. Thus the cardinality of a maximal linearly independent subset of , i.e., .  Since is -linearly independent, we get that .  However, is not isomorphic to as a -mdoule. Indeed, has nonzero torsion elements while does not have any nonzero torsion elements.     (Vector space as -module is torsion)  Let be a finite-dimensional vector space over a field , and let . Using we consider as a left -module: By definition By the Cayley-Hamilton's, the characteristic polynomial of , annihilates , i.e., for every . Hence .    (Rank of a torsion module is zero) Let be a left module over an integral domain , and assume that . For any there exists such that , i.e., every is -linearly dependent. Thus the rank of a torsion module over an integral domain is .  "
+},
+{
+  "id": "def-torsion",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#def-torsion",
+  "type": "Definition",
+  "number": "9.7.1",
+  "title": "",
+  "body": " Let be an integral domain, and let be a left -module. The torsion submodule of is  If then we say that is a torsion  -module.  If then is said to be a torsion-free  -module.   "
+},
+{
+  "id": "finite-abelian-group-as-torsion-module",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#finite-abelian-group-as-torsion-module",
+  "type": "Example",
+  "number": "9.7.2",
+  "title": "(Finite abelian groups as torsion modules).",
+  "body": " (Finite abelian groups as torsion modules) Let be a finite abelian group, i.e., is a finite -module. We have . "
+},
+{
+  "id": "free-module-is-torsion-free",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#free-module-is-torsion-free",
+  "type": "Example",
+  "number": "9.7.3",
+  "title": "(Free module is torsion-free).",
+  "body": " (Free module is torsion-free)  Let be an integral domain. A free -module can be seen to be torsion-free.  "
+},
+{
+  "id": "example-96",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#example-96",
+  "type": "Example",
+  "number": "9.7.4",
+  "title": "(Rank <span class=\"process-math\">\\(1\\)<\/span> module which is not a free module).",
+  "body": " (Rank module which is not a free module)  Consider an -module . We show that the rank of is . Suppose that and are two distinct elements of with either or . We then have the following relation that implies that are -linearly dependent. If both and then implies that are -linearly dependent. Thus the cardinality of a maximal linearly independent subset of , i.e., .  Since is -linearly independent, we get that .  However, is not isomorphic to as a -mdoule. Indeed, has nonzero torsion elements while does not have any nonzero torsion elements.   "
+},
+{
+  "id": "example-97",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#example-97",
+  "type": "Example",
+  "number": "9.7.5",
+  "title": "(Vector space as <span class=\"process-math\">\\(F[X]\\)<\/span>-module is torsion).",
+  "body": " (Vector space as -module is torsion)  Let be a finite-dimensional vector space over a field , and let . Using we consider as a left -module: By definition By the Cayley-Hamilton's, the characteristic polynomial of , annihilates , i.e., for every . Hence .  "
+},
+{
+  "id": "torsion-module-has-rank-0",
+  "level": "2",
+  "url": "sec-torsion-module-over-domain.html#torsion-module-has-rank-0",
+  "type": "Example",
+  "number": "9.7.6",
+  "title": "(Rank of a torsion module is zero).",
+  "body": " (Rank of a torsion module is zero) Let be a left module over an integral domain , and assume that . For any there exists such that , i.e., every is -linearly dependent. Thus the rank of a torsion module over an integral domain is . "
 }
 ]
 
