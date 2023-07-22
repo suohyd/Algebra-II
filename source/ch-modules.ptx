@@ -7,4 +7,5 @@
   <xi:include href="./sec-submodules.ptx"/>
   <xi:include href="./sec-module-hom.ptx"/>
   <xi:include href="./sec-sums-products-of-modules.ptx"/>
+  <xi:include href="./sec-torsion-module-over-domain.ptx"/>
 </chapter>

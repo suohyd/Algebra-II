@@ -1,0 +1,56 @@
+<section xml:id="sec-torsion-module-over-domain">
+	<title>Torsion module over an integral domain</title>
+	<definition xml:id="def-torsion">
+		<statement>
+			Let <m>A</m> be an integral domain, and let <m>M</m> be a left <m>A</m>-module. The <term>torsion submodule of <m>M</m></term> is 
+			<me>{\rm Tor}(M)=\left\{m\in M:a\cdot m=0,\;\text{for some}\,0\neq a\in A\,\text{that may depend on }m\right\}.</me>
+			<p>
+				If <m>M={\rm Tor}(M)</m> then we say that <m>M</m> is a <term>torsion</term> <m>A</m>-module.
+			</p>
+			<p>
+				If <m>{\rm Tor}(M)=\{0\}</m> then <m>M</m> is said to be a <term>torsion-free</term> <m>A</m>-module.
+			</p>
+		</statement>
+	</definition>
+	<example xml:id="finite-abelian-group-as-torsion-module">
+		<title>(Finite abelian groups as torsion modules)</title>
+		Let <m>M</m> be a finite abelian group, i.e., <m>M</m> is a finite <m>\Z</m>-module. We have <m>{\rm Tor}(M)=M</m>.
+	</example>
+	<example xml:id="free-module-is-torsion-free">
+		<title>(Free module is torsion-free)</title>
+		<statement>
+			Let <m>A</m> be an integral domain. A free <m>A</m>-module <m>A^{(n)}</m> can be seen to be torsion-free.
+		</statement>
+	</example>
+	<example>
+		<title>(Rank <m>1</m> module which is not a free module)</title>
+		<statement>
+			Consider an <m>\Z</m>-module <m>M=\Z\times\Z/2\Z</m>. We show that the rank of <m>M</m> is <m>1</m>. Suppose that <m>r=(n,\overline{m})</m> and <m>s=(k,\overline{l})</m> are two distinct elements of <m>M</m> with either <m>n\neq 0</m> or <m>k\neq 0</m>. We then have the following relation that implies that <m>r,s\in M</m> are <m>\Z</m>-linearly dependent.
+			<me>2k(n,\overline{m})-2n(k,\overline{l})=0\in M</me>
+			If both <m>n=0</m> and <m>k=0</m> then
+			<me>2(0,\overline{m})+2(0,\overline{l})=0\in M</me> implies that <m>r,s</m> are <m>\Z</m>-linearly dependent.
+			<p>
+				Thus the cardinality of a maximal linearly independent subset of <m>M</m>, i.e., <m>{\rm rank}(M)\leq 1</m>.
+			</p>
+			<p>
+				Since <m>\{(1,0)\}</m> is <m>\Z</m>-linearly independent, we get that <m>{\rm rank}(M)=1</m>.
+			</p>
+			<p>
+				However, <m>M</m> is not isomorphic to <m>\Z</m> as a <m>\Z</m>-mdoule. Indeed, <m>M</m> has nonzero torsion elements while <m>\Z</m> does not have any nonzero torsion elements.
+			</p>
+		</statement>
+	</example>
+	<example>
+		<title>(Vector space as <m>F[X]</m>-module is torsion)</title>
+		<statement>
+			Let <m>V</m> be a finite-dimensional vector space over a field <m>F</m>, and let <m>T\in\End_F(V)</m>. Using <m>T</m> we consider <m>V</m> as a left <m>F[X]</m>-module:
+			<me>F[X]\times V\to V\quad\text{given by}\quad \left(\sum a_iX^i,v\right)\mapsto\sum a_iX^i\cdot v=\sum a_iT^i(v).</me>
+			By definition <me>{\rm Tor}(M)=\left\{v\in V:\sum a_iT^i(v)=0\quad\text{for some }\sum a_iX^i\in F[X]\right\}.</me> 
+			By the Cayley-Hamilton's, the characteristic polynomial of <m>T</m>, <m>\chi_T</m> annihilates <m>T</m>, i.e., <m>\chi_T(T)(v)=0</m> for every <m>v\in V</m>. Hence <m>{\rm Tor}(V)=V</m>.
+		</statement>
+	</example>
+	<example xml:id="torsion-module-has-rank-0">
+		<title>(Rank of a torsion module is zero)</title>
+		Let <m>M</m> be a left module over an integral domain <m>A</m>, and assume that <m>M={\rm Tor}(M)</m>. For any <m>m\in M</m> there exists <m>0\neq a\in A</m> such that <m>a\cdot m=0</m>, i.e., every <m>\{m\}</m> is <m>A</m>-linearly dependent. Thus the rank of a torsion module over an integral domain is <m>0</m>.
+	</example>
+</section>
