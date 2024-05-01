@@ -11,8 +11,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">We show that <span class="process-math">\(x^4+1\)</span> is reducible over every <span class="process-math">\(\mathbb{F}_p\text{,}\)</span> where <span class="process-math">\(p\)</span> is an odd prime number. The case when <span class="process-math">\(p=2\)</span> is left to the reader.</div>
-<span class="incontext"><a href="sec-poly-reducible-for-any-p.html#p-80" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Consider the map <span class="process-math">\(\phi\colon F[x]\to F[x]\)</span> given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum\alpha_ix^i\mapsto\sum\alpha_i(x/a-b/a)^i.
+\end{equation*}
+</div>
+<div class="para">By the arguments in the last paragraph we see that <span class="process-math">\(\phi\)</span> is a ring homomorphism. Furthermore, using the fact that <span class="process-math">\(\varphi\)</span> and <span class="process-math">\(\phi\)</span> are ring homomorphism we get the following.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi\circ\varphi\left(\sum\alpha_kx^k\right)=\phi\left(\sum\alpha_k(ax+b)^k\right)=\sum\alpha_k\phi\left(ax+b\right)^k=\sum\alpha_k\left(a(x/a-b/a)+b\right)^k=\sum\alpha_kx^k.
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\varphi\circ\phi\left(\sum\alpha_kx^k\right)=\varphi\left(\sum\alpha_k(x/a-b/a)^k\right)=\sum\alpha_k\varphi\left(x/a-b/a\right)^k=\sum\alpha_k\left((ax+b)/a-b/a\right)^k=\sum\alpha_kx^k.
+\end{equation*}
+</div>
+<div class="para">This shows that <span class="process-math">\(\varphi\)</span> is a ring automorphism.</div>
+</div>
+<span class="incontext"><a href="sec-examples-irreducibility.html#p-80" class="internal">in-context</a></span>
 </body>
 </html>

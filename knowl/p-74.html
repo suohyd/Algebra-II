@@ -12,7 +12,16 @@
 </head>
 <body class="ignore-math">
 <h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Suppose that <span class="process-math">\(I\)</span> is a nonzero prime ideal. Then there exists an irreducible polynomial <span class="process-math">\(f\in F[X]\)</span> such that <span class="process-math">\(I=(f)\)</span> (see <a href="" class="xref" data-knowl="./knowl/prime-iff-irreducible-polynomials.html" title="Proposition 4.5.9">Proposition 4.5.9</a>). By <a href="" class="xref" data-knowl="./knowl/Kronecker-theorem.html" title="Theorem 4.6.1: (Kronecker’s theorem)">Theorem 4.6.1</a>, <span class="process-math">\(F[X]/I\)</span> is a field. By correspondence theorem, every ideal of <span class="process-math">\(F[X]/I\)</span> is obtained by an ideal of <span class="process-math">\(F[X]\)</span> containing <span class="process-math">\(I\text{.}\)</span> As <span class="process-math">\(F[X]/I\)</span> is a field there are no proper ideals of <span class="process-math">\(F[X]\)</span> that contains <span class="process-math">\(I\text{.}\)</span> Hence <span class="process-math">\(I\)</span> is maximal.</div>
+<div class="para logical">
+<div class="para">We now show that <span class="process-math">\(f\text{,}\)</span> when considered as a polynomial over <span class="process-math">\(K\text{,}\)</span> has a root in <span class="process-math">\(K\text{.}\)</span> An element <span class="process-math">\(r\in F[X]\)</span> when considered as an element in <span class="process-math">\(K\)</span> is denoted by <span class="process-math">\(\overline{r}\text{.}\)</span>  Suppose that <span class="process-math">\(f(X)=a_0+a_1X+\cdots+a_nX^n\in F[X]\text{.}\)</span> Consider the polynomial <span class="process-math">\(\overline{f}(t)=\overline{a_0}+\overline{a_1}t+\cdots+\overline{a_n}t^n\in K[X]\text{.}\)</span> We show that <span class="process-math">\(\overline{X}\)</span> is a root of <span class="process-math">\(\overline{f}\text{.}\)</span> Indeed,</div>
+<div class="displaymath process-math">
+\begin{align*}
+\overline{f}(\overline{X})\amp=\overline{a_0}+\overline{a_1}\overline{X}+\cdots+\overline{a_n}\overline{X}^n\\
+\amp= (a_0+a_1X+\cdots+a_nX^n)+(f)\\
+\amp=0\in K
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-Kronecker-theorem.html#p-74" class="internal">in-context</a></span>
 </body>
 </html>
