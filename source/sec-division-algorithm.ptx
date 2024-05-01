@@ -106,7 +106,7 @@
 			<me>\ev_{(a^2,a^3)}\colon\Q[X,Y]\mapsto\Q\quad\text{given by}\quad f(X,Y)\mapsto f(a^2,a^3).</me>
 			We claim that <m>\ker(\ev_{(a^2,a^3)})=(Y^2-X^3)</m>. We have <m>(Y^2-X^3)\subseteq\ker(\ev_{(a^2,a^3)})</m>.-->
  We show that if <m>f(X,Y)\in\Q[X,Y]</m> is such that <m>f(a^2,a^3)=0</m> for any <m>a\in\Q</m> then <m>f(X,Y)\in(Y^2-X^3)</m>. We consider <m>f(X,Y),Y^2-X^3</m> as polynomials over <m>\Q[X]</m> in variable <m>Y</m>. Thus we can apply <xref ref="division-algorithm-for-LC-unit"/> to get the following.
-			<me>f=q(X,Y)(Y^2-X^3)+r(X)Y+s(X),\quad\text{where}\quad r(X),s(X)\in\Q[X]</me> By the assumption, <m>f(a^2,a^3)=0</m> for every <m>a\in\Q</m>, and hence we get that <me>r(a^2)a^3+s(a^2)=0\quad\text{for every}\quad a\in\Q.</me> This shows that the polynomial <m>r(X^2)X^3+s(X^2)\in\Q[X]</m> has infinitely many roots in <m>\Q</m>. By <xref ref="finite-roots"/>, we must have <m>r(X^2)X^3+s(X^2)=0\in\Q[X]</m>. Comparing even degree and odd degree terms we get that <m>r=s=0\in\Q[X]</m>. Thus, <m>f\in(Y^2-X^3)</m> and the resuLC is proved.
+			<me>f=q(X,Y)(Y^2-X^3)+r(X)Y+s(X),\quad\text{where}\quad r(X),s(X)\in\Q[X]</me> By the assumption, <m>f(a^2,a^3)=0</m> for every <m>a\in\Q</m>, and hence we get that <me>r(a^2)a^3+s(a^2)=0\quad\text{for every}\quad a\in\Q.</me> This shows that the polynomial <m>r(X^2)X^3+s(X^2)\in\Q[X]</m> has infinitely many roots in <m>\Q</m>. By <xref ref="finite-roots"/>, we must have <m>r(X^2)X^3+s(X^2)=0\in\Q[X]</m>. Comparing even degree and odd degree terms we get that <m>r=s=0\in\Q[X]</m>. Thus, <m>f\in(Y^2-X^3)</m> and the resut is proved.
 		</statement>
 	</example>
 		<example xml:id="maximal-ideals-in-poly-in-several-variables">
@@ -133,7 +133,7 @@
 			</p>
 			<p>
 				In fact, by Hilbert's Nullstellensatz, if <m>F</m> is <em>algebraically closed</em> then <em>every</em>
-			</p> maximal ideal in <m>\subset F[x_1,x_2,\cdots,x_n]</m> is of the form <m>(x_1-a_1,\cdots,x_n-a_n)</m> for some <m>a_1,\ldots,a_n\in F</m>.
+			</p> maximal ideal in <m>F[x_1,x_2,\cdots,x_n]</m> is of the form <m>(x_1-a_1,\cdots,x_n-a_n)</m> for some <m>a_1,\ldots,a_n\in F</m>.
 		</statement>
 	</example>
 	<definition xml:id="def-irreducible-polynomial">
