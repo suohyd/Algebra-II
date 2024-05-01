@@ -133,7 +133,7 @@
 			</p>
 			<p>
 				In fact, by Hilbert's Nullstellensatz, if <m>F</m> is <em>algebraically closed</em> then <em>every</em>
-			</p> maximal ideal in <m>\mathfrak{m}\subset F[x_1,x_2,\ldots,x_n]</m> is of the form <m>(x_1-a_1,\ldots,x_n-a_n)</m> for some <m>a_1,\ldots,a_n\in F</m>.
+			</p> maximal ideal in <m>\subset F[x_1,x_2,\cdots,x_n]</m> is of the form <m>(x_1-a_1,\cdots,x_n-a_n)</m> for some <m>a_1,\ldots,a_n\in F</m>.
 		</statement>
 	</example>
 	<definition xml:id="def-irreducible-polynomial">
