@@ -73,8 +73,7 @@
 	<example xml:id="example-poly-over-rings">
 		<title>(Polynomial ring)</title>
 		<statement>
-			Let <m>R</m> be a ring. We define a map <me>P\colon\Z_{\geq 0}\to R</me> such that the set <m>{\rm supp }P=\{n\in\Z_{\geq 0}:P(n)\neq 0\}</m> is finite. The set <m>{\rm supp }P</m> is called <em>support</em> of <m>P</m>.
-			
+			<!--Let <m>R</m> be a ring. We define a map <me>P\colon\Z_{\geq 0}\to R</me> such that the set <m>{\rm supp }P=\{n\in\Z_{\geq 0}:P(n)\neq 0\}</m> is finite. The set <m>{\rm supp }P</m> is called <em>support</em> of <m>P</m>. We write <m>P_n</m> for <m>P(n)</m>.-->	
 			
 			Consider the polynomial ring in one variable over <m>R</m>:
 			<me>R[X]=\left\{r_0+r_1X+\cdots +r_nX^n:r_i\in R\text{ and }n\in\mathbb{N}\right\}.</me> Here, the expression <m>r_0+r_1X+\cdots +r_nX^n</m> is understood to be a formal sum. Addition and multiplication is defined in usual way:
