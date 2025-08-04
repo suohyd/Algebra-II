@@ -1,0 +1,127 @@
+<section xml:id="sec-examples-rings">
+	<title>Examples of Rings</title>
+	<introduction>
+		We give several examples of rings with unity.
+	</introduction>
+	<example xml:id="example-trivial-ring">
+		<title>(Trivial Ring)</title>
+		<statement>
+			A trivial group <m>\{0\}</m> is a ring and is called a <term>trivial ring</term>. Note that in a trivial ring <m>1=0</m>. In fact, if <m>1=0</m> in a ring then that ring is trivial.
+		</statement>
+	</example>
+	<example xml:id="example-ring-of-integers">
+		<title>(Ring of integers)</title>
+		<statement>The set of integers <m>\Z</m> is a ring with the usual addition and the multiplication.</statement>
+	</example>
+	<example xml:id="example-rationals-reals-complex">
+		<title>(Rationals, Reals and Complex numbers)</title>
+		<statement>
+			The set of complex numbers <m>\C</m>, the real numbers <m>\R</m>, and rationals <m>\Q</m> are rings with the usual addition and the multiplication.
+		</statement>
+	</example>
+	<example xml:id="Gaussian-integers">
+		<title>(Gaussian integers)</title>
+		<statement>
+			Let <m>i=\sqrt{-1}\in\C</m>.The subset of <m>\C</m>
+			<me>\Z[i]=\{a+ib:a,b\in\Z\}</me>
+			is a ring under the addition and the multiplication inherited from <m>\C</m>. This ring is called the ring of <term>Gaussian integers</term>. Given any <m>x\in\Z[i]</m> there are unique <m>a,b\in\Z</m> such that <m>z=a+ib</m>.
+		</statement>
+		</example>
+	<example xml:id="example-finite-group">
+		<title>(Finite cyclic group as a ring)</title>
+		<statement>
+			Consider a cyclic group <m>\Z/n\Z</m>. We write the coset of an integer <m>i</m> in <m>\Z/n\Z</m> as <m>[i]</m>. We define the multiplication as follows.
+			<me>[i]\cdot[j]=[ij]</me>
+			Here <m>ij</m> is the multiplication of integers <m>i,j</m> in <m>\Z</m>.
+		</statement>
+	</example>
+	<example xml:id="example-matrices">
+		<title>(Matrices over a ring)</title>
+		<statement>
+			Let <m>R</m> be a ring with unity. Consider the set of <m>n\times n</m> matrices over <m>R</m>, <m>M_n(R)</m>. So
+			<me>M_n(R)=\left\{(a_{ij})=\begin{pmatrix}a_{11}\amp a_{12}\amp\cdots\amp a_{1n}\\a_{21}\amp a_{22}\amp\cdots\amp a_{2n}\\\vdots\amp\vdots\amp\ddots\amp\vdots\\a_{n1}\amp a_{n2}\amp\cdots\amp a_{nn}\end{pmatrix}:a_{ij}\in R\right\}.</me>
+			It is an abelian group under matrix addition.
+			<me>(a_{ij})+(b_{ij})=(a_{ij}+b_{ij})</me>
+			The matrix multiplication gives <m>M_{n}(R)</m> a monoid structure.
+			<me>\begin{pmatrix}a_{11}\amp a_{12}\amp\cdots\amp a_{1n}\\a_{21}\amp a_{22}\amp\cdots\amp a_{2n}\\\vdots\amp\vdots\amp\ddots\amp\vdots\\a_{n1}\amp a_{n2}\amp\cdots\amp a_{nn}\end{pmatrix}\cdot\begin{pmatrix}b_{11}\amp b_{12}\amp\cdots\amp b_{1n}\\b_{21}\amp b_{22}\amp\cdots\amp b_{2n}\\\vdots\amp\vdots\amp\ddots\amp\vdots\\b_{n1}\amp b_{n2}\amp\cdots\amp b_{nn}\end{pmatrix}=\begin{pmatrix}\sum_ja_{1j}b_{j1}\amp \sum_ja_{1j}b_{j2}\amp\cdots\amp \sum_ja_{1j}b_{jn}\\\sum_ja_{2j}b_{j1}\amp \sum_ja_{2j}b_{j2}\amp\cdots\amp \sum_ja_{2j}b_{jn}\\\vdots\amp\vdots\amp\ddots\amp\vdots\\\sum_ja_{nj}b_{j1}\amp \sum_ja_{nj}b_{j2}\amp\cdots\amp \sum_ja_{nj}b_{jn}\end{pmatrix}</me>
+			</statement>
+	</example>
+	<example xml:id="example-triangular-rings">
+		<title>(Triangular ring)</title>
+		<statement>
+			<p>
+				Consider an abelian group <m>A</m> with the group operation written additively. We write the additive identities of <m>{\mathbb{Z}}</m> and <m>A</m> by <m>0_{\mathbb{Z}}</m> and <m>0_A</m>, respectively. For <m>n\in\mathbb{N}</m> and <m>a\in A</m> we make following conventions.
+			</p>
+			<p>Left action:
+			<men xml:id="left-action">n\cdot a=\underbrace{a+a+\cdots+a}_{n-\text{times}}\quad\text{and}\quad -n\cdot a=\underbrace{(-a)+(-a)+\cdots+(-a)}_{n-\text{times}}</men>
+		</p>
+		<p>Right action:
+			<men xml:id="right-action">a\cdot n=\underbrace{a+a+\cdots+a}_{n-\text{times}}\quad\text{and}\quad a\cdot (-n)=\underbrace{(-a)+(-a)+\cdots+(-a)}_{n-\text{times}}</men>
+		</p>
+		<p>
+			For <m>0_{\mathbb{Z}}\in\mathbb{Z}</m> and any <m>a\in A</m> we take <men xml:id="action-of-zero">0_{\mathbb{Z}}\cdot a=0_A\quad\text{and}\quad a\cdot0_{\mathbb{Z}}=0_A.</men>
+			Consider a <term>triangular ring</term>.
+			<me>R=\left\{\begin{pmatrix}m\amp a\\0_{\mathbb{Z}}\amp n\end{pmatrix}:m,n\in\mathbb{Z}\text{ and }a\in A\right\}</me>
+			The addition on <m>R</m> is defined as follows.
+			<me>\begin{pmatrix}m_1\amp a_1\\0_{\mathbb{Z}}\amp n_1\end{pmatrix}+\begin{pmatrix}m_2\amp a_2\\0_{\mathbb{Z}}\amp n_2\end{pmatrix}=\begin{pmatrix}m_1+m_2\amp a_1+a_2\\0_{\mathbb{Z}}\amp n_1+n_2\end{pmatrix}</me>
+			The multiplication on <m>R</m> is defined as follows.
+			<men xml:id="multiplication-in-triangular-rings">\begin{pmatrix}m_1\amp a_1\\0_{\mathbb{Z}}\amp n_1\end{pmatrix}\cdot\begin{pmatrix}m_2\amp a_2\\0_{\mathbb{Z}}\amp n_2\end{pmatrix}=\begin{pmatrix}m_1 m_2\amp m_1\cdot a_2+a_1\cdot n_2\\0_{\mathbb{Z}}\amp n_1n_2\end{pmatrix}</men>
+			This is the usual matrix multiplication when we take into consideration the left and the right actions defined in <xref ref="left-action"/> and <xref ref="right-action"/>, respectively.
+		</p>
+		</statement>
+	</example>
+	<example xml:id="example-poly-over-rings">
+		<title>(Polynomial ring)</title>
+		<statement>
+			Let <m>R</m> be a ring. Consider the polynomial ring in one variable over <m>R</m>:
+			<me>R[X]=\left\{r_0+r_1X+\cdots +r_nX^n:r_i\in R\text{ and }n\in\mathbb{N}\right\}.</me> Addition and multiplication is defined in usual way:
+			<md><mrow>\text{Addition:}\;\text{ if }m\leq n\text{ then}\quad\sum_{i=0}^mr_iX^i+\sum_{j=0}^ns_jX^j=\sum_{k=0}^{m}(r_k+s_k)X^k+\sum_{j=m+1}^{n}s_jX^j</mrow><mrow>\text{We also assume }\sum_ia_iX^i+\sum_jb_jX^j=\sum_jb_jX^j+\sum_ia_iX^i\;\text{for any two elements of }R[X]</mrow><mrow>\text{Multiplication:}\quad\left(\sum_{i=0}^{m}r_iX^i\right)\left(\sum_{j=0}^{n}s_jX^j\right)=\sum_{i=0}^{m}\left(\sum_{j=0}^{n}r_is_jX^{j+i}\right)=r_0s_0+\sum_{i=1}^{m+n}\left(\sum_{j=0}^{i}r_js_{i-j}\right)X^i</mrow><mrow>\text{We also assume that }\sum_ir_iX^i=\sum_is_iX^i\;\text{if and only if}\;r_i=s_i\;\text{for every }i.</mrow></md>
+		</statement>
+	</example>
+	<example xml:id="example-opposite-ring">
+		<title>(Opposite Ring)</title>
+		Let <m>R</m> be a ring. The <term>opposite ring</term> of <m>R</m> is denoted by <m>R^{\rm op}</m> and is defined by the following properties.
+		<ol>
+			<li>We denote elements of <m>R^{\rm op}</m> by <m>r^{\rm op}</m>. Thus when <m>r\in R</m> is viewed as an element of <m>R^{\rm op}</m> we denote it by <m>r^{\rm op}</m>.</li>
+			<li>The underlying set and the abelian group structure of <m>R^{\rm op}</m> is the same as that of <m>R</m>. In other words, <m>(R^{\rm op},+)=(R,+)</m>. Hence for <m>r,s\in R</m> we have
+			<me>r^{\rm op}+s^{\rm op}=(r+s)^{\rm op}.</me>
+		</li>
+			<li>The multiplication is defined as follows: for <m>r^{\rm op},s^{\rm op}\in R^{\rm op}</m>, i.e., for <m>r,s\in R</m>
+			<me>r^{\rm op}s^{\rm op}=(sr)^{\rm op}.</me></li>
+		</ol>
+		If for every <m>r,s\in R</m>, <m>rs=sr</m> then the multiplication in <m>R^{\rm op}</m> is also the same as that of <m>R</m>.
+	</example>
+	<example xml:id="example-product-of-rings">
+		<title>(Product of rings)</title>
+		<statement>
+			Let <m>I</m> be a nonempty indexing set and for each <m>i\in I</m> let <m>R_i</m> be a ring. The <term>product ring <m>\prod_iR_i</m></term> is a ring with componentwise addition and multiplication.
+			<md><mrow>(\ldots,r_i,\ldots)+(\ldots,s_i,\ldots)=(\ldots,r_i+s_i,\ldots)</mrow><mrow>(\ldots,r_i,\ldots)(\ldots,s_i,\ldots)=(\ldots,r_is_i,\ldots)</mrow></md>
+			<p>
+				Similar to the above construction we have the following example.
+			</p>
+			<p>
+				Let <m>R</m> be a ring and let <m>I</m> be a nonempty set. Let <m>R^I</m> be the set of all functions from <m>I</m> to <m>R</m>.
+			The set <m>R^I</m> is a ring with following operations of addition and multiplication.
+			<md><mrow>\text{Addition:}\quad (f+g)(i)=f(i)+g(i)</mrow><mrow>\text{Additive Identity:}\quad\mathbf{0}\colon I\to R\quad\text{give by}\quad i\mapsto 0\quad\text{for every}\;i\in I</mrow><mrow>\text{Multiplication:}\quad (fg)(i)=f(i)g(i)</mrow><mrow>\text{Multiplicative Identity:}\quad \unit\colon I\to R\quad\text{given by}\quad i\mapsto 1\quad\text{for every}\quad i\in I</mrow></md>
+			</p>
+		</statement>
+	</example>
+	<example xml:id="example-endo-of-vs">
+		<title>(Endomorphisms of a vector space)</title>
+		<statement>
+			This example is related to <xref ref="example-matrices"/> (recall from Linear algebra course). Let <m>V</m> be a vector space over a field <m>F</m>. Consider the set of all endomorphisms of <m>V</m>, <m>\End_F{V}</m> i.e., the set of all <m>F</m>-linear maps from <m>V</m> to <m>V</m>. This is a ring under following operations.
+			<ol><li>Addition: <m>(f+g)(v)=\underbrace{f(v)+g(v)}_{\text{addition in }V}</m> for <m>f,g\in\End_F(V)</m> and <m>v\in V</m></li>
+			<li>Multiplication: <m>(f\circ g)(v)=f\left(g(v)\right)</m> for <m>f,g\in\End_F(V)</m> and <m>v\in V</m></li>
+			</ol>
+		</statement>
+	</example>
+	<example xml:id="ring-of-continuous-real-valued-functions">
+		<title>(Continuous real-valued functions)</title>
+		<statement>
+			Let <m>I</m> be a nonempty open interval of <m>\R</m>. The set of all continuous real-valued functions from <m>I</m> to <m>\R</m>,
+			<me>C(I)=\{f\colon I\to\R:f\text{ is continuous}\}</me>
+			is a ring under addition of functions and the multiplication defined as follows.
+			<me>\left(f\cdot g\right)(x)=f(x)g(x)\quad\text{for}\; f,g\in C(I)\;\text{and}\;x\in I.</me>
+		</statement>
+	</example>
+</section>
